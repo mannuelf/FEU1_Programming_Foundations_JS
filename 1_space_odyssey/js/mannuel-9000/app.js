@@ -114,9 +114,18 @@ console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, ha
        cannot go outside, console log the correct log based on that condition. 
 */
 
+
+
+if (hasJetPack){
+console.log("JetPack is enabled!!! off I go outside to fix the satellite");
+}
+else if (jetpacknotenabled){
+console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
+}
+
 /* 
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
-
+ 
  console.log("JetPack is enabled!!! off I go outside to fix the satellite");
  console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
 
