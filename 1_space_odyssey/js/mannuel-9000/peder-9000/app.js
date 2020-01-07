@@ -85,19 +85,19 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
-var isAlive;
+var isAlive = true; 
 var name = "Peder-9000";
-var hasJetPack;
+var hasJetPack; 
 var suitColor;
 var eyes;
 var eyeColor;
-var hairColor;
+var hairColor
 var legs;
 var arms;
 var hands;
 var ears;
-var canWalk;
-var canRun;
+var canWalk;  
+var canRun; 
 var canFly;
 var hasWeapon;
 var isInGoodMood;
