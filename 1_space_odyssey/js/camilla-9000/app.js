@@ -106,6 +106,14 @@ console.log(".-.-. Booting .-.-.");
 console.log(name, suitColor, isInGoodMood, canRun, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon);
 
 
+if(hasJetPack) {
+    console.log("JetPack is enabled!!")
+}
+else if(hasJetPack) {
+    console.log("JetPack NOT enable")
+}
+
+
 
 /* 
  2. BROKEN SATELLITE::::::
