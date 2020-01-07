@@ -105,6 +105,11 @@ var isInGoodMood = true;
 console.log(".-.-. Booting .-.-.");
 console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon);
 
+if (hasJetPack) {
+  console.log("JetPack is enabled!!! off I go outside to fix the satellite");
+} else {
+  console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
+}
 /*
  2. BROKEN SATELLITE::::::
     You need to send the droid out on a space walk to fix the satellite, with out it you can't communicate with earth.
@@ -114,8 +119,5 @@ console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, ha
 
 /*
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
-
- console.log("JetPack is enabled!!! off I go outside to fix the satellite");
- console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
 
  */
