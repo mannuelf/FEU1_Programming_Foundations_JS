@@ -121,3 +121,27 @@ console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, ha
  console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
 
  */
+
+
+/*
+ 3. METEOR SHOWER::::::
+    On your way to Jupiter you encounter a massive meteor shower that could damage the ship, you need to redirect the ship to a new safe location.
+    a. Choose the correct response by console logging the correct index of the array
+*/
+
+var responses = [
+  "Call basecamp and ask for assistance, but they are far away",
+  "Do nothing, just push through",
+  "initiate core thrusters, punch 180degrees into nav-dash and warp away from danger",
+  "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
+];
+
+console.log("COMMAND:", );
+
+
+/* 
+ 3. METEOR SHOWER:::::: 
+    On your way to Jupiter you encounter a massive meteor shower that could damage the ship, 
+    you need to redirect the ship to a new safe location.
+    a. Choose the correct response by console logging the correct index of the array
+*/
