@@ -23,10 +23,10 @@ console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, ha
 //2
 
 if (hasJetPack === true) {
-    console.log("Droid can go outside");
+    console.log("JetPack is enabled!!! off I go outside to fix the satellite");
 }
 else if (hasJetPack === false) {
-    console.log("Droid can't go outside");
+    console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
 }
 
 //3
