@@ -44,7 +44,6 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
         2020: The sole survivor of the journey to Jupiter ascends to the next level of humanity.
  */
 
-
 /*
   You are the sole survivor who will make the journey to Jupiter.
 
@@ -103,9 +102,21 @@ var hasWeapon;
 var isInGoodMood;
 
 console.log(".-.-. Booting .-.-.");
-console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon);
-
-
+console.log(
+  name,
+  isAlive,
+  hasJetPack,
+  eyes,
+  eyeColor,
+  hairColor,
+  legs,
+  arms,
+  hands,
+  ears,
+  canWalk,
+  canFly,
+  hasWeapon
+);
 
 /* 
  2. BROKEN SATELLITE::::::
