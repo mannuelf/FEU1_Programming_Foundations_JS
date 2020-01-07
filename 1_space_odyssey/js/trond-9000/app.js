@@ -28,5 +28,3 @@ if (hasJetPack === true) {
 else if (hasJetPack === false) {
     console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
 }
-
-//3
