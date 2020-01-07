@@ -2,9 +2,13 @@
 
 Learning how to program.
 
-# 1 Space Odyssey command line game
+# 1. Space Odyssey command line game
 
-Fork repo, open project in VS CODE and use VS CODE Live Server to run the site.
+1. Fork repo
+2. clone repo
+3.  open project in VS CODE
+4.  open `index.html` inside the `1_space_odyssey` folder
+5.  use VS CODE Live Server to run the site.
 
 ![space](./1_space_odyssey/img/space_odyssey.jpg)
 
