@@ -9,6 +9,7 @@ Learning how to program.
 3.  open project in VS CODE
 4.  open `index.html` inside the `1_space_odyssey` folder
 5.  use VS CODE Live Server to run the site.
+6.  definition of done is a pull request
 
 ![space](./1_space_odyssey/img/space_odyssey.jpg)
 
