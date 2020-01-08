@@ -109,7 +109,7 @@ console.log(name, suitColor, isInGoodMood, canRun, isAlive, hasJetPack, eyes, ey
 if(hasJetPack) {
     console.log("JetPack is enabled!!")
 }
-else if(hasJetPack) {
+else {
     console.log("JetPack NOT enable")
 }
 
