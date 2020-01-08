@@ -84,22 +84,22 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
-var isAlive;
-var name;
-var hasJetPack;
-var suitColor;
-var eyes;
-var eyeColor;
-var hairColor;
-var legs;
-var arms;
-var hands;
-var ears;
-var canWalk;
-var canRun;
-var canFly;
-var hasWeapon;
-var isInGoodMood;
+var isAlive = true;
+var name = "Manny-9000";
+var hasJetPack = true;
+var suitColor = "Chrome";
+var eyes = 2;
+var eyeColor = "brown";
+var hairColor = "black";
+var legs = 2;
+var arms = 2;
+var hands = 2;
+var ears = 2;
+var canWalk = true;
+var canRun = true;
+var canFly = true;
+var hasWeapon = true;
+var isInGoodMood = true;
 
 console.log("\u{1F916} .-.-. Booting .-.-.");
 console.log(
@@ -115,7 +115,8 @@ console.log(
   ears,
   canWalk,
   canFly,
-  hasWeapon
+  hasWeapon,
+  isInGoodMood
 );
 
 /*
@@ -125,8 +126,16 @@ console.log(
        cannot go outside, console log the correct log based on that condition.
 */
 console.log(
-  "\u{1F6F0} BROKEN SATELLITE::::::"
+  " \u{2747} BROKEN SATELLITE:::::: \u{2747} \u{2747} \u{2747} \u{2747}"
 );
+
+if (hasJetPack) {
+  console.log("JetPack is enabled!!! off I go outside to fix the satellite");
+} else {
+  console.log(
+    "JetPack NOT enabled, please enable jetPack before doing a space walk"
+  );
+}
 
 /*
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
@@ -138,7 +147,7 @@ console.log(
 /*
  3. METEOR SHOWER::::::
     On your way to Jupiter you encounter a massive meteor shower that could damage the ship, you need to redirect the ship to a new safe location.
-    a) Using a for loop iterate through the responses array and choose the appropriate response to get out of danger.
+    a. Using a for loop iterate through the responses array and choose the appropriate response to get out of danger.
       create an if condition in your loop to print only 1 response using a comparison operator.
 */
 console.log(
@@ -152,10 +161,12 @@ var responses = [
   "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
 ];
 
-// write your code here, use the console log beneath
-// console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
-
-
+var numResponses = responses.length;
+for (var i = 0; i <= numResponses; i++) {
+  if (responses[i] === responses[2]) {
+    console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
+  }
+}
 
 /*
  4. ALIENS SPACE CRAFT ENCROACHING::::::
