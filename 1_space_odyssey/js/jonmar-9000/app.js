@@ -3,7 +3,7 @@ const droid = {
   isAlive: true,
   body: {
     eyes: 2,
-    eyeColor: "svart",
+    eyeColor: "black",
     hairColor: "black",
     legs: 2,
     arms: 2,
@@ -13,7 +13,7 @@ const droid = {
   accesories: {
     hasJetPack: true,
     hasWeapon: true,
-    suitColor: "rosa"
+    suitColor: "pink"
   },
   ability: {
     canWalk: true,
