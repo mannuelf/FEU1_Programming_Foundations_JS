@@ -160,20 +160,21 @@ var responses = [
 /*
  4. ALIENS SPACE CRAFT ENCROACHING::::::
     Alien craft approaches its an enemy for sure...you need to shoot it down!!
-    a) fill in the variables so that the if statement passes fires the photonLaser
+    a) create the required variables and fill in the correct values and dataTypes to make
+       the if statements pass and fires the photonLaser.
 */
 console.log(
   "\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::"
 );
 
-var isEnemyCraft;
-var photonLaser;
-var bullets;
-var photonLaserEnabled;
+var ___;
+var ___;
+var ___;
+var ___;
 
 if (isEnemyCraft && photonLaser && photonLaserEnabled) {
   if (bullets >= 100) {
-    console.log("\u{2708} pew pew pew !! you got them!!");
+    console.log("\u{2708} pew pew pew --- you got them!!");
   } else {
     console.log("\u{1F9E8} DEAD \u{1F9E8} ");
   }

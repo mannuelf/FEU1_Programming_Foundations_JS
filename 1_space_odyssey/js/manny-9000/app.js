@@ -177,10 +177,10 @@ console.log(
   "\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::"
 );
 
-var isEnemyCraft;
-var photonLaser;
-var bullets;
-var photonLaserEnabled;
+var ___;
+var ___;
+var ___;
+var ___;
 
 if (isEnemyCraft && photonLaser && photonLaserEnabled) {
   if (bullets >= 100) {
