@@ -125,12 +125,11 @@ console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, ha
 
 /*
  3. METEOR SHOWER::::::
-    On your way to Jupiter you encounter a massive meteor shower that could damage the ship, 
-    you need to redirect the ship to a new safe location.
-    a. get the number of responses available to you in the responses array
-     - once you have the number
-    b. Choose the correct response by console logging the correct index of the array
-     - write a loop to print out the response using an if statement to check if your response is equal to the correct index of the array
+    On your way to Jupiter you encounter a massive meteor shower that could damage the ship, you need to redirect the ship to a new safe location.
+    a. Get number of responses available to you in the responses array
+       - once you have the number, create a for loop too loop through the possible answers
+    b. using a for loop print out the chosen response 
+       using an if statement to check if your response is equal to the correct index of the array
 */
 
 var responses = [
@@ -142,6 +141,6 @@ var responses = [
 
 // a.
 var numberOfResponses;
-// console.log("number of responses available to me are:", );
+console.log("number of responses available to me are:", );
 
-// console.log("COMMAND:", );
+console.log("COMMAND:", );
