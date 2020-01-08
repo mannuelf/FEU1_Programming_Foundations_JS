@@ -160,8 +160,8 @@ var responses = [
 /*
  4. ALIENS SPACE CRAFT ENCROACHING::::::
     Alien craft approaches its an enemy for sure...you need to shoot it down!!
-    a) create the required variables and fill in the correct values and dataTypes to make
-       the if statements pass and fires the photonLaser.
+    a) create the required variables below and fill in the correct values and dataTypes to make
+       the if statements pass so that photonLaser fires pew pew pew.
 */
 console.log(
   "\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::"
