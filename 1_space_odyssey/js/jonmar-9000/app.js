@@ -31,3 +31,9 @@ droid.hasJetPack
 
 console.log(".-.-. Booting .-.-.");
 console.log(droid);
+
+let colors = ["red", "blue", "yellow", "green"];
+
+for (let i = 0; i <= colors.length; i++) {
+  if (colors[i] === "blue") console.log("You have chosen blue");
+}
