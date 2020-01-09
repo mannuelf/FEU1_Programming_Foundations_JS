@@ -160,7 +160,8 @@ var responses = [
 /*
  4. ALIENS SPACE CRAFT ENCROACHING::::::
     Alien craft approaches its an enemy for sure...you need to shoot it down!!
-    a) create the required variables below and fill in the correct values and dataTypes to make
+    a) convert the pseudoscope to real code
+       create the required variables below and fill in the correct values and dataTypes to make
        the if statements pass so that photonLaser fires pew pew pew.
     b)
 */
@@ -174,12 +175,11 @@ var ___;
 var ___;
 var ___;
 
-if (isEnemyCraft && photonLaser && photonLaserEnabled) {
-  if (bullets >= 100) {
-    // b.
-    // shoot 100 photon-lazers by printing this log 100 times: console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
-    // use a loop
-  } else {
-    console.log("\u{1F9E8} DEAD \u{1F9E8} ");
-  }
-}
+/*
+  If its an enemyCraft && photonLaser && photonLaserEnabled
+      IF bullets is greater than or equal to 100
+          shoot 100 photon-lazers by printing this log 100 times:
+          console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!"); (use a loop)
+        ELSE
+          console.log("\u{1F9E8} DEAD \u{1F9E8} ");
+*/
