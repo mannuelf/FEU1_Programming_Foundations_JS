@@ -116,10 +116,10 @@ console.log(name, suitColor, isInGoodMood, canRun, isAlive, hasJetPack, eyes, ey
        cannot go outside, console log the correct log based on that condition. 
 */
 if(hasJetPack) {
-    console.log("JetPack is enabled!!")
+    console.log("JetPack is enabled!!! off I go outside to fix the satellite")
 }
 else {
-    console.log("JetPack NOT enable")
+    console.log("JetPack NOT enable, please enable jetPack before doing a space walk")
 }
 
 
