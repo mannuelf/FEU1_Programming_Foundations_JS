@@ -121,3 +121,26 @@ console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, ha
  console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
 
  */
+
+
+/*
+ 3. METEOR SHOWER::::::
+    On your way to Jupiter you encounter a massive meteor shower that could damage the ship, you need to redirect the ship to a new safe location.
+    a. Get number of responses available to you in the responses array
+       - once you have the number, create a for loop too loop through the possible answers
+    b. using a for loop print out the chosen response 
+       using an if statement to check if your response is equal to the correct index of the array
+*/
+
+var responses = [
+  "Call basecamp and ask for assistance, but they are far away",
+  "Do nothing, just push through",
+  "initiate core thrusters, punch 180degrees into nav-dash and warp away from danger",
+  "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
+];
+
+// a.
+var numberOfResponses;
+console.log("number of responses available to me are:", );
+
+console.log("COMMAND:", );
