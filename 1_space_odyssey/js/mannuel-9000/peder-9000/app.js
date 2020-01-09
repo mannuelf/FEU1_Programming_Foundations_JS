@@ -44,7 +44,6 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
         2020: The sole survivor of the journey to Jupiter ascends to the next level of humanity.
  */
 
-
 /*
   You are the sole survivor who will make the journey to Jupiter.
 
@@ -85,27 +84,39 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
-var isAlive;
-var name = "Mannuel-9000";
-var hasJetPack;
-var suitColor;
-var eyes;
-var eyeColor;
-var hairColor;
-var legs;
-var arms;
-var hands;
-var ears;
-var canWalk;
-var canRun;
-var canFly;
-var hasWeapon;
-var isInGoodMood;
+var isAlive = true;
+var name = "Peder-9000";
+var hasJetPack = false;
+var suitColor = "pink";
+var eyes = 2;
+var eyeColor = "blue";
+var hairColor = "brown";
+var legs = 2;
+var arms = 2;
+var hands = 2;
+var ears = 2;
+var canWalk = true;
+var canRun = true;
+var canFly = true;
+var hasWeapon = true;
+var isInGoodMood = false;
 
 console.log(".-.-. Booting .-.-.");
-console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon);
-
-
+console.log(
+  name,
+  isAlive,
+  hasJetPack,
+  eyes,
+  eyeColor,
+  hairColor,
+  legs,
+  arms,
+  hands,
+  ears,
+  canWalk,
+  canFly,
+  hasWeapon
+);
 
 /* 
  2. BROKEN SATELLITE::::::
@@ -116,8 +127,12 @@ console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, ha
 
 /* 
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
+  */
 
- console.log("JetPack is enabled!!! off I go outside to fix the satellite");
- console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
-
- */
+if (hasJetPack) {
+  console.log("go outside");
+} else {
+  console.log(
+    "JetPack NOT enabled, please enable jetPack before doing a space walk"
+  );
+}
