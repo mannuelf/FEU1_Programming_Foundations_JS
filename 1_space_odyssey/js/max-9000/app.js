@@ -1,4 +1,3 @@
-
 var isAlive;
 var name = "Mannuel-9000";
 var hasJetPack = true;
@@ -23,4 +22,4 @@ if (hasJetPack) {
     console.log("JetPack is enabled!!! off I go outside to fix the satellite");
 } else {
     console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
-
+}
