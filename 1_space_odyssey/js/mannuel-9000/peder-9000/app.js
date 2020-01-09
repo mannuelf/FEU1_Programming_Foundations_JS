@@ -187,15 +187,12 @@ var bullets = 100;
           console.log("\u{1F9E8} DEAD \u{1F9E8} ");
 */
 
-
-if(enemyCraft && photonLaser && photonLaserEnabled){
-  if(bullets >= 100){
-for (var i = 1; i <=100; i++){
-  console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
-}
-  }else{
+if (enemyCraft && photonLaser && photonLaserEnabled) {
+  if (bullets >= 100) {
+    for (var i = 1; i <= 100; i++) {
+      console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
+    }
+  } else {
     console.log("\u{1F9E8} DEAD \u{1F9E8} ");
   }
 }
-
-
