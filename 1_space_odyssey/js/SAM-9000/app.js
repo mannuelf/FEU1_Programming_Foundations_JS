@@ -149,7 +149,7 @@ var responses = [
 // console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
 
 for (var count = 0; count < responses.length; count++) {
-  if(count === 2) {
+  if (responses[count] === responses[2]) {
     console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
   }
 }
