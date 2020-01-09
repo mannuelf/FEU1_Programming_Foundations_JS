@@ -154,8 +154,8 @@ var responses = [
 
 // write your code here, use the console log beneath
 
-for (var i = 0; i <= responses.length; i++) {
-  if (responses[i] === responses[2]) {
+for (var count = 0; i <= responses.length; count++) {
+  if (responses[count] === responses[2]) {
     console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
   }
 }
