@@ -105,12 +105,6 @@
 
     console.log(".-.-. Booting .-.-.");
     console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon);
-    if (hasJetPack === true) {
-        console.log("JetPack is enabled!!! off I go outside to fix the satellite");
-    }
-    else {
-        console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
-    }
 
     /* 
     2. BROKEN SATELLITE::::::
@@ -126,3 +120,9 @@
     console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
 
     */
+   if (hasJetPack === true) {
+    console.log("JetPack is enabled!!! off I go outside to fix the satellite");
+}
+else {
+    console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
+}
