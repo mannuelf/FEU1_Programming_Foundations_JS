@@ -106,12 +106,6 @@ console.log(".-.-. Booting .-.-.");
 console.log(name, suitColor, isInGoodMood, canRun, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon);
 
 
-if(hasJetPack) {
-    console.log("JetPack is enabled!!")
-}
-else {
-    console.log("JetPack NOT enable")
-}
 
 
 
@@ -121,6 +115,13 @@ else {
     a) write an if condition checking if the jet pack is enabled, if true the droid can go outside if false the droid 
        cannot go outside, console log the correct log based on that condition. 
 */
+if(hasJetPack) {
+    console.log("JetPack is enabled!!")
+}
+else {
+    console.log("JetPack NOT enable")
+}
+
 
 /* 
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
