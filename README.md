@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # FEU1 Programming Foundations
 
 Learning how to program.
@@ -17,6 +18,8 @@ Learning how to program.
 ![space](./1_space_odyssey/img/space_odyssey.jpg)
 
 =======
+=======
+>>>>>>> hani-9000
 # FEU1 Programming Foundations
 
 Learning how to program.
@@ -31,5 +34,8 @@ Learning how to program.
 
 ![space](./1_space_odyssey/img/space_odyssey.jpg)
 
+<<<<<<< HEAD
 >>>>>>> fixed
+=======
+>>>>>>> hani-9000
 photo credit: https://www.warnerbros.com/movies/2001-space-odyssey/

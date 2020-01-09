@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 .DS_Store
  .vscode
  .idea
@@ -108,6 +109,8 @@ dist
 # TernJS port file
 .tern-port
 =======
+=======
+>>>>>>> hani-9000
 # Logs
 logs
 *.log
@@ -212,4 +215,7 @@ dist
 
 # TernJS port file
 .tern-port
+<<<<<<< HEAD
 >>>>>>> fixed
+=======
+>>>>>>> hani-9000

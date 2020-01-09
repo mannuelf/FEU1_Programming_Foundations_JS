@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 body {
     background-color: #000;
     background-image: url("../img/cover_desktop.jpg");
@@ -17,6 +18,8 @@ h1 {
   font-size: 3em;
 }
 =======
+=======
+>>>>>>> hani-9000
 body {
     background-color: #000;
     background-image: url("../img/cover_desktop.jpg");
@@ -42,5 +45,9 @@ body {
 	100% {
 		opacity: 1;
 	}
+<<<<<<< HEAD
 }
 >>>>>>> fixed
+=======
+}
+>>>>>>> hani-9000
