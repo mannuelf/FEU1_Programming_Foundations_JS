@@ -26,8 +26,7 @@ var isInGoodMood = true;
 
 if (hasJetPack) {
     console.log ("Jetpack is on")
-}
-else { console.log ("Jetpack is not on, you should stay inside")
+} else { console.log ("Jetpack is not on, you should stay inside")
 }
 
 /* 
@@ -40,8 +39,3 @@ else { console.log ("Jetpack is not on, you should stay inside")
 
 console.log(".-.-. Booting .-.-.");
 console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon);
-
-
-console.log(1);
-console.log(2);
-console.log(3);
