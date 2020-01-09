@@ -116,12 +116,10 @@ console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, ha
 
 
 
-if (hasJetPack){
-console.log("JetPack is enabled!!! off I go outside to fix the satellite");
-}
-else (hasJetPack === false)
-{
-console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
+if (hasJetPack) {
+  console.log("JetPack is enabled!!! off I go outside to fix the satellite");
+} else {
+  console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
 }
 
 /* 
