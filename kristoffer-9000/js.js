@@ -131,35 +131,3 @@ console.log("JetPack NOT enabled, please enable jetPack before doing a space wal
  console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
 
  */
-
-
-
- for (var count = 1; count <= 10; count++) {
-   console.log(count);
- }
-
-
- for (var i = 5; i <= 25; i++) {
-  console.log(i);
-  }
-
-
-var colors = ["red", "blue", "green", "yellow"];
-var firstItem = colors [0];
-console.log(firstItem);
-
-// 0 = red mens 1 = blue, 2 = green og 3 = yellow etc.
-
-var secondItem = colors [1];
-secondItem
-// akuratt det samme men slipper å skrive consloe.log
-
-var colors = ["red", "blue", "green", "yellow"] ;
-var numberOfColors = colors.length ;
-
-for (var i = 0; i <= numberOfColors; i++) {
-if (colors[i] === "blue") {
-console.log("you have chosen blue");
-}
-}
-
