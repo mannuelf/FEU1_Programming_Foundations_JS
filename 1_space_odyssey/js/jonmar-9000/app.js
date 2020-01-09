@@ -60,7 +60,7 @@ console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
 var enemyCraft = true;
 var photonLaser = true;
 var photonLaserEnabled = true;
-var bullets = 101;
+var bullets = 99;
 
 var bulletsNeeded = 100;
 
