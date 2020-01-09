@@ -44,7 +44,6 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
         2020: The sole survivor of the journey to Jupiter ascends to the next level of humanity.
  */
 
-
 /*
   You are the sole survivor who will make the journey to Jupiter.
 
@@ -85,27 +84,39 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
-var isAlive;
-var name = "Mannuel-9000";
-var hasJetPack;
-var suitColor;
-var eyes;
-var eyeColor;
-var hairColor;
-var legs;
-var arms;
-var hands;
-var ears;
-var canWalk;
-var canRun;
-var canFly;
-var hasWeapon;
-var isInGoodMood;
+var isAlive = true;
+var name = "Peder-9000";
+var hasJetPack = false;
+var suitColor = "pink";
+var eyes = 2;
+var eyeColor = "blue";
+var hairColor = "brown";
+var legs = 2;
+var arms = 2;
+var hands = 2;
+var ears = 2;
+var canWalk = true;
+var canRun = true;
+var canFly = true;
+var hasWeapon = true;
+var isInGoodMood = false;
 
 console.log(".-.-. Booting .-.-.");
-console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon);
-
-
+console.log(
+  name,
+  isAlive,
+  hasJetPack,
+  eyes,
+  eyeColor,
+  hairColor,
+  legs,
+  arms,
+  hands,
+  ears,
+  canWalk,
+  canFly,
+  hasWeapon
+);
 
 /* 
  2. BROKEN SATELLITE::::::
@@ -116,31 +127,12 @@ console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, ha
 
 /* 
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
+  */
 
- console.log("JetPack is enabled!!! off I go outside to fix the satellite");
- console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
-
- */
-
-
-/*
- 3. METEOR SHOWER::::::
-    On your way to Jupiter you encounter a massive meteor shower that could damage the ship, you need to redirect the ship to a new safe location.
-    a. Get number of responses available to you in the responses array
-       - once you have the number, create a for loop too loop through the possible answers
-    b. using a for loop print out the chosen response 
-       using an if statement to check if your response is equal to the correct index of the array
-*/
-
-var responses = [
-  "Call basecamp and ask for assistance, but they are far away",
-  "Do nothing, just push through",
-  "initiate core thrusters, punch 180degrees into nav-dash and warp away from danger",
-  "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
-];
-
-// a.
-var numberOfResponses;
-console.log("number of responses available to me are:", );
-
-console.log("COMMAND:", );
+if (hasJetPack) {
+  console.log("go outside");
+} else {
+  console.log(
+    "JetPack NOT enabled, please enable jetPack before doing a space walk"
+  );
+}
