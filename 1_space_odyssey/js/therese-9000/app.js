@@ -149,7 +149,7 @@ var responses = [
 
 // write your code here, use the console log beneath
 
-for (var i = 0; i <= 3; i++) {
+for (var i = 0; i <= responses.length; i++) {
   if (i === 3) {
     console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
   }
