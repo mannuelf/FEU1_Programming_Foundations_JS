@@ -159,15 +159,13 @@ var responses = [
 
 // write your code here, use the console log beneath
 
-var nrOfResponses = responses.length;
-
-for (var i = 0; i <= nrOfResponses; i++) {
+for (var i = 0; i <= responses.length; i++) {
     if (responses[i] === responses[2]) {
         console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
-    } else {console.log("Ship has been kidnapped by aliens")}
+    } else {
+        console.log("Ship has been kidnapped by aliens")
+    }
 }
-
-
 
 
 
@@ -184,20 +182,21 @@ console.log(
 );
 
 // a.
-var ship = "enemy";
-var ammo = 100;
+var enemyCraft = "enemy";
+var bullets = 100;
 var photonlaser = true;
-//var ;
+var photonLaserEnabled = true;
 
-if (ship==="enemy", photonlaser ===true)
-console.log("photonLaserEnabled");
-for (ammo = 0; ammo <= 100; ammo++) {
-   if(ammo <= 99) {
-    console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
-} else {
+if (enemyCraft && photonlaser && photonLaserEnabled) {
+    if (bullets >= 100) {
+        for (var i = 0; i <= 100; i++) {
+            console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
+        } 
+    } else {
         console.log("\u{1F9E8} DEAD \u{1F9E8} ");
     }
 }
+
 
 /*
   If its an enemyCraft && photonLaser && photonLaserEnabled
