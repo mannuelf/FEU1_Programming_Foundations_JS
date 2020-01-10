@@ -143,6 +143,10 @@ console.log(
     "initiate core thrusters, punch 180degrees into dash-nav and warp away from danger",
     "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
   ];
+  var response = responses.Length;
+  for (var i = 0; i <= response; i++) {
+    console.log(response[i])
+  }
   
   // write your code here, use the console log beneath
   // console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
@@ -162,7 +166,7 @@ console.log(
   );
   
   // a.
-  var enemyCraft = "aproching";
+  var enemyCraft = "encroaching";
   var photonLaser = "enabled";
   var photonLaserEnabled = true;
 
@@ -177,10 +181,9 @@ console.log(
             console.log("\u{1F9E8} DEAD \u{1F9E8} ");
   */
 
- /*for(var bullets = 100; bullets <= 100; bullets ++) {
-    console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
- }  */
-var bullets = 100;
- while(bullets > 100) {
-  console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
- }
+ for(var bullets = 0; bullets < 100; bullets ++) {
+   console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
+  }
+  if( bullets == 0){
+    console.log("\u{1F9E8} DEAD \u{1F9E8} ");
+  }
