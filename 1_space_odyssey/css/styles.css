@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 body {
     background-color: #000;
     background-image: url("../img/cover_desktop.jpg");
@@ -17,18 +16,6 @@ h1 {
   margin: 50vh auto;
   font-size: 3em;
 }
-=======
-=======
->>>>>>> hani-9000
-body {
-    background-color: #000;
-    background-image: url("../img/cover_desktop.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    transition: fade ease-in;
-}
 
 .fade-in {
 	opacity: 1;
@@ -45,9 +32,3 @@ body {
 	100% {
 		opacity: 1;
 	}
-<<<<<<< HEAD
-}
->>>>>>> fixed
-=======
-}
->>>>>>> hani-9000

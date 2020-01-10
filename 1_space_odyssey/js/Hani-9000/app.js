@@ -145,8 +145,10 @@ console.log(
   ];
   var response = responses.Length;
   for (var i = 0; i <= response; i++) {
-    console.log(response[i])
+  if(responses[i] === responses[2]) {
+    console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
   }
+}
   
   // write your code here, use the console log beneath
   // console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
@@ -166,10 +168,20 @@ console.log(
   );
   
   // a.
-  var enemyCraft = "encroaching";
-  var photonLaser = "enabled";
+  var enemyCraft = true;
+  var photonLaser = true;
   var photonLaserEnabled = true;
+  var bullets = 100;
 
+  if( enemyCraft && photonLaser && photonLaserEnabled){
+    if ( bullets <= 100) {
+   for(var i = 0; i < 100; i ++) {
+     console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
+    }
+  } else{
+      console.log("\u{1F9E8} DEAD \u{1F9E8} ");
+      }
+    }
   
   
   /*
@@ -181,9 +193,3 @@ console.log(
             console.log("\u{1F9E8} DEAD \u{1F9E8} ");
   */
 
- for(var bullets = 0; bullets < 100; bullets ++) {
-   console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
-  }
-  if( bullets == 0){
-    console.log("\u{1F9E8} DEAD \u{1F9E8} ");
-  }
