@@ -94,10 +94,10 @@ var isInGoodMood = false;
 console.log(".-.-. Booting .-.-.");
 console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon);
 
-if(hasJetPack === true) {
-    console.log("The Jetpack is enabled, off you go");
+if (hasJetPack === true) {
+    console.log("JetPack is enabled!!! off I go outside to fix the satellite");
     } else {
-    console.log("the jetpack is disabled, please enable it before you go out");
+    console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
 }
 /*
  2. BROKEN SATELLITE::::::
@@ -134,7 +134,7 @@ console.log(
   ];
   var response = responses.Length;
   for (var i = 0; i <= response; i++) {
-  if(responses[i] === responses[2]) {
+  if (responses[i] === responses[2]) {
     console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
   }
 }
@@ -162,12 +162,12 @@ console.log(
   var photonLaserEnabled = true;
   var bullets = 100;
 
-  if( enemyCraft && photonLaser && photonLaserEnabled){
+  if ( enemyCraft && photonLaser && photonLaserEnabled){
     if ( bullets <= 100) {
-   for(var i = 0; i < 100; i ++) {
+   for (var i = 0; i < 100; i ++) {
      console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
     }
-  } else{
+  } else {
       console.log("\u{1F9E8} DEAD \u{1F9E8} ");
       }
     }
