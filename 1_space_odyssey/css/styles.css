@@ -1,53 +1,34 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 body {
-    background-color: #000;
-    background-image: url("../img/cover_desktop.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    transition: fade ease-in;
+  background-color: #000;
+  background-image: url("../img/cover_desktop.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  transition: fade ease-in;
 }
 
 h1 {
-  font-family: 'Ubuntu', sans-serif;
-  color: #FFF;
-  text-align: center;
-  margin: 50vh auto;
-  font-size: 3em;
-}
-=======
-=======
->>>>>>> hani-9000
-body {
-    background-color: #000;
-    background-image: url("../img/cover_desktop.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    transition: fade ease-in;
+font-family: 'Ubuntu', sans-serif;
+color: #FFF;
+text-align: center;
+margin: 50vh auto;
+font-size: 3em;
 }
 
 .fade-in {
-	opacity: 1;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 2s;
+opacity: 1;
+animation-name: fadeInOpacity;
+animation-iteration-count: 1;
+animation-timing-function: ease-in;
+animation-duration: 2s;
 }
 
 @keyframes fadeInOpacity {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-<<<<<<< HEAD
+0% {
+  opacity: 0;
 }
->>>>>>> fixed
-=======
+100% {
+  opacity: 1;
 }
->>>>>>> hani-9000
