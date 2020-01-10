@@ -155,8 +155,6 @@ var responses = [
 // write your code here, use the console log beneath
 // console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
 
-
-
 /*
  4. ALIENS SPACE CRAFT ENCROACHING::::::
     Alien craft approaches its an enemy for sure...you need to shoot it down!!
