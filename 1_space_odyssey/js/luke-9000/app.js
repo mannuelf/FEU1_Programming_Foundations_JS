@@ -161,9 +161,8 @@ var responses = [
 
 for (var i = 0; i <= responses.length; i++) {
     if (responses[i] === responses[2]) {
+        console.log(responses[i])
         console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
-    } else {
-        console.log("Ship has been kidnapped by aliens")
     }
 }
 
@@ -182,7 +181,7 @@ console.log(
 );
 
 // a.
-var enemyCraft = "enemy";
+var enemyCraft = true;
 var bullets = 100;
 var photonlaser = true;
 var photonLaserEnabled = true;
