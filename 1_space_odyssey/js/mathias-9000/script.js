@@ -17,8 +17,7 @@ var isInGoodMood = true;
 
 if (hasJetPack){
     console.log("jetpack is on")
-}
-else{
+} else {
     console.log("jetpack is not on")
 }
 
