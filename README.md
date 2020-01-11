@@ -16,3 +16,11 @@ Learning how to program.
 ![space](./1_space_odyssey/img/space_odyssey.jpg)
 
 photo credit: https://www.warnerbros.com/movies/2001-space-odyssey/
+
+# How to
+
+Best way to play split your screen in two, have the browser console open on the right so that you can see the console output as you code (Don't code blind). 
+
+Also in the `index.html` page only include `your` javascript file
+
+![space](./1_space_odyssey/img/howto.png)
