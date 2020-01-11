@@ -177,3 +177,18 @@ for (var i = 0; i <= numResponses; i++) {
 console.log(
   "\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::"
 );
+
+var enemyCraft = true;
+var photonLaser = true;
+var photonLaserEnabled = true;
+var bullets = 101;
+
+if (enemyCraft && photonLaser && photonLaserEnabled) {
+  if (bullets >= 100) {
+    for(var i = 0; i <= 100; i++ ) {
+      console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
+    }
+  } else {
+    console.log("\u{1F9E8} DEAD \u{1F9E8} ");
+  }
+}
