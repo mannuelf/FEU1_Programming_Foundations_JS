@@ -84,22 +84,22 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
-var isAlive = true;
-var name = "Doctor John";
-var hasJetPack = true;
-var suitColor = "white and red";
-var eyes = 2;
-var eyeColor = "blue";
-var hairColor = "pink";
-var legs = 2;
-var arms = 2;
-var hands = 2;
-var ears = 2;
-var canWalk = true;
-var canRun = true;
-var canFly = false;
-var hasWeapon = false;
-var isInGoodMood = false;
+var isAlive;
+var name;
+var hasJetPack;
+var suitColor;
+var eyes;
+var eyeColor;
+var hairColor;
+var legs;
+var arms;
+var hands;
+var ears;
+var canWalk;
+var canRun;
+var canFly;
+var hasWeapon;
+var isInGoodMood;
 
 console.log("\u{1F916} .-.-. Booting .-.-.");
 console.log(
@@ -130,14 +130,10 @@ console.log(
 
 /*
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
-*/
 
-if (hasJetPack === true ) {
-  console.log("JetPack is enabled!!! off I go outside to fix the satellite");
-} else {
-  console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
-}
- 
+ console.log("JetPack is enabled!!! off I go outside to fix the satellite");
+ console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
+ */
 
 /*
  3. METEOR SHOWER::::::
@@ -156,23 +152,8 @@ var responses = [
   "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
 ];
 
-
 // write your code here, use the console log beneath
-
-var nrOfResponses = responses.Length;
-
-for (var Nr = 0; Nr <= nrOfResponses; Nr++) {
-
-  if (responses[Nr] === 2) {
-
-    console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
- 
-  }
-}
-
-
-
-
+// console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
 
 /*
  4. ALIENS SPACE CRAFT ENCROACHING::::::
