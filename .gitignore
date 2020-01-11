@@ -1,4 +1,7 @@
 .DS_Store
+.vscode
+.idea
+1_space_odyssey/index.html
 
 # Logs
 logs

@@ -86,26 +86,31 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
 var isAlive = true;
-var name = "kaasen9000";
+var name = "Camilla-9000";
 var hasJetPack = true;
 var suitColor = "white";
-var eyes = 4;
+var eyes = true;
 var eyeColor = "green";
-var hairColor = "svart";
-var legs = 3;
-var arms = 4;
-var hands = 4;
+var hairColor = "yellow";
+var legs = 2;
+var arms = 2;
+var hands = 2;
 var ears = 2;
-
-var canWalk = false;
-var canRun = false;
+var canWalk = true;
+var canRun = true;
 var canFly = true;
-var hasWeapon = true;
-var isInGoodMood = true;
-
+var hasWeapon = false;
+var isInGoodMood = false;
 
 console.log(".-.-. Booting .-.-.");
-console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon);
+console.log(name, suitColor, isInGoodMood, canRun, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon);
+
+
+if (hasJetPack) {
+  console.log("JetPack is enabled!!")
+} else if (hasJetPack) {
+  console.log("JetPack NOT enabled, please enable jetPack before doing a space walk")
+}
 
 
 
@@ -115,14 +120,6 @@ console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, ha
     a) write an if condition checking if the jet pack is enabled, if true the droid can go outside if false the droid
        cannot go outside, console log the correct log based on that condition.
 */
-
-
-if (hasJetPack) {
-    console.log("JetPack is enabled!!! off I go outside to fix the satellite")
-} else {
-    console.log("JetPack NOT enabled, please enable jetPack before doing a space walk")
-}
-
 
 /*
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
@@ -138,31 +135,26 @@ if (hasJetPack) {
       create an if condition in your loop to print only 1 response using a comparison operator.
 */
 console.log(
-    "\u{1F327} METEOR SHOWER::::::"
+  "\u{1F327} METEOR SHOWER::::::"
 );
 
 var responses = [
-    "Call basecamp and ask for assistance, but they are far away",
-    "Do nothing, just push through",
-    "initiate core thrusters, punch 180degrees into dash-nav and warp away from danger",
-    "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
+  "Call basecamp and ask for assistance, but they are far away",
+  "Do nothing, just push through",
+  "initiate core thrusters, punch 180degrees into dash-nav and warp away from danger",
+  "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
 ];
+
 // write your code here, use the console log beneath
-
-
-
-
-for (var i = 0; i < responses.length; i++) {
-    if (responses[i] === "initiate core thrusters, punch 180degrees into dash-nav and warp away from danger") {
-        console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
-    }
-}
-
-
-
 // console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
 
+var numberOfResponses = responses.length;
 
+for (var i = 0; i <= numberOfResponses; i++) {
+  if (responses[i] === numberOfResponses[2]) {
+    console.log(responses[2] + " " + "\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
+  }
+}
 
 /*
  4. ALIENS SPACE CRAFT ENCROACHING::::::
@@ -173,7 +165,7 @@ for (var i = 0; i < responses.length; i++) {
     b)
 */
 console.log(
-    "\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::"
+  "\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::"
 );
 
 // a.
@@ -181,6 +173,17 @@ var enemyCraft = true;
 var photonLaser = true;
 var photonLaserEnabled = true;
 var bullets = 100;
+
+
+if (enemyCraft && photonLaser && photonLaserEnabled === true) {
+  if (bullets >= 100) {
+    for (var i = 0; i < 100; i++) {
+      console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
+    }
+  } else {
+    console.log("\u{1F9E8} DEAD \u{1F9E8} ");
+  }
+}
 
 /*
   If its an enemyCraft && photonLaser && photonLaserEnabled
@@ -190,13 +193,3 @@ var bullets = 100;
         ELSE
           console.log("\u{1F9E8} DEAD \u{1F9E8} ");
 */
-
-if (enemyCraft && photonLaser && photonLaserEnabled); {
-    if (bullets >= 100) {
-        for (var i = 0; i < 100; i++) {
-            console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
-        }
-    } else {
-        console.log("\u{1F9E8} DEAD \u{1F9E8} ");
-    }
-}
