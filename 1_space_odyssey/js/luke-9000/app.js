@@ -44,7 +44,6 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
         2020: The sole survivor of the journey to Jupiter ascends to the next level of humanity.
  */
 
-
 /*
   You are the sole survivor who will make the journey to Jupiter.
 
@@ -86,25 +85,38 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
 var isAlive = true;
-var name = "SAM-9000";
+var name = "Doctor John";
 var hasJetPack = true;
-var suitColor = "white";
-var eyes = 4;
-var eyeColor = "green";
-var hairColor = "black";
-var legs = 3;
-var arms = 4;
-var hands = 4;
+var suitColor = "white and red";
+var eyes = 2;
+var eyeColor = "blue";
+var hairColor = "pink";
+var legs = 2;
+var arms = 2;
+var hands = 2;
 var ears = 2;
-var canWalk = false;
-var canRun = false;
-var canFly = true;
-var hasWeapon = true;
-var isInGoodMood = true;
+var canWalk = true;
+var canRun = true;
+var canFly = false;
+var hasWeapon = false;
+var isInGoodMood = false;
 
-console.log(".-.-. Booting .-.-.");
-console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon);
-
+console.log("\u{1F916} .-.-. Booting .-.-.");
+console.log(
+    name,
+    isAlive,
+    hasJetPack,
+    eyes,
+    eyeColor,
+    hairColor,
+    legs,
+    arms,
+    hands,
+    ears,
+    canWalk,
+    canFly,
+    hasWeapon
+);
 
 /*
  2. BROKEN SATELLITE::::::
@@ -112,21 +124,20 @@ console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, ha
     a) write an if condition checking if the jet pack is enabled, if true the droid can go outside if false the droid
        cannot go outside, console log the correct log based on that condition.
 */
-
-if (hasJetPack) {
-  console.log("JetPack is enabled!!! off I go outside to fix the satellite");
-} else {
-  console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
-}
-
+console.log(
+    "\u{1F6F0} BROKEN SATELLITE::::::"
+);
 
 /*
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
+*/
 
- console.log("JetPack is enabled!!! off I go outside to fix the satellite");
- console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
+if (hasJetPack === true) {
+    console.log("JetPack is enabled!!! off I go outside to fix the satellite");
+} else {
+    console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
+}
 
- */
 
 /*
  3. METEOR SHOWER::::::
@@ -135,42 +146,56 @@ if (hasJetPack) {
       create an if condition in your loop to print only 1 response using a comparison operator.
 */
 console.log(
-  "\u{1F327} METEOR SHOWER::::::"
+    "\u{1F327} METEOR SHOWER::::::"
 );
 
 var responses = [
-  "Call basecamp and ask for assistance, but they are far away",
-  "Do nothing, just push through",
-  "initiate core thrusters, punch 180degrees into dash-nav and warp away from danger",
-  "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
+    "Call basecamp and ask for assistance, but they are far away",
+    "Do nothing, just push through",
+    "initiate core thrusters, punch 180degrees into dash-nav and warp away from danger",
+    "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
 ];
 
-// write your code here, use the console log beneath
-// console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
 
-for (var count = 0; count < responses.length; count++) {
-  if (responses[count] === responses[2]) {
-    console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
-  }
+// write your code here, use the console log beneath
+
+for (var i = 0; i <= responses.length; i++) {
+    if (responses[i] === responses[2]) {
+        console.log(responses[i])
+        console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
+    }
 }
+
+
 
 /*
  4. ALIENS SPACE CRAFT ENCROACHING::::::
     Alien craft approaches its an enemy for sure...you need to shoot it down!!
-    a) convert the pseudoscope to real code
+    a) convert the pseudoscode to real code
        create the required variables below and fill in the correct values and dataTypes to make
        the if statements pass so that photonLaser fires pew pew pew.
     b)
 */
 console.log(
-  "\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::"
+    "\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::"
 );
 
 // a.
 var enemyCraft = true;
-var photonLaser = true;
+var bullets = 100;
+var photonlaser = true;
 var photonLaserEnabled = true;
-var bullets = 800;
+
+if (enemyCraft && photonlaser && photonLaserEnabled) {
+    if (bullets >= 100) {
+        for (var i = 0; i <= 100; i++) {
+            console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
+        } 
+    } else {
+        console.log("\u{1F9E8} DEAD \u{1F9E8} ");
+    }
+}
+
 
 /*
   If its an enemyCraft && photonLaser && photonLaserEnabled
@@ -180,13 +205,3 @@ var bullets = 800;
         ELSE
           console.log("\u{1F9E8} DEAD \u{1F9E8} ");
 */
-
-if(enemyCraft && photonLaser && photonLaserEnabled) {
-  if(bullets >= 100) {
-    for(var i = 1; i <= 100; i++) {
-      console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
-    }
-  } else {
-    console.log("\u{1F9E8} DEAD \u{1F9E8} ");
-  }
-}

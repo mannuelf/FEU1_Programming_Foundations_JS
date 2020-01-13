@@ -161,7 +161,6 @@ var responses = [
     a) convert the pseudoscope to real code
        create the required variables below and fill in the correct values and dataTypes to make
        the if statements pass so that photonLaser fires pew pew pew.
-    b)
 */
 console.log(
   "\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::"
