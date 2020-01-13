@@ -85,22 +85,22 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
-var isAlive;
-var name = "Mannuel-9000";
-var hasJetPack;
-var suitColor;
-var eyes;
-var eyeColor;
-var hairColor;
-var legs;
-var arms;
-var hands;
-var ears;
-var canWalk;
-var canRun;
-var canFly;
-var hasWeapon;
-var isInGoodMood;
+var isAlive = true;
+var name = "Nejat-9000";
+var hasJetPack = true;
+var suitColor = "blue";
+var eyes = 2;
+var eyeColor = "brown";
+var hairColor = "black";
+var legs = 2;
+var arms = 2;
+var hands = 2;
+var ears = 2;
+var canWalk = true;
+var canRun = true;
+var canFly = false;
+var hasWeapon = true;
+var isInGoodMood = true;
 
 console.log(".-.-. Booting .-.-.");
 console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon);
@@ -113,6 +113,12 @@ console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, ha
     a) write an if condition checking if the jet pack is enabled, if true the droid can go outside if false the droid 
        cannot go outside, console log the correct log based on that condition. 
 */
+
+if(hasJetPack){
+  console.logo("JetPack is enabled!!! off I go outside to fix the satellite")
+}else{
+  console.logo("JetPack NOT enabled, please enable jetPack before doing a space walk")
+}
 
 /* 
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
