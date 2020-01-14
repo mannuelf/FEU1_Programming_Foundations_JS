@@ -1,14 +1,14 @@
-var isAlive = true;
-var name = "Bartek-9000";
+var isAlive;
+var name = "Mannuel-9000";
 var hasJetPack = true;
-var suitColor = "gold";
-var eyes = 4;
-var eyeColor = "skyblue";
-var hairColor = null;
-var legs = 3;
+var suitColor = "blue";
+var eyes = 5;
+var eyeColor = "red";
+var hairColor = "black";
+var legs = 4;
 var arms = 2;
-var hands = 4;
-var ears = 1;
+var hands = 2;
+var ears = 2;
 var canWalk = true;
 var canRun = true;
 var canFly = true;
@@ -32,30 +32,16 @@ console.log(
   hasWeapon
 );
 
-/*
- 2. BROKEN SATELLITE::::::
-    You need to send the droid out on a space walk to fix the satellite, with out it you can't communicate with earth.
-    a) write an if condition checking if the jet pack is enabled, if true the droid can go outside if false the droid
-       cannot go outside, console log the correct log based on that condition.
-*/
-
-console.log("\u{1F6F0} BROKEN SATELLITE::::::");
-/*
- uncomment these console logs and write your if else statement and use them to console log out the correct statement
-
- console.log("JetPack is enabled!!! off I go outside to fix the satellite");
- console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
-
- */
-
-hasJetPack
-  ? console.log("JetPack is enabled!!! off I go outside to fix the satellite")
-  : console.log(
-      "JetPack NOT enabled, please enable jetPack before doing a space walk"
-    );
+if (hasJetPack) {
+  console.log("JetPack is enabled!!! off I go outside to fix the satellite");
+} else {
+  console.log(
+    "JetPack NOT enabled, please enable jetPack before doing a space walk"
+  );
+}
 
 /*
- 3. METEOR SHOWER::::::
+3. METEOR SHOWER::::::
     On your way to Jupiter you encounter a massive meteor shower that could damage the ship, you need to redirect the ship to a new safe location.
     a) Using a for loop iterate through the responses array and choose the appropriate response to get out of danger.
       create an if condition in your loop to print only 1 response using a comparison operator.
@@ -69,13 +55,14 @@ var responses = [
   "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
 ];
 
-for (var i = 0; i < responses.length; i++) {
-  if (responses[i].includes("away from danger")) {
+for (var count = 0; count <= responses.length; count++) {
+  if (responses[count] === responses[2]) {
     console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
   }
 }
 
 // write your code here, use the console log beneath
+// console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
 
 /*
  4. ALIENS SPACE CRAFT ENCROACHING::::::
@@ -91,17 +78,19 @@ console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
 var enemyCraft = true;
 var photonLaser = true;
 var photonLaserEnabled = true;
+
 var bullets = 100;
 
 if (enemyCraft && photonLaser && photonLaserEnabled) {
   if (bullets >= 100) {
-    for (let i = 0; i < 100; i++) {
+    for (var count = 0; count < 100; count++) {
       console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
     }
   } else {
-    console.log("\u{1F9E8} DEAD \u{1F9E8} ");
+    console.log("\u{1F9E8} Run away on foot... in space \u{1F9E8} ");
   }
 }
+
 /*
   If its an enemyCraft && photonLaser && photonLaserEnabled
       IF bullets is greater than or equal to 100
