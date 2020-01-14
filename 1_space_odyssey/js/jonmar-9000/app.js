@@ -76,3 +76,5 @@ if (enemyCraft && photonLaser && photonLaserEnabled) {
     console.log(lose);
   }
 }
+
+// 5th Exercise
