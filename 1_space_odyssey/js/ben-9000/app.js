@@ -141,7 +141,7 @@ var lunarRadar = {
 };
 
 
-lunarRadar.isEnabled = false;
+lunarRadar.isEnabled = TRUE;
 lunarRadar.long = true;
 lunarRadar.lat = true;
 lunarRadar.approachSpeed = 600;
@@ -170,12 +170,9 @@ if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
     console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
   } else if (lunarRadar.approachSpeed > 600) {
     console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
-  } else if (approachSpeed <= 100) {
-    console.log(
-      "\u{1F47D} hmmm need a bit more heat " +
-        name +
-        " lets increase pitch and we should have a smooth landing"
-    );
+  } else if (lunarRadar.approachSpeed <= 100) {
+    console.log("\u{1F47D} hmmm need a bit more heat " + name +
+        " lets increase pitch and we should have a smooth landing");
   } else {
     console.log("Please enter an approach speed");
   }
@@ -213,3 +210,61 @@ ELSE
 */
 
 // Level 2 convert it to a switch statement.
+// switch 
+
+
+/*
+switch(expression) {
+  case "":
+    console.log("hello")
+    break;
+  case"":
+  console.log(" is");
+  break;
+  default:
+    console.log("something")
+}*/
+
+
+
+switch(true) {
+  case lunarRadar.approachSpeed >= 200 && lunarRadar.approachSpeed <= 299:
+    console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get heck outta here!")
+  break;
+  case lunarRadar.approachSpeed > 300:
+    console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+  break;
+  case lunarRadar.approachSpeed > 400:
+    console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+  break;
+  case lunarRadar.approachSpeed > 500:
+     console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+    break;
+  case lunarRadar.approachSpeed > 600:
+    console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+    break;
+  case lunarRadar.approachSpeed <= 100:
+     console.log("\u{1F47D} hmmm need a bit more heat " + name + " lets increase pitch and we should have a smooth landing");
+     break;
+  default:
+    console.log('Please enter an approach speed');
+
+}
+  
+   
+
+  
+
+
+    
+
+
+
+
+
+
+      
+
+
+
+
