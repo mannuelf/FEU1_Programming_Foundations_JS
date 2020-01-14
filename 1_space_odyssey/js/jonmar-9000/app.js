@@ -107,17 +107,13 @@ lunarRadar.approachSpeed = 500;
 //       name +
 //       " we are making our descent, now entering approach speed"
 //   );
-//   if (lunarRadar.approachSpeed >= 600) {
-//     console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
-//   } else if (lunarRadar.approachSpeed >= 500) {
-//     console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
-//   } else if (lunarRadar.approachSpeed >= 400) {
-//     console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+//   if (lunarRadar.approachSpeed >= 400) {
+//     console.log(`\u{1F627} Coming in way too hot ${name} decrease pitch!`);
 //   } else if (lunarRadar.approachSpeed >= 300) {
-//     console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+//     console.log("\u{1F627} Coming in hot " + name + " decrease pitch!");
 //   } else if (lunarRadar.approachSpeed >= 200) {
 //     console.log(
-//       "\u{269B} well done " +
+//       "\u{269B} Well done " +
 //         name +
 //         " we have touched down safely. Lets get some samples and get heck outta here!"
 //     );
