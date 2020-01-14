@@ -249,7 +249,7 @@ ELSE
 if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long){
   console.log("\u{1F91F} looking good " + name + " we are making our descent, now entering approach speed");
 
-  if (lunarRadar.approachSpeed <= 200 && lunarRadar.approachSpeed <= 299){
+  if (lunarRadar.approachSpeed <= 200 && lunarRadar.approachSpeed >= 299){
   console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get heck outta here!");
   } else if(lunarRadar.approachSpeed <= 300){
   console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
