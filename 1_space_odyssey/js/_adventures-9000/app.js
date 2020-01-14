@@ -118,7 +118,6 @@ console.log(
   hasWeapon
 );
 
-
 if (hasJetPack) {
   console.log("JetPack is enabled!!! off I go outside to fix the satellite");
 } else {
@@ -133,9 +132,7 @@ if (hasJetPack) {
     a) write an if condition checking if the jet pack is enabled, if true the droid can go outside if false the droid
        cannot go outside, console log the correct log based on that condition.
 */
-console.log(
-  "\u{1F6F0} BROKEN SATELLITE::::::"
-);
+console.log("\u{1F6F0} BROKEN SATELLITE::::::");
 
 /*
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
@@ -150,9 +147,7 @@ console.log(
     a) Using a for loop iterate through the responses array and choose the appropriate response to get out of danger.
       create an if condition in your loop to print only 1 response using a comparison operator.
 */
-console.log(
-  "\u{1F327} METEOR SHOWER::::::"
-);
+console.log("\u{1F327} METEOR SHOWER::::::");
 
 var responses = [
   "Call basecamp and ask for assistance, but they are far away",
@@ -171,9 +166,7 @@ var responses = [
        create the required variables below and fill in the correct values and dataTypes to make
        the if statements pass so that photonLaser fires pew pew pew.
 */
-console.log(
-  "\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::"
-);
+console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
 
 // a.
 var ___;
@@ -190,7 +183,6 @@ var ___;
           console.log("\u{1F9E8} DEAD \u{1F9E8} ");
 */
 
-
 /*
  5. LUNAR LANDING:::::
     We got word of an extra terrestrial sighting on the moon... we have been tasked to land on the moon
@@ -206,9 +198,7 @@ var ___;
 
     tip: varName.keyName (this is how to extract a value from an object)
 */
-console.log(
-  "\u{1F311} LUNAR LANDING:::::"
-);
+console.log("\u{1F311} LUNAR LANDING:::::");
 
 // start coding here
 
@@ -216,8 +206,8 @@ var lunarRadar = {
   isEnabled: undefined,
   long: undefined,
   lat: undefined,
-  approachSpeed: undefined, // "ft per minute"
-}
+  approachSpeed: undefined // "ft per minute"
+};
 
 // Level 1 convert this psuedocode to functioning code.
 

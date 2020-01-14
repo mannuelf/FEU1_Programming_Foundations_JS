@@ -1,5 +1,6 @@
 // 1st Exercise
 
+let name = "Jonmar-9000";
 const droid = {
   name: "Jonmar-9000",
   isAlive: true,
@@ -78,3 +79,108 @@ if (enemyCraft && photonLaser && photonLaserEnabled) {
 }
 
 // 5th Exercise
+
+console.log("\u{1F311} LUNAR LANDING:::::");
+
+var lunarRadar = {
+  isEnabled: undefined,
+  long: undefined,
+  lat: undefined,
+  approachSpeed: undefined // "ft per minute"
+};
+
+lunarRadar.isEnabled = true;
+lunarRadar.long = 200;
+lunarRadar.lat = 300;
+lunarRadar.approachSpeed = 500;
+
+// if (
+//   lunarRadar.isEnabled &&
+//   lunarRadar.lat !== undefined &&
+//   lunarRadar.long !== undefined
+// ) {
+//   console.log(
+//     "\u{1F91F} looking good " +
+//       name +
+//       " we are making our descent, now entering approach speed"
+//   );
+//   if (lunarRadar.approachSpeed >= 600) {
+//     console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+//   } else if (lunarRadar.approachSpeed >= 500) {
+//     console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+//   } else if (lunarRadar.approachSpeed >= 400) {
+//     console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+//   } else if (lunarRadar.approachSpeed >= 300) {
+//     console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+//   } else if (lunarRadar.approachSpeed >= 200) {
+//     console.log(
+//       "\u{269B} well done " +
+//         name +
+//         " we have touched down safely. Lets get some samples and get heck outta here!"
+//     );
+//   } else if (lunarRadar.approachSpeed < 200) {
+//     console.log(
+//       "\u{1F47D} hmmm need a bit more heat " +
+//         name +
+//         " lets increase pitch and we should have a smooth landing"
+//     );
+//   } else {
+//     console.log("Please enter an approach speed");
+//   }
+// } else {
+//   console.log(
+//     "\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " +
+//       name +
+//       " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance."
+//   );
+// }
+
+if (
+  lunarRadar.isEnabled &&
+  lunarRadar.lat !== undefined &&
+  lunarRadar.long !== undefined
+) {
+  console.log(
+    "\u{1F91F} looking good " +
+      name +
+      " we are making our descent, now entering approach speed"
+  );
+
+  switch (true) {
+    case lunarRadar.approachSpeed > 300:
+      console.log(
+        "\u{1F627} coming in way too hot " + name + " decrease pitch!"
+      );
+      break;
+
+    case lunarRadar.approachSpeed > 200:
+      console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+      break;
+
+    case lunarRadar.approachSpeed > 100:
+      console.log(
+        "\u{269B} well done " +
+          name +
+          " we have touched down safely. Lets get some samples and get heck outta here!"
+      );
+      break;
+
+    case lunarRadar.approachSpeed <= 100:
+      console.log(
+        "\u{1F47D} hmmm need a bit more heat " +
+          name +
+          " lets increase pitch and we should have a smooth landing"
+      );
+      break;
+
+    default:
+      console.log("Please enter an approach speed");
+      break;
+  }
+} else {
+  console.log(
+    "\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " +
+      name +
+      " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance."
+  );
+}
