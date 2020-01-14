@@ -93,7 +93,6 @@ if (enemyCraft && photonLaser && photonLaserEnabled) {
     console.log("\u{1F9E8} Run away on foot... in space \u{1F9E8} ");
   }
 }
-
 /*
   If its an enemyCraft && photonLaser && photonLaserEnabled
       IF bullets is greater than or equal to 100
@@ -102,17 +101,6 @@ if (enemyCraft && photonLaser && photonLaserEnabled) {
         ELSE
           console.log("\u{1F9E8} DEAD \u{1F9E8} ");
 */
-
-
-
-
-
-
-
-
-
-
-
 /*
  5. LUNAR LANDING:::::
     We got word of an extra terrestrial sighting on the moon... we have been tasked to land on the moon
