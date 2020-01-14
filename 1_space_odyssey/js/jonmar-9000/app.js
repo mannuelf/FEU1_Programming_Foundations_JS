@@ -1,6 +1,5 @@
 // 1st Exercise
 
-let name = "Jonmar-9000";
 const droid = {
   name: "Jonmar-9000",
   isAlive: true,
@@ -25,6 +24,8 @@ const droid = {
     isInGoodMood: true
   }
 };
+
+let name = droid.name;
 
 // 2nd Exercise
 
@@ -94,6 +95,8 @@ lunarRadar.long = 200;
 lunarRadar.lat = 300;
 lunarRadar.approachSpeed = 500;
 
+// 5th Exercise -- 1st part (if statement)
+
 // if (
 //   lunarRadar.isEnabled &&
 //   lunarRadar.lat !== undefined &&
@@ -134,6 +137,8 @@ lunarRadar.approachSpeed = 500;
 //       " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance."
 //   );
 // }
+
+// 5th Exercise -- 2nd part (switch statement)
 
 if (
   lunarRadar.isEnabled &&
