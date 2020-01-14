@@ -86,7 +86,6 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
 */
 var isAlive;
 var name;
-var hasJetPack;
 var suitColor;
 var eyes;
 var eyeColor;
@@ -100,6 +99,7 @@ var canRun;
 var canFly;
 var hasWeapon;
 var isInGoodMood;
+var hasJetPack;
 
 console.log("\u{1F916} .-.-. Booting .-.-.");
 console.log(
@@ -117,6 +117,15 @@ console.log(
   canFly,
   hasWeapon
 );
+
+
+if (hasJetPack) {
+  console.log("JetPack is enabled!!! off I go outside to fix the satellite");
+} else {
+  console.log(
+    "\u{1F691} JetPack NOT enabled, please enable jetPack before doing a space walk"
+  );
+}
 
 /*
  2. BROKEN SATELLITE::::::
@@ -180,3 +189,28 @@ var ___;
         ELSE
           console.log("\u{1F9E8} DEAD \u{1F9E8} ");
 */
+
+/*
+ 5. LUNAR LANDING:::::
+    Our first destination is the moon we need  investigate a extra terestrial sighting...
+    we have aboard a NASA lunar module https://en.wikipedia.org/wiki/Apollo_Lunar_Module
+    This module will allow to land safely on the moon.
+
+    Ensure the correct co-ordinates are entered into the
+    navigation system. It's all automated we just have to ensure that the values input are not undefined.
+*/
+console.log(
+  "\u{1F311} LUNAR LANDING:::::"
+);
+
+var lunarLandingCoOrdinates = {
+  long: undefined,
+  lat: undefined,
+  decentSpeed: undefined,
+}
+
+if (lunarLandingCoOrdinates) {
+  if (lunarLandingCoOrdinates.long !== undefined && lunarLandingCoOrdinates.lat !== undefined) {
+    console.log("looking good captain" + name + "we are making our desent")
+  }
+}
