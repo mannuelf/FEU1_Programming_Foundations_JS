@@ -133,9 +133,7 @@ if (hasJetPack) {
     a) write an if condition checking if the jet pack is enabled, if true the droid can go outside if false the droid
        cannot go outside, console log the correct log based on that condition.
 */
-console.log(
-  "\u{1F6F0} BROKEN SATELLITE::::::"
-);
+console.log("\u{1F6F0} BROKEN SATELLITE::::::");
 
 /*
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
@@ -150,9 +148,7 @@ console.log(
     a) Using a for loop iterate through the responses array and choose the appropriate response to get out of danger.
       create an if condition in your loop to print only 1 response using a comparison operator.
 */
-console.log(
-  "\u{1F327} METEOR SHOWER::::::"
-);
+console.log("\u{1F327} METEOR SHOWER::::::");
 
 var responses = [
   "Call basecamp and ask for assistance, but they are far away",
@@ -160,6 +156,12 @@ var responses = [
   "initiate core thrusters, punch 180degrees into dash-nav and warp away from danger",
   "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
 ];
+
+for (var i = 0; i <= responses.length; i++) {
+  if (responses[i] === responses[3]) {
+    console.log(responses[i]);
+  }
+}
 
 // write your code here, use the console log beneath
 // console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
@@ -171,15 +173,29 @@ var responses = [
        create the required variables below and fill in the correct values and dataTypes to make
        the if statements pass so that photonLaser fires pew pew pew.
 */
-console.log(
-  "\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::"
-);
+console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
+
+var orderHasShipped = true;
+
+//honestly have no clue of what i did her
 
 // a.
-var ___;
-var ___;
-var ___;
-var ___;
+var enemyCraft = false;
+var photonLaser = true;
+var photonLaserEnabled = true;
+var bullets = 100;
+
+if (enemyCraft && photonLaser && photonLaserEnabled) {
+  if (bullets >= 100) {
+    for (var i = 0; i <= 100; i++) {
+      console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
+    }
+  } else {
+    console.log("\u{1F9E8} DEAD \u{1F9E8}");
+  }
+} else {
+  console.log("do your homework")
+}
 
 /*
   If its an enemyCraft && photonLaser && photonLaserEnabled
