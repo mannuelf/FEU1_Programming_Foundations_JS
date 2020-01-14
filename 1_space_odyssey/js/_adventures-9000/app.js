@@ -118,7 +118,6 @@ console.log(
   hasWeapon
 );
 
-
 if (hasJetPack) {
   console.log("JetPack is enabled!!! off I go outside to fix the satellite");
 } else {
@@ -206,7 +205,6 @@ if (enemyCraft && photonLaser && photonLaserEnabled) {
           console.log("\u{1F9E8} DEAD \u{1F9E8} ");
 */
 
-
 /*
  5. LUNAR LANDING:::::
     We got word of an extra terrestrial sighting on the moon... we have been tasked to land on the moon
@@ -222,9 +220,7 @@ if (enemyCraft && photonLaser && photonLaserEnabled) {
 
     tip: varName.keyName (this is how to extract a value from an object)
 */
-console.log(
-  "\u{1F311} LUNAR LANDING:::::"
-);
+console.log("\u{1F311} LUNAR LANDING:::::");
 
 // start coding here
 
@@ -232,8 +228,8 @@ var lunarRadar = {
   isEnabled: undefined,
   long: undefined,
   lat: undefined,
-  approachSpeed: undefined, // "ft per minute"
-}
+  approachSpeed: undefined // "ft per minute"
+};
 
 // Level 1 convert this psuedocode to functioning code.
 
