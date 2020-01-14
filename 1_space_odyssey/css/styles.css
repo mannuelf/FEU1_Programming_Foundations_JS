@@ -1,17 +1,31 @@
 body {
     background-color: #000;
-    background-image: url("../img/cover_desktop.jpg");
+    height: 100%;
+    width: 100%;
+    font-family: 'Ubuntu', sans-serif;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
-    transition: fade ease-in;
+}
+
+.viewport-window__default {
+  background-image: url("../img/cover_desktop.jpg");
+}
+
+.viewport-window__lunar-landing {
+  background-image: url("../img/lunar-landing.jpg");
 }
 
 h1 {
-  font-family: 'Ubuntu', sans-serif;
   color: #FFF;
   text-align: center;
   margin: 50vh auto;
   font-size: 3em;
+  z-index: 10;
+}
+
+h1 span {
+  font-size: .8em;
+  color: yellow;
+  display: block;
 }
