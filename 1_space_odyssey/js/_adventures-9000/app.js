@@ -255,3 +255,66 @@ ELSE
 */
 
 // Level 2 convert it to a switch statement.
+
+
+
+/*
+ 6. PLANET INFO-DASH:::::
+  Given this array of planets print out the Description, Surface temperature and Mass in the console logs bellow
+*/
+console.log("\u{1F319} PLANET INFO-DASH:::::");
+
+var planets = [
+  [ "MERCURY",
+    [
+      "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+      "-173 to 427°C",
+      "330,104,000,000,000 billion kg (0.055 x Earth)"
+    ],
+  ],
+  [ "JUPITER",
+    [
+      "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+      "-108°C",
+      "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+    ],
+  ],
+  [ "EARTH",
+    [
+      "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+      "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+      "6.6 sextillion tons"
+    ],
+  ],
+  [ "MARS",
+    [
+      "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+      "87 to -5 °C",
+      "641,693,000,000,000 billion kg (0.107 x Earth)"
+    ],
+  ],
+];
+
+console.group(planets[0][0]);
+  console.log("Description:", );
+  console.log("Surface temperature:", );
+  console.log("Distance:", );
+console.groupEnd();
+
+console.group(planets[1][0]);
+  console.log("Description:", );
+  console.log("Surface temperature:", );
+  console.log("Distance:", );
+console.groupEnd();
+
+console.group(planets[2][0]);
+  console.log("Description:", );
+  console.log("Surface temperature:", );
+  console.log("Distance:", );
+console.groupEnd();
+
+console.group(planets[3][0]);
+  console.log("Description:", );
+  console.log("Surface temperature:", );
+  console.log("Distance:", );
+console.groupEnd();
