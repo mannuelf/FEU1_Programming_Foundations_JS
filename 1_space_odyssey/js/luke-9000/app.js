@@ -85,7 +85,7 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
 var isAlive = true;
-var name = "Doctor John";
+var name = "GoochieGoochie";
 var hasJetPack = true;
 var suitColor = "white and red";
 var eyes = 2;
@@ -269,7 +269,7 @@ console.log(
    
       switch (lunarRadar.approachSpeed){
       case 200:
-        console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get heck outta here!");
+        console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get the heck outta here!");
       break;
       case 300:
         console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
