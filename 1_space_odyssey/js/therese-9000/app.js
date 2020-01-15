@@ -211,9 +211,7 @@ if (
 
     tip: varName.keyName (this is how to extract a value from an object)
 */
-console.log(
-  "\u{1F311} LUNAR LANDING:::::"
-);
+console.log("\u{1F311} LUNAR LANDING:::::");
 
 // start coding here
 
@@ -222,7 +220,7 @@ var lunarRadar = {
   long: undefined,
   lat: undefined,
   approachSpeed: undefined, // "ft per minute"
-}
+};
 
 lunarRadar.isEnabled = true;
 lunarRadar.long = 30.7723;
@@ -252,7 +250,7 @@ ELSE
   console.log("\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " + name + " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
 
 
-if(lunarRadar.isEnabled && lunarRadar.lat !== undefined && lunarRadar.long !== undefined){
+if(lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long){
   console.log("\u{1F91F} looking good " + name + " we are making our descent, now entering approach speed");
   if(lunarRadar.approachSpeed >= 200 && lunarRadar.approachSpeed < 299){
     console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get heck outta here!");
@@ -275,33 +273,54 @@ if(lunarRadar.isEnabled && lunarRadar.lat !== undefined && lunarRadar.long !== u
 
 */
 
-
 // Level 2 convert it to a switch statement.
 
-if (lunarRadar.isEnabled && lunarRadar.lat !== undefined && lunarRadar.long !== undefined) {
-  console.log("\u{1F91F} looking good " + name + " we are making our descent, now entering approach speed");
-  switch(lunarRadar.approachSpeed) {
+if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
+  console.log(
+    "\u{1F91F} looking good " +
+      name +
+      " we are making our descent, now entering approach speed"
+  );
+  switch (lunarRadar.approachSpeed) {
     case 200:
-      console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get heck outta here!");
+      console.log(
+        "\u{269B} well done " +
+          name +
+          " we have touched down safely. Lets get some samples and get heck outta here!"
+      );
       break;
     case 300:
       console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
       break;
     case 400:
-      console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+      console.log(
+        "\u{1F627} coming in way too hot " + name + " decrease pitch!"
+      );
       break;
     case 500:
-      console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+      console.log(
+        "\u{1F627} coming in way too hot " + name + " decrease pitch!"
+      );
       break;
     case 600:
-      console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+      console.log(
+        "\u{1F627} coming in way too hot " + name + " decrease pitch!"
+      );
       break;
     case 100:
-      console.log("\u{1F47D} hmmm need a bit more heat " + name + " lets increase pitch and we should have a smooth landing");
+      console.log(
+        "\u{1F47D} hmmm need a bit more heat " +
+          name +
+          " lets increase pitch and we should have a smooth landing"
+      );
       break;
     default:
-      console.log('Please enter an approach speed');
-  } 
+      console.log("Please enter an approach speed");
+  }
 } else {
-    console.log("\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " + name + " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
+  console.log(
+    "\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " +
+      name +
+      " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance."
+  );
 }
