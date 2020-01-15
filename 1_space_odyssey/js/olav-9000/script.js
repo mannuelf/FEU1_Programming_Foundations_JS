@@ -142,7 +142,7 @@ var lunarRadar = {
 
 lunarRadar.isEnabled = true;
 lunarRadar.long = 30;
-lunarRadarlat = 60;
+lunarRadar.lat = 60;
 lunarRadar.approachSpeed = 250;
 
 if (lunarRadar.isEnabled && lunarRadar.lat !== undefined && lunarRadar.long !== undefined) {
