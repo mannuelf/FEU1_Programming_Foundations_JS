@@ -1,12 +1,5 @@
-1. /*CREATE DROID::::::
-    Below are all the variables needed to initialize an android into consciousness in its default state.
-    a. assign the correct values to the variables below, 
-    b. ensure to choose the correct values and datatypes
-    c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
-*/
-
 var isAlive = true;
-var name = "Hoff-9000";
+var name = "Line-9000";
 var hasJetPack = true;
 var suitColor = "neongreen";
 var eyes = true;
@@ -19,14 +12,8 @@ var ears = 2;
 var canWalk = true;
 var canRun = false;
 var canFly = true;
-var hasWeapon = true;
+var hasWeapon = true; 
 var isInGoodMood = true;
-
-var voiceover = "David Hasslehoff";
-var bodytype = "car";
-var evilAI = "EvilArcade";
-var evilAIBodyType = "Packman machine";
-
 
 
 
@@ -37,12 +24,18 @@ var evilAIBodyType = "Packman machine";
        cannot go outside, console log the correct log based on that condition. 
 */
 
-if (hasJetPack){
-    console.log("Jetpack is on, go on outside")
+if (hasJetPack) {
+    console.log ("Jetpack is on")
+} else { console.log ("Jetpack is not on, you should stay inside")
 }
-else{
-    console.log("Jetpack is not on, you should stay inside")
-}
+
+/* 
+ uncomment these console logs and write your if else statement and use them to console log out the correct statement
+
+ console.log("JetPack is enabled!!! off I go outside to fix the satellite");
+ console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
+
+ */
 
 console.log(".-.-. Booting .-.-.");
 console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon);

@@ -103,7 +103,7 @@ var hasWeapon = true;
 var isInGoodMood = true;
 
 console.log(".-.-. Booting .-.-.");
-console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon, isInGoodMood, canRun, suitColor,);
+console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon);
 
 
 /*
@@ -128,34 +128,65 @@ if (hasJetPack) {
 
  */
 
+/*
+ 3. METEOR SHOWER::::::
+    On your way to Jupiter you encounter a massive meteor shower that could damage the ship, you need to redirect the ship to a new safe location.
+    a) Using a for loop iterate through the responses array and choose the appropriate response to get out of danger.
+      create an if condition in your loop to print only 1 response using a comparison operator.
+*/
+console.log(
+  "\u{1F327} METEOR SHOWER::::::"
+);
 
+var responses = [
+  "Call basecamp and ask for assistance, but they are far away",
+  "Do nothing, just push through",
+  "initiate core thrusters, punch 180degrees into dash-nav and warp away from danger",
+  "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
+];
 
- for (var count = 1; count <= 10; count++) {
-   console.log(count);
- }
+// write your code here, use the console log beneath
+// console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
 
-
- for (var i = 5; i <= 25; i++) {
-  console.log(i);
+for (var count = 0; count < responses.length; count++) {
+  if (responses[count] === responses[2]) {
+    console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
   }
-
-
-var colors = ["red", "blue", "green", "yellow"];
-var firstItem = colors [0];
-console.log(firstItem);
-
-// 0 = red mens 1 = blue, 2 = green og 3 = yellow etc.
-
-var secondItem = colors [1];
-secondItem
-// akuratt det samme men slipper å skrive consloe.log
-
-var colors = ["red", "blue", "green", "yellow"] ;
-var numberOfColors = colors.length ;
-
-for (var i = 0; i <= numberOfColors; i++) {
-if (colors[i] === "blue") {
-console.log("you have chosen blue");
-}
 }
 
+/*
+ 4. ALIENS SPACE CRAFT ENCROACHING::::::
+    Alien craft approaches its an enemy for sure...you need to shoot it down!!
+    a) convert the pseudoscope to real code
+       create the required variables below and fill in the correct values and dataTypes to make
+       the if statements pass so that photonLaser fires pew pew pew.
+    b)
+*/
+console.log(
+  "\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::"
+);
+
+// a.
+var enemyCraft = true;
+var photonLaser = true;
+var photonLaserEnabled = true;
+var bullets = 800;
+
+/*
+  If its an enemyCraft && photonLaser && photonLaserEnabled
+      IF bullets is greater than or equal to 100
+          shoot 100 photon-lazers by printing this log 100 times:
+          console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!"); (use a loop)
+        ELSE
+          console.log("\u{1F9E8} DEAD \u{1F9E8} ");
+*/
+
+if(enemyCraft && photonLaser && photonLaserEnabled) {
+  if(bullets >= 100) {
+    for(var i = 1; i <= 100; i++) {
+      console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
+    }
+  } else {
+    console.log("\u{1F9E8} DEAD \u{1F9E8} ");
+  }
+}

@@ -86,31 +86,24 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
 var isAlive = true;
-var name = "Camilla-9000";
-var hasJetPack = true;
-var suitColor = "white";
-var eyes = true;
+var name = "Kristoffer-9000";
+var hasJetPack =true;
+var suitColor = "red";
+var eyes = 3;
 var eyeColor = "green";
-var hairColor = "yellow";
-var legs = 2;
-var arms = 2;
-var hands = 2;
-var ears = 2;
+var hairColor = "black";
+var legs = 7;
+var arms = 4;
+var hands = 9;
+var ears = 5;
 var canWalk = true;
 var canRun = true;
-var canFly = true;
+var canFly = false;
 var hasWeapon = false;
-var isInGoodMood = false;
+var isInGoodMood = true;
 
 console.log(".-.-. Booting .-.-.");
-console.log(name, suitColor, isInGoodMood, canRun, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon);
-
-
-if (hasJetPack) {
-  console.log("JetPack is enabled!!")
-} else if (hasJetPack) {
-  console.log("JetPack NOT enabled, please enable jetPack before doing a space walk")
-}
+console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon, isInGoodMood, canRun, suitColor,);
 
 
 
@@ -121,6 +114,14 @@ if (hasJetPack) {
        cannot go outside, console log the correct log based on that condition.
 */
 
+
+
+if (hasJetPack) {
+  console.log("JetPack is enabled!!! off I go outside to fix the satellite");
+} else {
+  console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
+}
+
 /*
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
 
@@ -128,7 +129,10 @@ if (hasJetPack) {
  console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
 
  */
-/*
+
+
+
+ /*
  3. METEOR SHOWER::::::
     On your way to Jupiter you encounter a massive meteor shower that could damage the ship, you need to redirect the ship to a new safe location.
     a) Using a for loop iterate through the responses array and choose the appropriate response to get out of danger.
@@ -148,13 +152,12 @@ var responses = [
 // write your code here, use the console log beneath
 // console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
 
-var numberOfResponses = responses.length;
-
-for (var i = 0; i <= numberOfResponses; i++) {
-  if (responses[i] === numberOfResponses[2]) {
-    console.log(responses[2] + " " + "\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
+for (var i = 0; i <= responses.length; i ++) {
+  if (responses[i]=== "initiate core thrusters, punch 180degrees into dash-nav and warp away from danger"){
+    console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
   }
 }
+
 
 /*
  4. ALIENS SPACE CRAFT ENCROACHING::::::
@@ -169,21 +172,10 @@ console.log(
 );
 
 // a.
-var enemyCraft = true;
-var photonLaser = true;
-var photonLaserEnabled = true;
-var bullets = 100;
-
-
-if (enemyCraft && photonLaser && photonLaserEnabled === true) {
-  if (bullets >= 100) {
-    for (var i = 0; i < 100; i++) {
-      console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
-    }
-  } else {
-    console.log("\u{1F9E8} DEAD \u{1F9E8} ");
-  }
-}
+var ___;
+var ___;
+var ___;
+var ___;
 
 /*
   If its an enemyCraft && photonLaser && photonLaserEnabled
