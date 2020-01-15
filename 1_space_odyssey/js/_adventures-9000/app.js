@@ -156,6 +156,12 @@ var responses = [
   "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
 ];
 
+for (var i = 0; i <= responses.length; i++) {
+  if (responses[i] === responses[3]) {
+    console.log(responses[i]);
+  }
+}
+
 // write your code here, use the console log beneath
 // console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
 
@@ -169,10 +175,22 @@ var responses = [
 console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
 
 // a.
-var ___;
-var ___;
-var ___;
-var ___;
+var enemyCraft = false;
+var photonLaser = true;
+var photonLaserEnabled = true;
+var bullets = 100;
+
+if (enemyCraft && photonLaser && photonLaserEnabled) {
+  if (bullets >= 100) {
+    for (var i = 0; i <= 100; i++) {
+      console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
+    }
+  } else {
+    console.log("\u{1F9E8} DEAD \u{1F9E8}");
+  }
+} else {
+  console.log("do your homework");
+}
 
 /*
   If its an enemyCraft && photonLaser && photonLaserEnabled
@@ -233,3 +251,80 @@ ELSE
 */
 
 // Level 2 convert it to a switch statement.
+
+
+
+/*
+ 6. PLANETARY INFO-DASH:::::
+
+ Level 1::::::::::::::
+ Given this array of planets using what you know about how to access data in an arrays index log out the:
+  - Description,
+  - Surface temperature and
+  - Mass
+
+  in the console logs bellow.
+
+  tip: pass your variables into the console.log after comma ,
+*/
+console.log("\u{1F319} PLANETARY INFO-DASH:::::");
+
+var planets = [
+  [ "MERCURY",
+    [
+      "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+      "-173 to 427°C",
+      "330,104,000,000,000 billion kg (0.055 x Earth)"
+    ],
+  ],
+  [ "JUPITER",
+    [
+      "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+      "-108°C",
+      "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+    ],
+  ],
+  [ "EARTH",
+    [
+      "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+      "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+      "6.6 sextillion tons"
+    ],
+  ],
+  [ "MARS",
+    [
+      "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+      "87 to -5 °C",
+      "641,693,000,000,000 billion kg (0.107 x Earth)"
+    ],
+  ],
+];
+
+console.group(planets[0][0]); // Mercury.
+  console.log("Description:", );
+  console.log("Surface temperature:", );
+  console.log("Distance:", );
+console.groupEnd();
+
+console.group(); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
+  console.log("Description:", );
+  console.log("Surface temperature:", );
+  console.log("Distance:", );
+console.groupEnd();
+
+console.group(); // Earth.
+  console.log("Description:", );
+  console.log("Surface temperature:", );
+  console.log("Distance:", );
+console.groupEnd();
+
+console.group(); // Mars.
+  console.log("Description:", );
+  console.log("Surface temperature:", );
+  console.log("Distance:", );
+console.groupEnd();
+
+/*
+ Level 2::::::::::::::
+ Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
+*/
