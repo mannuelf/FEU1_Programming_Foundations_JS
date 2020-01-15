@@ -342,24 +342,9 @@ switch (true) {
   Level 2::::::::::::::
   Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
 */
-// Level 1 and 2
 console.log("\u{1F319} PLANETARY INFO-DASH:::::");
 
 var planets = [
-  ["NEPTUNE",
-    [
-      "Neptune is the fourth largest and the farthest planet of the Solar System with the most powerful wind speeds out of all the planets. It is the smallest of the gas giants and is the first planet to be discovered by mathematical predictions in 1846.",
-      "-201°C",
-      "102,410,000,000,000,000 billion kg (17.15x Earth)"
-    ],
-  ],
-  ["VENUS",
-    [
-      "The second planet from the Sun and the sixth largest. Together with Mercury, they are the only planets without a satellite, even though Mercury is closer to the sun, Venus is the hottest planet.",
-      "462° C",
-      "4,867,320,000,000,000 billion kg (0.815 x Earth)"
-    ],
-  ],
   ["MERCURY",
     [
       "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
@@ -390,9 +375,25 @@ var planets = [
   ],
 ];
 
-var allPlanets = planets.length;
-for (singlePlanet = 0; singlePlanet < allPlanets; singlePlanet++) {}
+// Level 2
+planets.unshift(
+  ["NEPTUNE",
+  [
+    "Neptune is the fourth largest and the farthest planet of the Solar System with the most powerful wind speeds out of all the planets. It is the smallest of the gas giants and is the first planet to be discovered by mathematical predictions in 1846.",
+    "-201°C",
+    "102,410,000,000,000,000 billion kg (17.15x Earth)"
+  ],
+],
+["VENUS",
+  [
+    "The second planet from the Sun and the sixth largest. Together with Mercury, they are the only planets without a satellite, even though Mercury is closer to the sun, Venus is the hottest planet.",
+    "462° C",
+    "4,867,320,000,000,000 billion kg (0.815 x Earth)"
+  ],
+],
+);
 
+// Level 1 and 2
 console.group(planets[0][0]); // Neptune.
 console.log("Description:", planets[0][1][0]);
 console.log("Surface temperature:", planets[0][1][1]);
