@@ -1,4 +1,4 @@
-/* ______   __  __   ______  ______   
+/* ______   __  __   ______  ______
         _..._
       .'     '.      _
      /    .-""-\   _/ \
@@ -19,7 +19,7 @@
 
  1. CREATE DROID::::::
     Below are all the variables needed to initialize an android into consciousness in its default state.
-    a. assign the correct values to the variables below, 
+    a. assign the correct values to the variables below,
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
@@ -45,22 +45,181 @@ console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, ha
 
 
 
-/* 
+/*
  2. BROKEN SATELLITE::::::
     You need to send the droid out on a space walk to fix the satellite, with out it you can't communicate with earth.
-    a) write an if condition checking if the jet pack is enabled, if true the droid can go outside if false the droid 
-       cannot go outside, console log the correct log based on that condition. 
+    a) write an if condition checking if the jet pack is enabled, if true the droid can go outside if false the droid
+       cannot go outside, console log the correct log based on that condition.
 */
 
 if (hasJetPack === true) {
     console.log("JetPack is enabled!!! off I go outside to fix the satellite");
-} else { 
+} else {
     console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
 }
-/* 
+/*
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
 
  console.log("JetPack is enabled!!! off I go outside to fix the satellite");
  console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
 
  */
+
+ /*
+ 3. METEOR SHOWER::::::
+    On your way to Jupiter you encounter a massive meteor shower that could damage the ship, you need to redirect the ship to a new safe location.
+    a) Using a for loop iterate through the responses array and choose the appropriate response to get out of danger.
+      create an if condition in your loop to print only 1 response using a comparison operator.
+*/
+console.log(
+  "\u{1F327} METEOR SHOWER::::::"
+);
+
+var responses = [
+  "Call basecamp and ask for assistance, but they are far away",
+  "Do nothing, just push through",
+  "initiate core thrusters, punch 180degrees into dash-nav and warp away from danger",
+  "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
+];
+
+// write your code here, use the console log beneath
+// console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
+
+for (var count = 0; count < responses.length; count++) {
+  if (responses[count] === responses[2]) {
+    console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
+  }
+}
+
+/*
+ 4. ALIENS SPACE CRAFT ENCROACHING::::::
+    Alien craft approaches its an enemy for sure...you need to shoot it down!!
+    a) convert the pseudoscope to real code
+       create the required variables below and fill in the correct values and dataTypes to make
+       the if statements pass so that photonLaser fires pew pew pew.
+    b)
+*/
+console.log(
+  "\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::"
+);
+
+// a.
+var enemyCraft = true;
+var photonLaser = true;
+var photonLaserEnabled = true;
+var bullets = 700;
+
+/*
+  If its an enemyCraft && photonLaser && photonLaserEnabled
+      IF bullets is greater than or equal to 100
+          shoot 100 photon-lazers by printing this log 100 times:
+          console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!"); (use a loop)
+        ELSE
+          console.log("\u{1F9E8} DEAD \u{1F9E8} ");
+*/
+
+if(enemyCraft && photonLaser && photonLaserEnabled) {
+  if(bullets >= 100) {
+    for(var i = 1; i <= 100; i++) {
+      console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
+    }
+  } else {
+    console.log("\u{1F9E8} DEAD \u{1F9E8} ");
+  }
+}
+
+
+/*
+ 5. LUNAR LANDING:::::
+    We got word of an extra terrestrial sighting on the moon... we have been tasked to land on the moon
+    to investigate it, we have aboard a NASA lunar module https://en.wikipedia.org/wiki/Apollo_Lunar_Module
+    This module will allow to land safely on the moon with the aid of the landing radar which takes inputs.
+
+    Ensure the correct co-ordinates and approach speed are entered into the landing radar.
+    It's all automated we just have to ensure that the correct values are input ie. not undefined.
+
+    The lunar radar accepts approach speeds in increments of hundreds only, starting at 0 and maxing out at 700.
+
+    You cannot edit the lunarRadar object directly you have to pass your values in via an interface called variables.
+
+    tip: varName.keyName (this is how to extract a value from an object)
+*/
+console.log(
+  "\u{1F311} LUNAR LANDING:::::"
+);
+
+// start coding here
+
+var lunarRadar = {
+  isEnabled: true,
+  long: 200,
+  lat: 400,
+  approachSpeed: 300, // "ft per minute"
+}
+// Level 1 convert this psuedocode to functioning code.
+
+/*
+IF lunar radar is enabled && lat is defined and long is defined
+    console.log("\u{1F91F} looking good " + name + " we are making our descent, now entering approach speed");
+    IF approach speed is greater than or equal to 200ft per minute and approach speed is less than 299ft per minute
+      console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get heck outta here!");
+    ELSE IF approach speed is greater than or equal to 300ft per minute
+      console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+    ELSE IF approach speed is greater than or equal to 400ft per minute
+      console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+    ELSE IF approach speed is greater than or equal to 500ft per minute
+      console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+    ELSE IF approach speed is greater than or equal to 600ft per minute
+      console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+    ELSE IF approach speed is less than or equal to 100ft per minute
+      console.log("\u{1F47D} hmmm need a bit more heat " + name + " lets increase pitch and we should have a smooth landing");
+    ELSE
+      console.log('Please enter an approach speed');
+ELSE
+  console.log("\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " + name + " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
+*/
+
+if (lunarRadar.isEnabled && lunarRadar.long && lunarRadar.lat) {
+  console.log("\u{1F91F} looking good " + name + " we are making our descent, now entering approach speed")
+
+  if ((lunarRadar.approachSpeed >= 200) && (lunarRadar.approachSpeed > 299)) {
+    console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get heck outta here!")
+  }
+  else if (lunarRadar.approachSpeed >= 300) {
+    console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+  }
+
+  else if (lunarRadar.approachSpeed >= 400) {
+    console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+  }
+
+  else if (lunarRadar.approachSpeed >= 500) {
+    console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+  }
+
+  else if (lunarRadar.approachSpeed >= 600) {
+    console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+  }
+  else if (lunarRadar.approachSpeed <= 100) {
+    console.log("\u{1F47D} hmmm need a bit more heat " + name + " lets increase pitch and we should have a smooth landing");
+  }
+      else {
+        console.log('Please enter an approach speed')
+    }
+}
+else {
+  console.log("\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " + name + " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
+  }
+
+
+
+
+
+// Level 2 convert it to a switch statement.
+if (lunarRadar.isEnabled && lunarRadar.long && lunarRadar.lat) {
+  switch(true) {
+
+
+  }
+
+}
