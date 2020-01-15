@@ -426,8 +426,6 @@ var neptune = [
 
 planets.push(venus, neptune);
 
-console.log(planets)
-
 var venusDesc = planets[4];
 var neptuneDesc = planets[5];
 
