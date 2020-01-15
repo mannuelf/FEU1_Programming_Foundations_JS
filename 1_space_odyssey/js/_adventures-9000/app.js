@@ -174,10 +174,6 @@ for (var i = 0; i <= responses.length; i++) {
 */
 console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
 
-var orderHasShipped = true;
-
-//honestly have no clue of what i did her
-
 // a.
 var enemyCraft = false;
 var photonLaser = true;

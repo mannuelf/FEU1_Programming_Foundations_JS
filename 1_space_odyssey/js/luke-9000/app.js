@@ -85,7 +85,7 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
 var isAlive = true;
-var name = "Doctor John";
+var name = "GoochieGoochie";
 var hasJetPack = true;
 var suitColor = "white and red";
 var eyes = 2;
@@ -198,10 +198,99 @@ if (enemyCraft && photonlaser && photonLaserEnabled) {
 
 
 /*
-  If its an enemyCraft && photonLaser && photonLaserEnabled
-      IF bullets is greater than or equal to 100
+  if its an enemyCraft && photonLaser && photonLaserEnabled
+      if bullets is greater than or equal to 100
           shoot 100 photon-lazers by printing this log 100 times:
           console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!"); (use a loop)
-        ELSE
+        else
           console.log("\u{1F9E8} DEAD \u{1F9E8} ");
 */
+
+
+
+/*
+ 5. LUNAR LANDING:::::
+    We got word of an extra terrestrial sighting on the moon... we have been tasked to land on the moon
+    to investigate it, we have aboard a NASA lunar module https://en.wikipedia.org/wiki/Apollo_Lunar_Module
+    This module will allow to land safely on the moon with the aid of the landing radar which takes inputs.
+
+    Ensure the correct co-ordinates and approach speed are entered into the landing radar.
+    It's all automated we just have to ensure that the correct values are input ie. not undefined.
+
+    The lunar radar accepts approach speeds in increments of hundreds only, starting at 0 and maxing out at 700.
+
+    You cannot edit the lunarRadar object directly you have to pass your values in via an interface called variables.
+
+    tip: varName.keyName (this is how to extract a value from an object)
+*/
+console.log(
+    "\u{1F311} LUNAR LANDING:::::"
+  );
+  
+  // start coding here
+  
+  var lunarRadar = {
+    isEnabled: true,
+    long: 100,
+    lat: 100,
+    approachSpeed: 200, // "ft per minute"
+  };
+  
+  // Level 1 convert this psuedocode to functioning code.
+  
+  /*
+  if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
+      console.log("\u{1F91F} looking good " + name + " we are making our descent, now entering approach speed");
+
+      if (lunarRadar.approachSpeed >= 200 && lunarRadar.approachSpeed < 299){
+        console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get heck outta here!");
+      } else if(lunarRadar.approachSpeed >= 300) {
+        console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+      } else if(lunarRadar.approachSpeed >= 400) {
+        console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+      } else if(lunarRadar.approachSpeed >= 500) {
+        console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+      } else if(lunarRadar.approachSpeed >= 600) {
+        console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+      } else if(lunarRadar.approachSpeed <= 100) {
+        console.log("\u{1F47D} hmmm need a bit more heat " + name + " lets increase pitch and we should have a smooth landing");
+      } else {
+          console.log('Please enter an approach speed'); 
+      }
+    } else { 
+          console.log("\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " + name + " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
+    }
+  */
+  
+  // Level 2 convert it to a switch statement.
+
+   if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
+    console.log("\u{1F91F} looking good " + name + " we are making our descent, now entering approach speed");
+   
+      switch (lunarRadar.approachSpeed){
+      case 200:
+        console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get the heck outta here!");
+      break;
+      case 300:
+        console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+      break;
+      case 400:
+        console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+      break;
+      case 500:
+        console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+      break; 
+      case 600:
+        console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+      break;
+      case 100:
+        console.log("\u{1F47D} hmmm need a bit more heat " + name + " lets increase pitch and we should have a smooth landing");
+      break;
+      default:
+        console.log("Please enter an approach speed"); 
+    }
+
+   } else { 
+          console.log("\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " + name + " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
+    }
+  
