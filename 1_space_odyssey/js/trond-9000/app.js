@@ -79,7 +79,7 @@ var photonLaser = true;
 var photonLaserEnabled = true;
 var bullets = 100;
 
-if (enemyCraft && photonLaser && photonLaserEnabled === true) {
+if (enemyCraft && photonLaser && photonLaserEnabled) {
   if (bullets >= 100) {
     for (var i = 0; i < 100; i++) {
     console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
@@ -89,13 +89,3 @@ if (enemyCraft && photonLaser && photonLaserEnabled === true) {
     console.log("\u{1F9E8} DEAD \u{1F9E8} ");
   }
 }
-
-/*
-If its an enemyCraft && photonLaser && photonLaserEnabled
-  IF bullets is greater than or equal to 100
-      shoot 100 photon-lazers by printing this log 100 times:
-      console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!"); (use a loop)
-    ELSE
-      console.log("\u{1F9E8} DEAD \u{1F9E8} ");
-*/
-
