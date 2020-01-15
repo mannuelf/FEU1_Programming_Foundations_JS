@@ -259,10 +259,19 @@ ELSE
 
 
 /*
- 6. PLANET INFO-DASH:::::
-  Given this array of planets print out the Description, Surface temperature and Mass in the console logs bellow
+ 6. PLANETARY INFO-DASH:::::
+
+ Level 1::::::::::::::
+ Given this array of planets using what you know about how to access data in an arrays index log out the:
+  - Description,
+  - Surface temperature and
+  - Mass
+
+  in the console logs bellow.
+
+  tip: pass your variables into the console.log after comma ,
 */
-console.log("\u{1F319} PLANET INFO-DASH:::::");
+console.log("\u{1F319} PLANETARY INFO-DASH:::::");
 
 var planets = [
   [ "MERCURY",
@@ -295,26 +304,31 @@ var planets = [
   ],
 ];
 
-console.group(planets[0][0]);
+console.group(planets[0][0]); // Mercury.
   console.log("Description:", );
   console.log("Surface temperature:", );
   console.log("Distance:", );
 console.groupEnd();
 
-console.group(planets[1][0]);
+console.group(); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
   console.log("Description:", );
   console.log("Surface temperature:", );
   console.log("Distance:", );
 console.groupEnd();
 
-console.group(planets[2][0]);
+console.group(); // Earth.
   console.log("Description:", );
   console.log("Surface temperature:", );
   console.log("Distance:", );
 console.groupEnd();
 
-console.group(planets[3][0]);
+console.group(); // Mars.
   console.log("Description:", );
   console.log("Surface temperature:", );
   console.log("Distance:", );
 console.groupEnd();
+
+/*
+ Level 2::::::::::::::
+ Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
+*/
