@@ -89,3 +89,43 @@ if (enemyCraft && photonLaser && photonLaserEnabled) {
     console.log("\u{1F9E8} DEAD \u{1F9E8} ");
   }
 }
+
+//5
+// Level 1
+
+console.log(
+  "\u{1F311} LUNAR LANDING:::::"
+);
+
+var lunarRadar = {
+  isEnabled: true,
+  long: true,
+  lat: true,
+  approachSpeed: 200,
+}
+
+if (lunarRadar.isEnabled && lunarRadar.long && lunarRadar.lat) {
+  console.log("\u{1F91F} looking good, " + name + ", we are making our descent, now entering approach speed");
+  if (lunarRadar.approachSpeed >= 200 && lunarRadar.approachSpeed < 299) {
+    console.log("\u{269B} well done, " + name + ", we have touched down safely. Lets get some samples and get heck outta here!");
+  } else if (lunarRadar.approachSpeed >= 300) {
+    console.log("\u{1F627} coming in hot, " + name + ", decrease pitch!");
+  } else if (lunarRadar.approachSpeed >= 400) {
+    console.log("\u{1F627} coming in way too hot, " + name + ", decrease pitch!");
+  } else if (lunarRadar.approachSpeed >= 500) {
+    console.log("\u{1F627} coming in way too hot, " + name + ", decrease pitch!");
+  } else if (lunarRadar.approachSpeed >= 600) {
+    console.log("\u{1F627} coming in way too hot, " + name + ", decrease pitch!");
+  } else if (lunarRadar.approachSpeed <= 100) {
+    console.log("\u{1F47D} hmmm need a bit more heat, " + name + ", lets increase pitch and we should have a smooth landing");
+  } else {
+    console.log('Please enter an approach speed');
+  }
+}
+else {
+  console.log("\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " + name + ", you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
+}
+
+// Level 2
+
+
