@@ -213,11 +213,16 @@ console.log(
 // start coding here
 
 var lunarRadar = {
-  isEnabled: true,
-  long: 300,
-  lat: 40,
-  approachSpeed: 600, // "ft per minute"
+  isEnabled: undefined,
+  long: undefined,
+  lat: undefined,
+  approachSpeed: undefined, // "ft per minute"
 }
+
+lunarRadar.isEnabled = true;
+lunarRadar.long = 30;
+lunarRadar.lat = 40;
+lunarRadar.approachSpeed = 600;
 
 // Level 1 convert this psuedocode to functioning code.
 
