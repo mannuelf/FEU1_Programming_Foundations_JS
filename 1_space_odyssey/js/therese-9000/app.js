@@ -399,63 +399,130 @@ console.log("\u{1F319} PLANETARY INFO-DASH:::::");
 //   ],
 // ];
 
+// var planets = [
+//   {
+//     planet: "MERCURY",
+//     desc: "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+//     surfaceTemp:  "-173 to 427°C",
+//     mass: "330,104,000,000,000 billion kg (0.055 x Earth)"
+//   },
+//   {
+//     planet: "JUPITER",
+//     desc: "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+//     surfaceTemp: "-108°C",
+//     mass: "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+//   },
+//   {
+//     planet: "EARTH",
+//     desc: "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+//     surfaceTemp: "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+//     mass: "6.6 sextillion tons"
+//   },
+//   {
+//     planet: "MARS",
+//     desc: "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+//     surfaceTemp: "87 to -5 °C",
+//     mass: "641,693,000,000,000 billion kg (0.107 x Earth)"
+//   }
+// ]
+
 var planets = [
   {
-    planet: "MERCURY",
-    desc: "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
-    surfaceTemp:  "-173 to 427°C",
-    mass: "330,104,000,000,000 billion kg (0.055 x Earth)"
+    mercury: 
+    {
+      planet: "MERCURY",
+      desc: "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+      surfaceTemp:  "-173 to 427°C",
+      mass: "330,104,000,000,000 billion kg (0.055 x Earth)" 
+    }
+  },
+  { 
+    jupiter: 
+    {    
+      planet: "JUPITER",
+      desc: "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+      surfaceTemp: "-108°C",
+      mass: "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+    }
   },
   {
-    planet: "JUPITER",
-    desc: "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
-    surfaceTemp: "-108°C",
-    mass: "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+    earth:
+    {    
+      planet: "EARTH",
+      desc: "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+      surfaceTemp: "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+      mass: "6.6 sextillion tons"
+    }
   },
   {
-    planet: "EARTH",
-    desc: "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
-    surfaceTemp: "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
-    mass: "6.6 sextillion tons"
-  },
-  {
-    planet: "MARS",
-    desc: "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
-    surfaceTemp: "87 to -5 °C",
-    mass: "641,693,000,000,000 billion kg (0.107 x Earth)"
+    mars:
+    {
+      planet: "MARS",
+      desc: "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+      surfaceTemp: "87 to -5 °C",
+      mass: "641,693,000,000,000 billion kg (0.107 x Earth)"
+    }
   }
 ]
 
 
-var mercuryDesc = planets[0];
-var jupiterDesc = planets[1];
-var earthDesc = planets[2];
-var marsDesc = planets[3];
+// var mercuryDesc = planets[0];
+// var jupiterDesc = planets[1];
+// var earthDesc = planets[2];
+// var marsDesc = planets[3];
+var mercuryDesc = planets.mercury;
+var jupiterDesc = planets.jupiter;
+var earthDesc = planets.earth;
+var marsDesc = planets.mars;
 
 
-console.group(planets[0][0]); // Mercury.
-  console.log("Description:", mercuryDesc[0]);
-  console.log("Surface temperature:", mercuryDesc[1]);
-  console.log("Mass:", mercuryDesc[2]);
+// console.group(planets[0].planet); // Mercury.
+//   console.log("Description:", mercuryDesc.desc);
+//   console.log("Surface temperature:", mercuryDesc.surfaceTemp);
+//   console.log("Mass:", mercuryDesc.mass);
+// console.groupEnd();
+
+// console.group(planets[1].planet); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
+//   console.log("Description:", jupiterDesc.desc);
+//   console.log("Surface temperature:", jupiterDesc.surfaceTemp);
+//   console.log("Mass:", jupiterDesc.mass);
+// console.groupEnd();
+
+// console.group(planets[2].planet); // Earth.
+//   console.log("Description:", earthDesc.desc);
+//   console.log("Surface temperature:", earthDesc.surfaceTemp);
+//   console.log("Mass:", earthDesc.mass);
+// console.groupEnd();
+
+// console.group(planets[3].planet); // Mars.
+//   console.log("Description:", marsDesc.desc);
+//   console.log("Surface temperature:", marsDesc.surfaceTemp);
+//   console.log("Mass:", marsDesc.mass);
+// console.groupEnd();
+
+console.group(planets.mercury.planet); // Mercury.
+  console.log("Description:", mercuryDesc.desc);
+  console.log("Surface temperature:", mercuryDesc.surfaceTemp);
+  console.log("Mass:", mercuryDesc.mass);
 console.groupEnd();
 
-// console.group(planets[1][0]); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
-//   console.log("Description:", jupiterDesc[1][0]);
-//   console.log("Surface temperature:", jupiterDesc[1][1]);
-//   console.log("Mass:", jupiterDesc[1][2]);
-// console.groupEnd();
+console.group(planets.jupiter.planet); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
+  console.log("Description:", jupiterDesc.desc);
+  console.log("Surface temperature:", jupiterDesc.surfaceTemp);
+  console.log("Mass:", jupiterDesc.mass);
+console.groupEnd();
 
-// console.group(planets[2][0]); // Earth.
-//   console.log("Description:", earthDesc[1][0]);
-//   console.log("Surface temperature:", earthDesc[1][1]);
-//   console.log("Mass:", earthDesc[1][2]);
-// console.groupEnd();
+console.group(planets.ears.planet); // Earth.
+  console.log("Description:", earthDesc.desc);
+  console.log("Surface temperature:", earthDesc.surfaceTemp);
+  console.log("Mass:", earthDesc.mass);
+console.groupEnd();
 
-// console.group(planets[3][0]); // Mars.
-//   console.log("Description:", marsDesc[1][0]);
-//   console.log("Surface temperature:", marsDesc[1][1]);
-//   console.log("Mass:", marsDesc[1][2]);
-// console.groupEnd();
+console.group(planets.mars.planet); // Mars.
+  console.log("Description:", marsDesc.desc);
+  console.log("Surface temperature:", marsDesc.surfaceTemp);
+  console.log("Mass:", marsDesc.mass);
+console.groupEnd();
 
 /*
  Level 2::::::::::::::
@@ -471,6 +538,24 @@ console.groupEnd();
 //   ]
 // ]
 
+// var venus = {
+//   planet: "VENUS",
+//   desc: "Venus is the second planet from the Sun and the sixth largest. Together with Mercury, they are the only planets without a satellite, even though Mercury is closer to the sun, Venus is the hottest planet.",
+//   surfaceTemp: "462 °C", 
+//   mass: "4,867,320,000,000,000 billion kg (0.815 x Earth)"
+// }
+
+var venus = {
+  venus:
+  {
+    planet: "VENUS",
+    desc: "Venus is the second planet from the Sun and the sixth largest. Together with Mercury, they are the only planets without a satellite, even though Mercury is closer to the sun, Venus is the hottest planet.",
+    surfaceTemp: "462 °C", 
+    mass: "4,867,320,000,000,000 billion kg (0.815 x Earth)"
+  }
+}
+
+
 // var neptune = [
 //   "NEPTUNE",
 //   [
@@ -480,21 +565,39 @@ console.groupEnd();
 //   ]
 // ]
 
-// planets.unshift(venus, neptune);
+// var neptune = {
+//   planet: "NEPTUNE",
+//   desc: "Neptune is the fourth largest and the farthest planet of the Solar System with the most powerful wind speeds out of all the planets. It is the smallest of the gas giants and is the first planet to be discovered by mathematical predictions in 1846. ",
+//   surfaceTemp: "-201 °C",
+//   mass: "102,410,000,000,000,000 billion kg (17.15x Earth)"
+// }
 
-// var venusDesc = planets[4];
-// var neptuneDesc = planets[5];
+var neptune = {
+  neptune: 
+  {
+    planet: "NEPTUNE",
+    desc: "Neptune is the fourth largest and the farthest planet of the Solar System with the most powerful wind speeds out of all the planets. It is the smallest of the gas giants and is the first planet to be discovered by mathematical predictions in 1846. ",
+    surfaceTemp: "-201 °C",
+    mass: "102,410,000,000,000,000 billion kg (17.15x Earth)"
+  }
+}
 
-// console.group(planets[4][0]);
-//   console.log("Description:", venusDesc[1][0]);
-//   console.log("Surface temperature:", venusDesc[1][1]);
-//   console.log("Mass:", venusDesc[1][2]);
-// console.groupEnd();
-// console.group(planets[5][0]);
-//   console.log("Description:", neptuneDesc[1][0]);
-//   console.log("Surface temperature:", neptuneDesc[1][1]);
-//   console.log("Mass:", neptuneDesc[1][2]);
-// console.groupEnd();
+planets.unshift(venus, neptune);
+
+var venusDesc = planets.venus;
+var neptuneDesc = planets.neptune;
+
+console.group(planets.venus[0]);
+  console.log("Description:", venusDesc.desc);
+  console.log("Surface temperature:", venusDesc.surfaceTemp);
+  console.log("Mass:", venusDesc.mass);
+console.groupEnd();
+
+console.group(planets.neptune.planet);
+  console.log("Description:", neptuneDesc.desc);
+  console.log("Surface temperature:", neptuneDesc.surfaceTemp);
+  console.log("Mass:", neptuneDesc.mass);
+console.groupEnd();
 
 /*
  7. Android Object REFACTOR:::::
