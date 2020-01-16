@@ -103,25 +103,24 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
 
 var android = [
   {
-  isAlive: true,
-  name: "Therese-9000",
-  hasJetPack: true,
-  suitColor: "black",
-  eyes: 2,
-  eyeColor: "green",
-  hairColor: "brown",
-  legs: 2,
-  arms: 2,
-  hands: 2,
-  ears: 2,
-  canWalk: true,
-  canRun: true,
-  canFly: true,
-  hasWeapon: true,
-  isInGoodMood: true
-}
+    isAlive: true,
+    name: "Therese-9000",
+    hasJetPack: true,
+    suitColor: "black",
+    eyes: 2,
+    eyeColor: "green",
+    hairColor: "brown",
+    legs: 2,
+    arms: 2,
+    hands: 2,
+    ears: 2,
+    canWalk: true,
+    canRun: true,
+    canFly: true,
+    hasWeapon: true,
+    isInGoodMood: true
+  }
 ];
-
 
 console.log(".-.-. Booting .-.-.");
 
@@ -141,7 +140,7 @@ console.log(".-.-. Booting .-.-.");
 //   hasWeapon
 // );
 
-for(var i = 0; i < android.length; i++) {
+for (var i = 0; i < android.length; i++) {
   console.log(android[i]);
 }
 
@@ -246,7 +245,7 @@ var lunarRadar = {
   isEnabled: undefined,
   long: undefined,
   lat: undefined,
-  approachSpeed: undefined, // "ft per minute"
+  approachSpeed: undefined // "ft per minute"
 };
 
 lunarRadar.isEnabled = true;
@@ -367,170 +366,68 @@ if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
 */
 console.log("\u{1F319} PLANETARY INFO-DASH:::::");
 
-
-// var planets = [
-//   [ "MERCURY",
-//     [
-//       "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
-//       "-173 to 427°C",
-//       "330,104,000,000,000 billion kg (0.055 x Earth)"
-//     ],
-//   ],
-//   [ "JUPITER",
-//     [
-//       "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
-//       "-108°C",
-//       "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
-//     ],
-//   ],
-//   [ "EARTH",
-//     [
-//       "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
-//       "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
-//       "6.6 sextillion tons"
-//     ],
-//   ],
-//   [ "MARS",
-//     [
-//       "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
-//       "87 to -5 °C",
-//       "641,693,000,000,000 billion kg (0.107 x Earth)"
-//     ],
-//   ],
-// ];
-
 var planets = [
   {
     planet: "MERCURY",
-    desc: "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
-    surfaceTemp:  "-173 to 427°C",
+    desc:
+      "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+    surfaceTemp: "-173 to 427°C",
     mass: "330,104,000,000,000 billion kg (0.055 x Earth)"
   },
   {
     planet: "JUPITER",
-    desc: "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+    desc:
+      "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
     surfaceTemp: "-108°C",
     mass: "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
   },
   {
     planet: "EARTH",
-    desc: "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
-    surfaceTemp: "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+    desc:
+      "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+    surfaceTemp:
+      "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
     mass: "6.6 sextillion tons"
   },
   {
     planet: "MARS",
-    desc: "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+    desc:
+      "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
     surfaceTemp: "87 to -5 °C",
     mass: "641,693,000,000,000 billion kg (0.107 x Earth)"
   }
-]
-
-var mercuryDesc = planets[0];
-var jupiterDesc = planets[1];
-var earthDesc = planets[2];
-var marsDesc = planets[3];
-
-
-console.group(planets[0].planet); // Mercury.
-  console.log("Description:", mercuryDesc.desc);
-  console.log("Surface temperature:", mercuryDesc.surfaceTemp);
-  console.log("Mass:", mercuryDesc.mass);
-console.groupEnd();
-
-console.group(planets[1].planet); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
-  console.log("Description:", jupiterDesc.desc);
-  console.log("Surface temperature:", jupiterDesc.surfaceTemp);
-  console.log("Mass:", jupiterDesc.mass);
-console.groupEnd();
-
-console.group(planets[2].planet); // Earth.
-  console.log("Description:", earthDesc.desc);
-  console.log("Surface temperature:", earthDesc.surfaceTemp);
-  console.log("Mass:", earthDesc.mass);
-console.groupEnd();
-
-console.group(planets[3].planet); // Mars.
-  console.log("Description:", marsDesc.desc);
-  console.log("Surface temperature:", marsDesc.surfaceTemp);
-  console.log("Mass:", marsDesc.mass);
-console.groupEnd();
-
+];
 
 /*
  Level 2::::::::::::::
  Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
 */
 
-// var venus = [
-//   "VENUS",
-//   [
-//     "Venus is the second planet from the Sun and the sixth largest. Together with Mercury, they are the only planets without a satellite, even though Mercury is closer to the sun, Venus is the hottest planet.",
-//     "462 °C", 
-//     "4,867,320,000,000,000 billion kg (0.815 x Earth)"
-//   ]
-// ]
-
 var venus = {
   planet: "VENUS",
-  desc: "Venus is the second planet from the Sun and the sixth largest. Together with Mercury, they are the only planets without a satellite, even though Mercury is closer to the sun, Venus is the hottest planet.",
-  surfaceTemp: "462 °C", 
+  desc:
+    "Venus is the second planet from the Sun and the sixth largest. Together with Mercury, they are the only planets without a satellite, even though Mercury is closer to the sun, Venus is the hottest planet.",
+  surfaceTemp: "462 °C",
   mass: "4,867,320,000,000,000 billion kg (0.815 x Earth)"
-}
-
-// var venus = {
-//   venus:
-//   {
-//     planet: "VENUS",
-//     desc: "Venus is the second planet from the Sun and the sixth largest. Together with Mercury, they are the only planets without a satellite, even though Mercury is closer to the sun, Venus is the hottest planet.",
-//     surfaceTemp: "462 °C", 
-//     mass: "4,867,320,000,000,000 billion kg (0.815 x Earth)"
-//   }
-// }
-
-
-// var neptune = [
-//   "NEPTUNE",
-//   [
-//     "Neptune is the fourth largest and the farthest planet of the Solar System with the most powerful wind speeds out of all the planets. It is the smallest of the gas giants and is the first planet to be discovered by mathematical predictions in 1846. ",
-//     "-201 °C",
-//     "102,410,000,000,000,000 billion kg (17.15x Earth)"
-//   ]
-// ]
+};
 
 var neptune = {
   planet: "NEPTUNE",
-  desc: "Neptune is the fourth largest and the farthest planet of the Solar System with the most powerful wind speeds out of all the planets. It is the smallest of the gas giants and is the first planet to be discovered by mathematical predictions in 1846. ",
+  desc:
+    "Neptune is the fourth largest and the farthest planet of the Solar System with the most powerful wind speeds out of all the planets. It is the smallest of the gas giants and is the first planet to be discovered by mathematical predictions in 1846. ",
   surfaceTemp: "-201 °C",
   mass: "102,410,000,000,000,000 billion kg (17.15x Earth)"
-}
-
-// var neptune = {
-//   neptune: 
-//   {
-//     planet: "NEPTUNE",
-//     desc: "Neptune is the fourth largest and the farthest planet of the Solar System with the most powerful wind speeds out of all the planets. It is the smallest of the gas giants and is the first planet to be discovered by mathematical predictions in 1846. ",
-//     surfaceTemp: "-201 °C",
-//     mass: "102,410,000,000,000,000 billion kg (17.15x Earth)"
-//   }
-// }
+};
 
 planets.unshift(venus, neptune);
 
-var venusDesc = planets[0];
-var neptuneDesc = planets[1];
-
-console.group(planets[0].planet);
-  console.log("Description:", venusDesc.desc);
-  console.log("Surface temperature:", venusDesc.surfaceTemp);
-  console.log("Mass:", venusDesc.mass);
-console.groupEnd();
-
-console.group(planets[1].planet);
-  console.log("Description:", neptuneDesc.desc);
-  console.log("Surface temperature:", neptuneDesc.surfaceTemp);
-  console.log("Mass:", neptuneDesc.mass);
-console.groupEnd();
+for (var i = 0; i < planets.length; i++) {
+  console.group(planets[i].planet);
+    console.log("Description:", planets[i].desc);
+    console.log("Surface temperature:", planets[i].surfaceTemp);
+    console.log("Mass:", planets[i].mass);
+  console.groupEnd();
+}
 
 /*
  7. Android Object REFACTOR:::::
@@ -547,4 +444,3 @@ console.groupEnd();
  Refactor the planets array to be an array of objects, each object must be its own planet.
   - next update your application to use this newly refactored code
 */
-
