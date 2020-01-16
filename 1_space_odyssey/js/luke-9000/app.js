@@ -84,38 +84,22 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
-var isAlive = true;
+/*
+Level 1::::::::::::::
+Refactor (change) all the variables you have in place that initializes the android into an android object.
+- Your android needs a head, upperBody, lowerBody & [ anyThingElseYouCanDreamOf ].
+- Feel free to create any new properties that will further describe your android [ anyThingYouCanDreamOf ].
+*/
 var name = "GoochieGoochie";
 var hasJetPack = true;
-var suitColor = "white and red";
-var eyes = 2;
-var eyeColor = "blue";
-var hairColor = "pink";
-var legs = 2;
-var arms = 2;
-var hands = 2;
-var ears = 2;
-var canWalk = true;
-var canRun = true;
-var canFly = false;
-var hasWeapon = false;
-var isInGoodMood = false;
+
 
 console.log("\u{1F916} .-.-. Booting .-.-.");
 console.log(
-    name,
-    isAlive,
-    hasJetPack,
-    eyes,
-    eyeColor,
-    hairColor,
-    legs,
-    arms,
-    hands,
-    ears,
-    canWalk,
-    canFly,
-    hasWeapon
+
+  name,
+  hasJetPack,
+
 );
 
 /*
@@ -403,3 +387,46 @@ console.groupEnd();
  Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
 */
 
+/*
+ 7. Android Object REFACTOR:::::
+
+ Level 1::::::::::::::
+ Refactor (change) all the variables you have in place that initializes the android into an android object.
+ - Your android needs a head, upperBody, lowerBody & [ anyThingElseYouCanDreamOf ].
+ - Feel free to create any new properties that will further describe your android [ anyThingYouCanDreamOf ].
+ - next update your application to use this newly refactored code
+
+ tip: the console.log that prints the variables of the android will need to be updated
+*/
+
+var Robot = [
+  "robotUpperBody": {
+    material: "tritainium",
+    bodyRotation: "360",
+    robotArms: "manuverable"
+  },
+  "robotLowerbody": {
+    material: "tritainium",
+    robotLegs: "manuverable"
+  },
+  "robotWeapondary": {
+    mainWeapon: "Dual gatling Laser",
+    secondaryWeapon: "dual Rocketlaunchers",
+    gatlingAmmo: 3535353,
+    rocketAmmo: 4353
+  },
+  "head": {
+    robotEyes: true,
+    robotHeadLabal: "battleDroid",
+    robotView: "night, infrared",
+    robotLives: 34
+  },
+]
+
+
+
+/*
+ Level 2::::::::::::::
+ Refactor the planets array to be an array of objects, each object must be its own planet.
+  - next update your application to use this newly refactored code
+*/
