@@ -174,10 +174,6 @@ for (var i = 0; i <= responses.length; i++) {
 */
 console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
 
-var orderHasShipped = true;
-
-//honestly have no clue of what i did her
-
 // a.
 var enemyCraft = false;
 var photonLaser = true;
@@ -307,25 +303,25 @@ var planets = [
 console.group(planets[0][0]); // Mercury.
   console.log("Description:", );
   console.log("Surface temperature:", );
-  console.log("Distance:", );
+  console.log("Mass:", );
 console.groupEnd();
 
 console.group(); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
   console.log("Description:", );
   console.log("Surface temperature:", );
-  console.log("Distance:", );
+  console.log("Mass:", );
 console.groupEnd();
 
 console.group(); // Earth.
   console.log("Description:", );
   console.log("Surface temperature:", );
-  console.log("Distance:", );
+  console.log("Mass:", );
 console.groupEnd();
 
 console.group(); // Mars.
   console.log("Description:", );
   console.log("Surface temperature:", );
-  console.log("Distance:", );
+  console.log("Mass:", );
 console.groupEnd();
 
 /*

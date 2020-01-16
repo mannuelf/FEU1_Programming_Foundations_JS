@@ -25,6 +25,8 @@ const droid = {
   }
 };
 
+let name = droid.name;
+
 // 2nd Exercise
 
 droid.hasJetPack
@@ -76,3 +78,197 @@ if (enemyCraft && photonLaser && photonLaserEnabled) {
     console.log(lose);
   }
 }
+
+// 5th Exercise
+
+console.log("\u{1F311} LUNAR LANDING:::::");
+
+var lunarRadar = {
+  isEnabled: undefined,
+  long: undefined,
+  lat: undefined,
+  approachSpeed: undefined // "ft per minute"
+};
+
+lunarRadar.isEnabled = true;
+lunarRadar.long = 200;
+lunarRadar.lat = 300;
+lunarRadar.approachSpeed = 500;
+
+// 5th Exercise -- 1st part (if statement)
+
+// if (
+//   lunarRadar.isEnabled &&
+//   lunarRadar.lat !== undefined &&
+//   lunarRadar.long !== undefined
+// ) {
+//   console.log(
+//     "\u{1F91F} looking good " +
+//       name +
+//       " we are making our descent, now entering approach speed"
+//   );
+//   if (lunarRadar.approachSpeed >= 400) {
+//     console.log(`\u{1F627} Coming in way too hot ${name} decrease pitch!`);
+//   } else if (lunarRadar.approachSpeed >= 300) {
+//     console.log("\u{1F627} Coming in hot " + name + " decrease pitch!");
+//   } else if (lunarRadar.approachSpeed >= 200) {
+//     console.log(
+//       "\u{269B} Well done " +
+//         name +
+//         " we have touched down safely. Lets get some samples and get heck outta here!"
+//     );
+//   } else if (lunarRadar.approachSpeed < 200) {
+//     console.log(
+//       "\u{1F47D} hmmm need a bit more heat " +
+//         name +
+//         " lets increase pitch and we should have a smooth landing"
+//     );
+//   } else {
+//     console.log("Please enter an approach speed");
+//   }
+// } else {
+//   console.log(
+//     "\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " +
+//       name +
+//       " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the Mass."
+//   );
+// }
+
+// 5th Exercise -- 2nd part (switch statement)
+
+if (
+  lunarRadar.isEnabled &&
+  lunarRadar.lat !== undefined &&
+  lunarRadar.long !== undefined
+) {
+  console.log(
+    "\u{1F91F} looking good " +
+      name +
+      " we are making our descent, now entering approach speed"
+  );
+
+  switch (true) {
+    case lunarRadar.approachSpeed > 300:
+      console.log(
+        "\u{1F627} coming in way too hot " + name + " decrease pitch!"
+      );
+      break;
+
+    case lunarRadar.approachSpeed > 200:
+      console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+      break;
+
+    case lunarRadar.approachSpeed > 100:
+      console.log(
+        "\u{269B} well done " +
+          name +
+          " we have touched down safely. Lets get some samples and get heck outta here!"
+      );
+      break;
+
+    case lunarRadar.approachSpeed <= 100:
+      console.log(
+        "\u{1F47D} hmmm need a bit more heat " +
+          name +
+          " lets increase pitch and we should have a smooth landing"
+      );
+      break;
+
+    default:
+      console.log("Please enter an approach speed");
+      break;
+  }
+} else {
+  console.log(
+    "\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " +
+      name +
+      " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the Mass."
+  );
+}
+
+// 6th  Exercise
+
+console.log("\u{1F319} PLANETARY INFO-DASH:::::");
+
+var planets = [
+  [
+    "MERCURY",
+    [
+      "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+      "-173 to 427°C",
+      "330,104,000,000,000 billion kg (0.055 x Earth)"
+    ]
+  ],
+  [
+    "JUPITER",
+    [
+      "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+      "-108°C",
+      "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+    ]
+  ],
+  [
+    "EARTH",
+    [
+      "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+      "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+      "6.6 sextillion tons"
+    ]
+  ],
+  [
+    "MARS",
+    [
+      "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+      "87 to -5 °C",
+      "641,693,000,000,000 billion kg (0.107 x Earth)"
+    ]
+  ]
+];
+
+console.group(planets[0][0]); // Mercury.
+console.log("Description:", planets[0][1][0]);
+console.log("Surface temperature:", planets[0][1][1]);
+console.log("Mass:", planets[0][1][2]);
+console.groupEnd();
+
+console.group(planets[1][0]); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
+console.log("Description:", planets[1][1][0]);
+console.log("Surface temperature:", planets[1][1][1]);
+console.log("Mass:", planets[1][1][2]);
+console.groupEnd();
+
+console.group(planets[2][0]); // Earth.
+console.log("Description:", planets[2][1][0]);
+console.log("Surface temperature:", planets[2][1][1]);
+console.log("Mass:", planets[2][1][2]);
+console.groupEnd();
+
+console.group(planets[3][0]); // Mars.
+console.log("Description:", planets[3][1][0]);
+console.log("Surface temperature:", planets[3][1][1]);
+console.log("Mass:", planets[3][1][2]);
+console.groupEnd();
+
+// Level 2::::::::::::::
+
+const neptune = [
+  "NEPTUNE",
+  [
+    "Neptune is the fourth largest and the farthest planet of the Solar System with the most powerful wind speeds out of all the planets. It is the smallest of the gas giants and is the first planet to be discovered by mathematical predictions in 1846.",
+    "−201 °C",
+    "102,410,000,000,000,000 billion kg (17.15x Earth)"
+  ]
+];
+
+const uranus = [
+  "URANUS",
+  [
+    "Uranus is the seventh planet discovered in the Solar System that also led to the discovery of the last planet, Neptune they are both referred to as ice giants. Officially recognized in 1781 after many observations in the past, it is the third largest planet of the Solar System.",
+    "−197 °C",
+    "86,810,300,000,000,000 billion kg (14.536 x Earth)"
+  ]
+];
+
+planets.unshift(neptune, uranus);
+
+console.table(planets);
