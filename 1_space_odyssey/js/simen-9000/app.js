@@ -100,23 +100,6 @@
  Refactor the planets array to be an array of objects, each object must be its own planet.
   - next update your application to use this newly refactored code
 */
-    /* var isAlive = true;
-    var name = "simen-9000";
-    var hasJetPack = true;
-    var suitColor = "white";
-    var eyes = 2;
-    var eyeColor = "blue";
-    var hairColor = "brown";
-    var legs = 2;
-    var arms = 2;
-    var hands = 2;
-    var ears = 2;
-    var canWalk = true;
-    var canRun = true;
-    var canFly  = false;
-    var hasWeapon = true;
-    var isInGoodMood = true; */
-
     var simensAndoid = {
       head: {
         isAlive: true,
