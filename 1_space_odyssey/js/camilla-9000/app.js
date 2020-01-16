@@ -219,10 +219,11 @@ var lunarRadar = {
   lat: undefined,
   approachSpeed: undefined // "ft per minute"
 };
-lunarRadar.isEnabled = true;
-lunarRadar.long = 200;
-lunarRadar.lat = 100;
-lunarRadar.approachSpeed = 200;
+
+var isEnabled = true;
+var long = 200;
+var lat = 100;
+var approachSpeed = 200;
 
 
 if (isEnabled && lat && long) {
@@ -356,3 +357,71 @@ console.groupEnd();
  Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
 */
 
+/*
+ 7. Android Object REFACTOR:::::
+
+ Level 1::::::::::::::
+ Refactor (change) all the variables you have in place that initializes the android into an android object.
+ - Your android needs a head, upperBody, lowerBody & [ anyThingElseYouCanDreamOf ].
+ - Feel free to create any new properties that will further describe your android [ anyThingYouCanDreamOf ].
+ - next update your application to use this newly refactored code
+
+ tip: the console.log that prints the variables of the android will need to be updated
+
+ Level 2::::::::::::::
+ Refactor the planets array to be an array of objects, each object must be its own planet.
+  - next update your application to use this newly refactored code
+*/
+
+
+var android = [ {
+  name: "Camilla-9000",
+  isAlive: true,
+  hasJetPack: true,
+  suitColor: "white",
+  eyes: true,
+  eyeColor: "green",
+  hairColor: "yellow",
+  legs: 2,
+  arms: 2,
+  hands: 2,
+  canWalk: true,
+  canRun: true,
+  canFly: true,
+  hasWeapon: false,
+  isInGoodMood: false
+}];
+for(var i = 0; i < android.length; i++) {
+  console.log(android[i]);
+}
+
+var head = [ {
+  head: true,
+  eyes: 2,
+  nose: true,
+  mouth: 1,
+  hair: true,
+  ears: 2
+}];
+for(var i = 0; i < head.length; i++) {
+  console.log(head[i]);
+}
+
+var upperBody = [ {
+  arms: 2,
+  colortShirt: "grey",
+}
+]
+for(var i = 0; i < upperBody.length; i++) {
+  console.log(upperBody[i]);
+}
+var lowerBody = [ {
+  legs: 2,
+  colorPants: "blue",
+  shoes: 2,
+  colorShose: "black"
+}
+];
+for(var i = 0; i < lowerBody.length; i++) {
+  console.log(lowerBody[i]);
+}
