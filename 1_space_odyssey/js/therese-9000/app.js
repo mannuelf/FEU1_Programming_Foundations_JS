@@ -424,7 +424,7 @@ var neptune = [
   ]
 ]
 
-planets.push(venus, neptune);
+planets.unshift(venus, neptune);
 
 var venusDesc = planets[4];
 var neptuneDesc = planets[5];
