@@ -287,3 +287,98 @@ var bullets = 200;
 
     default: console.log("\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " + name + " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
   }
+
+  /*
+   6. PLANETARY INFO-DASH:::::
+
+   Level 1::::::::::::::
+   Given this array of planets using what you know about how to access data in an arrays index log out the:
+    - Description,
+    - Surface temperature and
+    - Mass
+
+    in the console logs bellow.
+
+    tip: pass your variables into the console.log after comma ,
+  */
+  console.log("\u{1F319} PLANETARY INFO-DASH:::::");
+
+  var planets = [
+    [ "MERCURY",
+      [
+        "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+        "-173 to 427°C",
+        "330,104,000,000,000 billion kg (0.055 x Earth)"
+      ],
+    ],
+    [ "JUPITER",
+      [
+        "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+        "-108°C",
+        "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+      ],
+    ],
+    [ "EARTH",
+      [
+        "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+        "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+        "6.6 sextillion tons"
+      ],
+    ],
+    [ "MARS",
+      [
+        "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+        "87 to -5 °C",
+        "641,693,000,000,000 billion kg (0.107 x Earth)"
+      ],
+    ],
+  ];
+
+  console.group(planets[0][0]); // Mercury.
+    console.log("Description: " + planets[0][1][0] , );
+    console.log("Surface temperature: " + planets[0][1][1], );
+    console.log("Mass: " + planets[0][1][2], );
+  console.groupEnd();
+
+  console.group(); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
+    console.log("Description: " + planets[1][1][0], );
+    console.log("Surface temperature: " + planets[1][1][1], );
+    console.log("Mass: " + planets[1][1][2], );
+  console.groupEnd();
+
+  console.group(); // Earth.
+    console.log("Description: " + planets[2][1][0], );
+    console.log("Surface temperature: " + planets[2][1][1], );
+    console.log("Mass: " + planets[2][1][2], );
+  console.groupEnd();
+
+  console.group(); // Mars.
+    console.log("Description: " + planets[3][1][0], );
+    console.log("Surface temperature: " + planets[3][1][1], );
+    console.log("Mass: " + planets[3][1][2], );
+  console.groupEnd();
+
+  /*
+   Level 2::::::::::::::
+   Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
+  */
+
+  var pluto = [ "PLUTO",
+    [
+      "Pluto is sadly not a planet. Pluto is the largest known dwarf planet in the Solar System, discovered in 1930. ",
+      "-229°C",
+      "13,050,000,000,000 billion kg (0.00218 x Earth)"
+    ],
+  ];
+
+  var saturn = [ "SATURN",
+    [
+      "Saturn is the sixth planet from the sun, with the largest planetary rings in the Solar System. ",
+      "-175C (-285F)",
+      "The mass of Saturn is about 95 times greater than our planet."
+    ],
+  ];
+
+planets.push(pluto, saturn);
+
+console.table(planets)
