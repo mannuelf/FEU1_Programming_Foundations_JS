@@ -114,7 +114,7 @@ var arms = 4;
 var hands = 2;
 var ears = 6;
 var canFly = true;
-var isInGoodMood = true;
+
 
 console.log(".-.-. Booting .-.-.");
 console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon, isInGoodMood, canRun, suitColor,);
