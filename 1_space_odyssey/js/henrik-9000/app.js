@@ -41,9 +41,21 @@ var hasWeapon = true;
 var isInGoodMood = true;
 
 console.log(".-.-. Booting .-.-.");
-console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon);
-
-
+console.log(
+  name,
+  isAlive,
+  hasJetPack,
+  eyes,
+  eyeColor,
+  hairColor,
+  legs,
+  arms,
+  hands,
+  ears,
+  canWalk,
+  canFly,
+  hasWeapon
+);
 
 /*
  2. BROKEN SATELLITE::::::
@@ -53,9 +65,11 @@ console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, ha
 */
 
 if (hasJetPack === true) {
-    console.log("JetPack is enabled!!! off I go outside to fix the satellite");
+  console.log("JetPack is enabled!!! off I go outside to fix the satellite");
 } else {
-    console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
+  console.log(
+    "JetPack NOT enabled, please enable jetPack before doing a space walk"
+  );
 }
 /*
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
@@ -65,15 +79,13 @@ if (hasJetPack === true) {
 
  */
 
- /*
+/*
  3. METEOR SHOWER::::::
     On your way to Jupiter you encounter a massive meteor shower that could damage the ship, you need to redirect the ship to a new safe location.
     a) Using a for loop iterate through the responses array and choose the appropriate response to get out of danger.
       create an if condition in your loop to print only 1 response using a comparison operator.
 */
-console.log(
-  "\u{1F327} METEOR SHOWER::::::"
-);
+console.log("\u{1F327} METEOR SHOWER::::::");
 
 var responses = [
   "Call basecamp and ask for assistance, but they are far away",
@@ -99,9 +111,7 @@ for (var count = 0; count < responses.length; count++) {
        the if statements pass so that photonLaser fires pew pew pew.
     b)
 */
-console.log(
-  "\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::"
-);
+console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
 
 // a.
 var enemyCraft = true;
@@ -118,16 +128,15 @@ var bullets = 700;
           console.log("\u{1F9E8} DEAD \u{1F9E8} ");
 */
 
-if(enemyCraft && photonLaser && photonLaserEnabled) {
-  if(bullets >= 100) {
-    for(var i = 1; i <= 100; i++) {
+if (enemyCraft && photonLaser && photonLaserEnabled) {
+  if (bullets >= 100) {
+    for (var i = 1; i <= 100; i++) {
       console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
     }
   } else {
     console.log("\u{1F9E8} DEAD \u{1F9E8} ");
   }
 }
-
 
 /*
  5. LUNAR LANDING:::::
@@ -144,9 +153,7 @@ if(enemyCraft && photonLaser && photonLaserEnabled) {
 
     tip: varName.keyName (this is how to extract a value from an object)
 */
-console.log(
-  "\u{1F311} LUNAR LANDING:::::"
-);
+console.log("\u{1F311} LUNAR LANDING:::::");
 
 // start coding here
 
@@ -154,8 +161,8 @@ var lunarRadar = {
   isEnabled: true,
   long: 200,
   lat: 400,
-  approachSpeed: 300, // "ft per minute"
-}
+  approachSpeed: 200 // "ft per minute"
+};
 // Level 1 convert this psuedocode to functioning code.
 
 /*
@@ -180,48 +187,40 @@ ELSE
 */
 
 if (lunarRadar.isEnabled && lunarRadar.long && lunarRadar.lat) {
-  console.log("\u{1F91F} looking good " + name + " we are making our descent, now entering approach speed")
+  console.log(
+    "\u{1F91F} looking good " +
+      name +
+      " we are making our descent, now entering approach speed"
+  );
 
-  if ((lunarRadar.approachSpeed >= 200) && (lunarRadar.approachSpeed > 299)) {
-    console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get heck outta here!")
-  }
-  else if (lunarRadar.approachSpeed >= 300) {
+  if (lunarRadar.approachSpeed >= 200 && lunarRadar.approachSpeed > 299) {
+    console.log(
+      "\u{269B} well done " +
+        name +
+        " we have touched down safely. Lets get some samples and get heck outta here!"
+    );
+  } else if (lunarRadar.approachSpeed >= 300) {
     console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
-  }
-
-  else if (lunarRadar.approachSpeed >= 400) {
+  } else if (lunarRadar.approachSpeed >= 400) {
     console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
-  }
-
-  else if (lunarRadar.approachSpeed >= 500) {
+  } else if (lunarRadar.approachSpeed >= 500) {
     console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
-  }
-
-  else if (lunarRadar.approachSpeed >= 600) {
+  } else if (lunarRadar.approachSpeed >= 600) {
     console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
-  }
-  else if (lunarRadar.approachSpeed <= 100) {
+  } else if (lunarRadar.approachSpeed <= 100) {
     console.log("\u{1F47D} hmmm need a bit more heat " + name + " lets increase pitch and we should have a smooth landing");
+  } else {
+    console.log("Please enter an approach speed");
   }
-      else {
-        console.log('Please enter an approach speed')
-    }
+} else {
+  console.log(
+    "\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " + name + " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
 }
-else {
-  console.log("\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " + name + " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
-  }
-
-
-
-
 
 // Level 2 convert it to a switch statement.
 if (lunarRadar.isEnabled && lunarRadar.long && lunarRadar.lat) {
-  switch(true) {
-
-
+  switch (true) {
   }
-
 }
 
 /*
