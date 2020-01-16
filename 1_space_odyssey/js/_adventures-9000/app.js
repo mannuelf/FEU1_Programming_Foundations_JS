@@ -297,34 +297,52 @@ var planets = [
       "87 to -5 °C",
       "641,693,000,000,000 billion kg (0.107 x Earth)"
     ],
-  ],
+  ]
 ];
 
 console.group(planets[0][0]); // Mercury.
   console.log("Description:", );
   console.log("Surface temperature:", );
-  console.log("Distance:", );
+  console.log("Mass:", );
 console.groupEnd();
 
 console.group(); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
   console.log("Description:", );
   console.log("Surface temperature:", );
-  console.log("Distance:", );
+  console.log("Mass:", );
 console.groupEnd();
 
 console.group(); // Earth.
   console.log("Description:", );
   console.log("Surface temperature:", );
-  console.log("Distance:", );
+  console.log("Mass:", );
 console.groupEnd();
 
 console.group(); // Mars.
   console.log("Description:", );
   console.log("Surface temperature:", );
-  console.log("Distance:", );
+  console.log("Mass:", );
 console.groupEnd();
+
 
 /*
  Level 2::::::::::::::
  Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
+*/
+
+
+/*
+ 7. Android Object REFACTOR:::::
+
+ Level 1::::::::::::::
+ Refactor (change) all the variables you have in place that initializes the android into an android object.
+ - Your android needs a head, upperBody, lowerBody & [ anyThingElseYouCanDreamOf ].
+ - Feel free to create any new properties that will further describe your android [ anyThingYouCanDreamOf ].
+ - next update your application to use this newly refactored code
+
+ tip: the console.log that prints the variables of the android will need to be updated
+
+ Level 2::::::::::::::
+ Refactor the planets array to be an array of objects, each object must be its own planet.
+  - next update your application to use this newly refactored code
 */
