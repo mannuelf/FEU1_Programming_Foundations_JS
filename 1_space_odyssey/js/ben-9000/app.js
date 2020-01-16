@@ -169,6 +169,30 @@ var planets = [
   ]
 ];
 
+
+var newPlanet = [
+  "Neptunes",
+  [
+    "is the fourth largest and the farthest planet of the Solar System with the most powerful wind speeds out of all the planets. It is the smallest of the gas giants and is the first planet to be discovered by mathematical predictions in 1846.",
+    "-201 °C",
+    "60,190.03 Earth days (164.79 Earth years)"
+  ]
+];
+
+var newPlanet1 = [
+  
+    "Venus",
+    [
+      "spinning in the opposite direction to most planets, Venus is the hottest planet, and one of the brightest object in the sky.",
+      "462° C",
+      "108,209,475 km (0.73 AU),"
+    ]
+];
+
+planets.unshift(newPlanet);
+planets.unshift(newPlanet1);
+
+
 console.log("\u{1F319} PLANETARY INFO-DASH:::::");
 
 console.group(planets[4][0]); // earth.done
@@ -217,28 +241,6 @@ console.groupEnd();
  Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
 */
 
-
-var newPlanet = [
-  "Neptunes",
-  [
-    "is the fourth largest and the farthest planet of the Solar System with the most powerful wind speeds out of all the planets. It is the smallest of the gas giants and is the first planet to be discovered by mathematical predictions in 1846.",
-    "-201 °C",
-    "60,190.03 Earth days (164.79 Earth years)"
-  ]
-];
-
-var newPlanet1 = [
-  
-    "Venus",
-    [
-      "spinning in the opposite direction to most planets, Venus is the hottest planet, and one of the brightest object in the sky.",
-      "462° C",
-      "108,209,475 km (0.73 AU),"
-    ]
-];
-
-planets.unshift(newPlanet);
-planets.unshift(newPlanet1);
 
 console.log(planets);
 
