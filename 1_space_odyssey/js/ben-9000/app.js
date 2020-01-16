@@ -1,25 +1,43 @@
-var isAlive = true;
-var name = "ben-9000";
-var hasJetPack = true;
-var suitColor = "black";
-var eyes = 4;
-var eyeColor = "brown";
-var hairColor = 0;
-var legs = 2;
-var arms = 2;
-var hands = 2;
-var ears = 2;
-var canWalk = true;
-var canRun = true;
-var canFly = true;
-var hasWeapon = false;
-var isInGoodMood = false;
+var android = {
+  head:{
+    name:"ben-9000",
+    eyes:2,
+    eyeColor:"brown",
+    hairColor:"black",
+    ears:2,
+  },
+  upperBody:{
+    arms:2,
+    hands:2,
+  },
+  lowerBody:{
+    legs:2,
+  },
+  anyThingElseYouCanDreamOf:{
+    canWalk:true,
+    canRun:true,
+    canFly:true,
+    hasWeapon:false,
+    isInGoodMood:false,
+    isAlive:true,
+    suitColor:"black",
+    hasJetPack:true,
+ },
+};
 
 console.log(".-.-. Booting .-.-.");
-console.log(
-  name,
-  isAlive,
-  hasJetPack,
+console.log(android.head.name);
+console.log(android.anyThingElseYouCanDreamOf.isAlive);
+console.log(android.anyThingElseYouCanDreamOf.hasJetPack);
+
+
+
+
+
+
+/*
+  
+ 
   eyes,
   eyeColor,
   hairColor,
@@ -31,6 +49,8 @@ console.log(
   canFly,
   hasWeapon
 );
+*/
+
 
 /* 
  2. BROKEN SATELLITE::::::
@@ -140,7 +160,7 @@ var hasJetPack = true;
 var suitColor = "black";
 var eyes = 4;
 var eyeColor = "brown";
-var hairColor = black;
+var hairColor = "black";
 var legs = 2;
 var arms = 2;
 var hands = 2;
@@ -151,33 +171,65 @@ var canFly = true;
 var hasWeapon = false;
 var isInGoodMood = false;
 */
-
-
-
-var android = [  
-  {//head
+var android = {
+  head:{
     name:"ben-9000",
     eyes:2,
     eyeColor:"brown",
     hairColor:"black",
     ears:2,
   },
-  {// upperBody, 
+  upperBody:{
     arms:2,
     hands:2,
   },
-  {// lowerBody 
+  lowerBody:{
     legs:2,
   },
-  {// anyThingElseYouCanDreamOf
+  anyThingElseYouCanDreamOf:{
     canWalk:true,
     canRun:true,
     canFly:true,
     hasWeapon:false,
     isInGoodMood:false,
-}
- 
-];
+    isAlive:true,
+    suitColor:"black",
+ },
+};
+
+console.log(".-.-. Booting .-.-.");
+console.log(android.head);android
+
+
+
+console.log(
+  name,
+  isAlive,
+  hasJetPack,
+  eyes,
+  eyeColor,
+  hairColor,
+  legs,
+  arms,
+  hands,
+  ears,
+  canWalk,
+  canFly,
+  hasWeapon
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
