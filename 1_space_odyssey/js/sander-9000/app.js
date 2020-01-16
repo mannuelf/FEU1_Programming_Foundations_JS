@@ -105,22 +105,38 @@ var isInGoodMood = true;
 */
 
 var android = {
-  isAlive: true,
-  name: "Sander-9000",
-  hasJetPack: true,
-  suitColor: "white",
-  eyes: 2,
-  eyeColor: "blue",
-  hairColor: "blonde",
-  legs: 2,
-  arms: 2,
-  hands: 2,
-  ears: 2,
-  canWalk: true,
-  canRun: true,
-  canFly: false,
-  hasWeapon: true,
-  isInGoodMood: true
+  head: {
+    ears: 2,
+    eyes: 2,
+    eyeColor: "blue",
+    hairColor: "blonde"
+  },
+  upperBody:{
+    arms: 2,
+    hands: 2,
+  },
+  lowerBody:{
+    legs: 2,
+    tail: 0,
+    feet: 2
+  },
+  skills:{
+    canWalk: true,
+    canRun: true,
+    canFly: false
+  },
+
+  equipment:{
+    hasJetPack: true,
+    hasWeapon: true,
+    suitColor: "white"
+  },
+
+  whom:{
+    name: "Sander-9000",
+    isAlive: true,
+    isInGoodMood: true,
+  }
 };
 
 console.log(".-.-. Booting .-.-.");
@@ -141,7 +157,7 @@ console.log(android);
 
  */
 
-if (android.hasJetPack) {
+if (android.equipment) {
   console.log("JetPack is enabled!!! off I go outside to fix the satellite");
 } else {
   console.log(
