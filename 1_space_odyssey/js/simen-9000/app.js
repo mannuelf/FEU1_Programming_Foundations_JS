@@ -191,3 +191,196 @@ console.log(
           ELSE
             console.log("\u{1F9E8} DEAD \u{1F9E8} ");
   */
+/*
+ 5. LUNAR LANDING:::::
+    We got word of an extra terrestrial sighting on the moon... we have been tasked to land on the moon
+    to investigate it, we have aboard a NASA lunar module https://en.wikipedia.org/wiki/Apollo_Lunar_Module
+    This module will allow to land safely on the moon with the aid of the landing radar which takes inputs.
+
+    Ensure the correct co-ordinates and approach speed are entered into the landing radar.
+    It's all automated we just have to ensure that the correct values are input ie. not undefined.
+
+    The lunar radar accepts approach speeds in increments of hundreds only, starting at 0 and maxing out at 700.
+
+    You cannot edit the lunarRadar object directly you have to pass your values in via an interface called variables.
+
+    tip: varName.keyName (this is how to extract a value from an object)
+*/
+console.log(
+  "\u{1F311} LUNAR LANDING:::::"
+);
+
+// start coding here
+
+var lunarRadar = {
+  isEnabled: undefined,
+  long: undefined,
+  lat: undefined,
+  approachSpeed: undefined, // "ft per minute"
+}
+
+lunarRadar.isEnabled = true;
+lunarRadar.long = -17.47194;
+lunarRadar.lat = -3.64589;
+lunarRadar.approachSpeed = 200;
+
+// Level 1 convert this psuedocode to functioning code.
+
+/*
+IF lunar radar is enabled && lat is defined and long is defined
+    console.log("\u{1F91F} looking good " + name + " we are making our descent, now entering approach speed");
+    IF approach speed is greater than or equal to 200ft per minute and approach speed is less than 299ft per minute
+      console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get heck outta here!");
+    ELSE IF approach speed is greater than or equal to 300ft per minute
+      console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+    ELSE IF approach speed is greater than or equal to 400ft per minute
+      console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+    ELSE IF approach speed is greater than or equal to 500ft per minute
+      console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+    ELSE IF approach speed is greater than or equal to 600ft per minute
+      console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+    ELSE IF approach speed is less than or equal to 100ft per minute
+      console.log("\u{1F47D} hmmm need a bit more heat " + name + " lets increase pitch and we should have a smooth landing");
+    ELSE
+      console.log('Please enter an approach speed');
+ELSE
+  console.log("\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " + name + " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
+*/
+if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long){
+  console.log("\u{1F91F} looking good " + name + " we are making our descent, now entering approach speed");
+
+  if (lunarRadar.approachSpeed <= 200 && lunarRadar.approachSpeed <= 299){
+  console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get heck outta here!");
+  } else if(lunarRadar.approachSpeed <= 300){
+  console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+  } else if(lunarRadar.approachSpeed <= 400){
+    console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+  } else if(lunarRadar.approachSpeed <= 500){
+    console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+  } else if(lunarRadar.approachSpeed <= 600){
+    console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+  } else if(lunarRadar.approachSpeed >= 100){
+    console.log("\u{1F47D} hmmm need a bit more heat " + name + " lets increase pitch and we should have a smooth landing");
+  } else {console.log('Please enter an approach speed');}
+}
+else {console.log("\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " + name + " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");}
+// Level 2 convert it to a switch statement.
+
+if(lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long)
+{
+  switch(lunarRadar.approachSpeed){
+    case 200:
+      console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get heck outta here!");
+      break;
+    case 300:
+      console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+      break;
+    case 400:
+      console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+      break;
+    case 500:
+      console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+      break;
+    case 600:
+      console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+      break;
+    case 100:
+      console.log("\u{1F47D} hmmm need a bit more heat " + name + " lets increase pitch and we should have a smooth landing");
+      break;
+    default:
+      console.log("\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " + name + " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
+  }
+}
+/*
+ 6. PLANETARY INFO-DASH:::::
+
+ Level 1::::::::::::::
+ Given this array of planets using what you know about how to access data in an arrays index log out the:
+  - Description,
+  - Surface temperature and
+  - Mass
+
+  in the console logs bellow.
+
+  tip: pass your variables into the console.log after comma ,
+*/
+console.log("\u{1F319} PLANETARY INFO-DASH:::::");
+
+var planets = [
+  [ "MERCURY",
+    [
+      "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+      "-173 to 427°C",
+      "330,104,000,000,000 billion kg (0.055 x Earth)"
+    ],
+  ],
+  [ "JUPITER",
+    [
+      "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+      "-108°C",
+      "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+    ],
+  ],
+  [ "EARTH",
+    [
+      "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+      "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+      "6.6 sextillion tons"
+    ],
+  ],
+  [ "MARS",
+    [
+      "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+      "87 to -5 °C",
+      "641,693,000,000,000 billion kg (0.107 x Earth)"
+    ],
+  ],
+];
+
+console.group(planets[0][0]); // Mercury.
+  console.log("Description: The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.", );
+  console.log("Surface temperature: -173 to 427°C", );
+  console.log("Mass: 330,104,000,000,000 billion kg (0.055 x Earth)", );
+console.groupEnd();
+
+console.group(planets[1][0]); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
+  console.log("Description: Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.", );
+  console.log("Surface temperature: -108°C", );
+  console.log("Mass: 1,898,130,000,000,000,000 billion kg (317.83 x Earth)", );
+console.groupEnd();
+
+console.group(planets[2][0]); // Earth.
+  console.log("Description: Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.", );
+  console.log("Surface temperature: 110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower", );
+  console.log("Mass: 6.6 sextillion tons", );
+console.groupEnd();
+
+console.group(planets[3][0]); // Mars.
+  console.log("Description: Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.", );
+  console.log("Surface temperature: 87 to -5 °C", );
+  console.log("Mass: 641,693,000,000,000 billion kg (0.107 x Earth)", );
+console.groupEnd();
+
+/*
+ Level 2::::::::::::::
+ Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
+*/
+var newPlanet = [
+  "Neptunes",
+  [
+    "is the fourth largest and the farthest planet of the Solar System with the most powerful wind speeds out of all the planets. It is the smallest of the gas giants and is the first planet to be discovered by mathematical predictions in 1846.",
+    "-201 °C",
+    "60,190.03 Earth days (164.79 Earth years)"
+  ]
+];
+var newPlanet1 = [
+
+  "Venus",
+  [
+    "spinning in the opposite direction to most planets, Venus is the hottest planet, and one of the brightest object in the sky.",
+    "462° C",
+    "108,209,475 km (0.73 AU),"
+  ]
+];
+planets.unshift(newPlanet);
+planets.unshift(newPlanet1);
