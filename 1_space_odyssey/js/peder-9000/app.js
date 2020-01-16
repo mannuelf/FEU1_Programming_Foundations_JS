@@ -101,27 +101,29 @@ canWalk: true,
 canRun: true,
 canFly: true,
 hasWeapon: true,
-isBadAss: True,
+isBadAss: true,
+hasJetPack:true,
 };
 
 console.log(".-.-. Booting .-.-.");
 console.log(
-  isAlive,
-    name,
-    head,
-    upperBody,
-    lowerBody,
-    laserEyes,
-    eyeColor,
-    legs,
-    arms,
-    hands,
-    ears,
-    canWalk,
-    canRun,
-    canFly,
-    hasWeapon,
-    isBadAss,
+    droid.isAlive,
+    droid.name,
+    droid.head,
+    droid.upperBody,
+    droid.lowerBody,
+    droid.laserEyes,
+    droid.eyeColor,
+    droid.legs,
+    droid.arms,
+    droid.hands,
+    droid.ears,
+    droid.canWalk,
+    droid.canRun,
+    droid.canFly,
+    droid.hasWeapon,
+    droid.isBadAss,
+    droid.hasJetPack,
 );
 
 /*
@@ -135,7 +137,7 @@ console.log(
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
   */
 
-if (hasJetPack) {
+if (droid.hasJetPack) {
   console.log("go outside");
 } else {
   console.log(
