@@ -84,39 +84,66 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
-var isAlive = true;
-var name = "Therese-9000";
-var hasJetPack = true;
-var suitColor = "black";
-var eyes = 2;
-var eyeColor = "green";
-var hairColor = "brown";
-var legs = 2;
-var arms = 2;
-var hands = 2;
-var ears = 2;
-var canWalk = true;
-var canRun = true;
-var canFly = true;
-var hasWeapon = true;
-var isInGoodMood = true;
+// var isAlive = true;
+// var name = "Therese-9000";
+// var hasJetPack = true;
+// var suitColor = "black";
+// var eyes = 2;
+// var eyeColor = "green";
+// var hairColor = "brown";
+// var legs = 2;
+// var arms = 2;
+// var hands = 2;
+// var ears = 2;
+// var canWalk = true;
+// var canRun = true;
+// var canFly = true;
+// var hasWeapon = true;
+// var isInGoodMood = true;
+
+var android = [
+  {
+  isAlive: true,
+  name: "Therese-9000",
+  hasJetPack: true,
+  suitColor: "black",
+  eyes: 2,
+  eyeColor: "green",
+  hairColor: "brown",
+  legs: 2,
+  arms: 2,
+  hands: 2,
+  ears: 2,
+  canWalk: true,
+  canRun: true,
+  canFly: true,
+  hasWeapon: true,
+  isInGoodMood: true
+}
+];
+
 
 console.log(".-.-. Booting .-.-.");
-console.log(
-  name,
-  isAlive,
-  hasJetPack,
-  eyes,
-  eyeColor,
-  hairColor,
-  legs,
-  arms,
-  hands,
-  ears,
-  canWalk,
-  canFly,
-  hasWeapon
-);
+
+// console.log(
+//   name,
+//   isAlive,
+//   hasJetPack,
+//   eyes,
+//   eyeColor,
+//   hairColor,
+//   legs,
+//   arms,
+//   hands,
+//   ears,
+//   canWalk,
+//   canFly,
+//   hasWeapon
+// );
+
+for(var i = 0; i < android.length; i++) {
+  console.log(android[i]);
+}
 
 /* 
  2. BROKEN SATELLITE::::::
@@ -124,7 +151,7 @@ console.log(
     a) write an if condition checking if the jet pack is enabled, if true the droid can go outside if false the droid 
        cannot go outside, console log the correct log based on that condition. 
 */
-if (hasJetPack === true) {
+if (android[0].hasJetPack === true) {
   console.log("JetPack is enabled!!! off I go outside to fix the satellite");
 } else {
   console.log(
@@ -341,36 +368,65 @@ if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
 console.log("\u{1F319} PLANETARY INFO-DASH:::::");
 
 
+// var planets = [
+//   [ "MERCURY",
+//     [
+//       "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+//       "-173 to 427°C",
+//       "330,104,000,000,000 billion kg (0.055 x Earth)"
+//     ],
+//   ],
+//   [ "JUPITER",
+//     [
+//       "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+//       "-108°C",
+//       "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+//     ],
+//   ],
+//   [ "EARTH",
+//     [
+//       "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+//       "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+//       "6.6 sextillion tons"
+//     ],
+//   ],
+//   [ "MARS",
+//     [
+//       "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+//       "87 to -5 °C",
+//       "641,693,000,000,000 billion kg (0.107 x Earth)"
+//     ],
+//   ],
+// ];
+
 var planets = [
-  [ "MERCURY",
-    [
-      "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
-      "-173 to 427°C",
-      "330,104,000,000,000 billion kg (0.055 x Earth)"
-    ],
-  ],
-  [ "JUPITER",
-    [
-      "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
-      "-108°C",
-      "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
-    ],
-  ],
-  [ "EARTH",
-    [
-      "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
-      "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
-      "6.6 sextillion tons"
-    ],
-  ],
-  [ "MARS",
-    [
-      "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
-      "87 to -5 °C",
-      "641,693,000,000,000 billion kg (0.107 x Earth)"
-    ],
-  ],
-];
+  {
+    planet: "MERCURY",
+    desc: "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+    surfaceTemp:  "-173 to 427°C",
+    mass: "330,104,000,000,000 billion kg (0.055 x Earth)"
+  },
+  {
+    planet: "JUPITER",
+    desc: "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+    surfaceTemp: "-108°C",
+    mass: "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+  },
+  {
+    planet: "EARTH",
+    desc: "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+    surfaceTemp: "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+    mass: "6.6 sextillion tons"
+  },
+  {
+    planet: "MARS",
+    desc: "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+    surfaceTemp: "87 to -5 °C",
+    mass: "641,693,000,000,000 billion kg (0.107 x Earth)"
+  }
+]
+
+
 var mercuryDesc = planets[0];
 var jupiterDesc = planets[1];
 var earthDesc = planets[2];
@@ -378,64 +434,81 @@ var marsDesc = planets[3];
 
 
 console.group(planets[0][0]); // Mercury.
-  console.log("Description:", mercuryDesc[1][0]);
-  console.log("Surface temperature:", mercuryDesc[1][1]);
-  console.log("Mass:", mercuryDesc[1][2]);
+  console.log("Description:", mercuryDesc[0]);
+  console.log("Surface temperature:", mercuryDesc[1]);
+  console.log("Mass:", mercuryDesc[2]);
 console.groupEnd();
 
-console.group(planets[1][0]); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
-  console.log("Description:", jupiterDesc[1][0]);
-  console.log("Surface temperature:", jupiterDesc[1][1]);
-  console.log("Mass:", jupiterDesc[1][2]);
-console.groupEnd();
+// console.group(planets[1][0]); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
+//   console.log("Description:", jupiterDesc[1][0]);
+//   console.log("Surface temperature:", jupiterDesc[1][1]);
+//   console.log("Mass:", jupiterDesc[1][2]);
+// console.groupEnd();
 
-console.group(planets[2][0]); // Earth.
-  console.log("Description:", earthDesc[1][0]);
-  console.log("Surface temperature:", earthDesc[1][1]);
-  console.log("Mass:", earthDesc[1][2]);
-console.groupEnd();
+// console.group(planets[2][0]); // Earth.
+//   console.log("Description:", earthDesc[1][0]);
+//   console.log("Surface temperature:", earthDesc[1][1]);
+//   console.log("Mass:", earthDesc[1][2]);
+// console.groupEnd();
 
-console.group(planets[3][0]); // Mars.
-  console.log("Description:", marsDesc[1][0]);
-  console.log("Surface temperature:", marsDesc[1][1]);
-  console.log("Mass:", marsDesc[1][2]);
-console.groupEnd();
+// console.group(planets[3][0]); // Mars.
+//   console.log("Description:", marsDesc[1][0]);
+//   console.log("Surface temperature:", marsDesc[1][1]);
+//   console.log("Mass:", marsDesc[1][2]);
+// console.groupEnd();
 
 /*
  Level 2::::::::::::::
  Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
 */
 
-var venus = [
-  "VENUS",
-  [
-    "Venus is the second planet from the Sun and the sixth largest. Together with Mercury, they are the only planets without a satellite, even though Mercury is closer to the sun, Venus is the hottest planet.",
-    "462 °C", 
-    "4,867,320,000,000,000 billion kg (0.815 x Earth)"
-  ]
-]
+// var venus = [
+//   "VENUS",
+//   [
+//     "Venus is the second planet from the Sun and the sixth largest. Together with Mercury, they are the only planets without a satellite, even though Mercury is closer to the sun, Venus is the hottest planet.",
+//     "462 °C", 
+//     "4,867,320,000,000,000 billion kg (0.815 x Earth)"
+//   ]
+// ]
 
-var neptune = [
-  "NEPTUNE",
-  [
-    "Neptune is the fourth largest and the farthest planet of the Solar System with the most powerful wind speeds out of all the planets. It is the smallest of the gas giants and is the first planet to be discovered by mathematical predictions in 1846. ",
-    "-201 °C",
-    "102,410,000,000,000,000 billion kg (17.15x Earth)"
-  ]
-]
+// var neptune = [
+//   "NEPTUNE",
+//   [
+//     "Neptune is the fourth largest and the farthest planet of the Solar System with the most powerful wind speeds out of all the planets. It is the smallest of the gas giants and is the first planet to be discovered by mathematical predictions in 1846. ",
+//     "-201 °C",
+//     "102,410,000,000,000,000 billion kg (17.15x Earth)"
+//   ]
+// ]
 
-planets.unshift(venus, neptune);
+// planets.unshift(venus, neptune);
 
-var venusDesc = planets[4];
-var neptuneDesc = planets[5];
+// var venusDesc = planets[4];
+// var neptuneDesc = planets[5];
 
-console.group(planets[4][0]);
-  console.log("Description:", venusDesc[1][0]);
-  console.log("Surface temperature:", venusDesc[1][1]);
-  console.log("Mass:", venusDesc[1][2]);
-console.groupEnd();
-console.group(planets[5][0]);
-  console.log("Description:", neptuneDesc[1][0]);
-  console.log("Surface temperature:", neptuneDesc[1][1]);
-  console.log("Mass:", neptuneDesc[1][2]);
-console.groupEnd();
+// console.group(planets[4][0]);
+//   console.log("Description:", venusDesc[1][0]);
+//   console.log("Surface temperature:", venusDesc[1][1]);
+//   console.log("Mass:", venusDesc[1][2]);
+// console.groupEnd();
+// console.group(planets[5][0]);
+//   console.log("Description:", neptuneDesc[1][0]);
+//   console.log("Surface temperature:", neptuneDesc[1][1]);
+//   console.log("Mass:", neptuneDesc[1][2]);
+// console.groupEnd();
+
+/*
+ 7. Android Object REFACTOR:::::
+
+ Level 1::::::::::::::
+ Refactor (change) all the variables you have in place that initializes the android into an android object.
+ - Your android needs a head, upperBody, lowerBody & [ anyThingElseYouCanDreamOf ].
+ - Feel free to create any new properties that will further describe your android [ anyThingYouCanDreamOf ].
+ - next update your application to use this newly refactored code
+
+ tip: the console.log that prints the variables of the android will need to be updated
+
+ Level 2::::::::::::::
+ Refactor the planets array to be an array of objects, each object must be its own planet.
+  - next update your application to use this newly refactored code
+*/
+
