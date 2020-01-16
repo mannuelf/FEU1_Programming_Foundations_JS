@@ -84,38 +84,44 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
-var isAlive = true;
-var name = "Peder-9000";
-var hasJetPack = false;
-var suitColor = "pink";
-var eyes = 2;
-var eyeColor = "blue";
-var hairColor = "brown";
-var legs = 2;
-var arms = 2;
-var hands = 2;
-var ears = 2;
-var canWalk = true;
-var canRun = true;
-var canFly = true;
-var hasWeapon = true;
-var isInGoodMood = false;
+
+var droid = {
+isAlive: true,
+name: "Peder-9000",
+head: true,
+upperBody: true,
+lowerBody: true,
+laserEyes: 2,
+eyeColor: "black",
+legs: 2,
+arms: 2,
+hands: 2,
+ears: 2,
+canWalk: true,
+canRun: true,
+canFly: true,
+hasWeapon: true,
+isBadAss: True,
+};
 
 console.log(".-.-. Booting .-.-.");
 console.log(
-  name,
   isAlive,
-  hasJetPack,
-  eyes,
-  eyeColor,
-  hairColor,
-  legs,
-  arms,
-  hands,
-  ears,
-  canWalk,
-  canFly,
-  hasWeapon
+    name,
+    head,
+    upperBody,
+    lowerBody,
+    laserEyes,
+    eyeColor,
+    legs,
+    arms,
+    hands,
+    ears,
+    canWalk,
+    canRun,
+    canFly,
+    hasWeapon,
+    isBadAss,
 );
 
 /*
@@ -418,3 +424,19 @@ console.log("Surface temperature:",planets[0][1][1]);
 console.log("Mass:", planets[0][1][2]);
 console.groupEnd();
 
+
+/*
+ 7. Android Object REFACTOR:::::
+
+ Level 1::::::::::::::
+ Refactor (change) all the variables you have in place that initializes the android into an android object.
+ - Your android needs a head, upperBody, lowerBody & [ anyThingElseYouCanDreamOf ].
+ - Feel free to create any new properties that will further describe your android [ anyThingYouCanDreamOf ].
+ - next update your application to use this newly refactored code
+
+ tip: the console.log that prints the variables of the android will need to be updated
+
+ Level 2::::::::::::::
+ Refactor the planets array to be an array of objects, each object must be its own planet.
+  - next update your application to use this newly refactored code
+*/
