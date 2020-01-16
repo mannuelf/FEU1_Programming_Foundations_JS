@@ -44,7 +44,6 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
         2020: The sole survivor of the journey to Jupiter ascends to the next level of humanity.
  */
 
-
 /*
   You are the sole survivor who will make the journey to Jupiter.
 
@@ -103,8 +102,24 @@ var hasWeapon = true;
 var isInGoodMood = true;
 
 console.log(".-.-. Booting .-.-.");
-console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon, isInGoodMood, canRun, suitColor,);
-
+console.log(
+  name,
+  isAlive,
+  hasJetPack,
+  eyes,
+  eyeColor,
+  hairColor,
+  legs,
+  arms,
+  hands,
+  ears,
+  canWalk,
+  canFly,
+  hasWeapon,
+  isInGoodMood,
+  canRun,
+  suitColor
+);
 
 /*
  2. BROKEN SATELLITE::::::
@@ -232,8 +247,6 @@ ELSE
 
 // Level 2 convert it to a switch statement.
 
-
-
 /*
  6. PLANETARY INFO-DASH:::::
 
@@ -250,58 +263,62 @@ ELSE
 console.log("\u{1F319} PLANETARY INFO-DASH:::::");
 
 var planets = [
-  [ "MERCURY",
+  [
+    "MERCURY",
     [
       "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
       "-173 to 427°C",
       "330,104,000,000,000 billion kg (0.055 x Earth)"
-    ],
+    ]
   ],
-  [ "JUPITER",
+  [
+    "JUPITER",
     [
       "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
       "-108°C",
       "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
-    ],
+    ]
   ],
-  [ "EARTH",
+  [
+    "EARTH",
     [
       "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
       "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
       "6.6 sextillion tons"
-    ],
+    ]
   ],
-  [ "MARS",
+  [
+    "MARS",
     [
       "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
       "87 to -5 °C",
       "641,693,000,000,000 billion kg (0.107 x Earth)"
-    ],
-  ],
+    ]
+  ]
 ];
 
 console.group(planets[0][0]); // Mercury.
-  console.log("Description:",planets[0][1][0] );
-  console.log("Surface temperature:",planets[0][1][1] );
-  console.log("Mass:", planets[0][1][2]);
+console.log("Description:", planets[0][1][0]);
+console.log("Surface temperature:", planets[0][1][1]);
+console.log("Mass:", planets[0][1][2]);
 console.groupEnd();
 
 console.group(planets[1][0]); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
-  console.log("Description:",planets[1][1][0] );
-  console.log("Surface temperature:",planets[1][1][1] );
-  console.log("Mass:",planets[1][1][2] );
+console.log("Description:", planets[1][1][0]);
+console.log("Surface temperature:", planets[1][1][1]);
+console.log("Mass:", planets[1][1][2]);
 console.groupEnd();
 
 console.group(planets[2][0]); // Earth.
-  console.log("Description:",planets[2][1][0] );
-  console.log("Surface temperature:",planets[2][1][1] );
-  console.log("Mass:",planets[2][1][2] );
+console.log("Description:", planets[2][1][0]);
+console.log("Surface temperature:", planets[2][1][1]);
+console.log("Mass:", planets[2][1][2]);
 console.groupEnd();
 
 console.group(planets[3][0]); // Mars.
-  console.log("Description:", planets[3][1][0]);
-  console.log("Surface temperature:",planets[3][1][1] );
-  console.log("Mass:",planets[3][1][2] );
+console.log("Description:", planets[3][1][0]);
+console.log("Surface temperature:", planets[3][1][1]);
+console.log("Mass:", planets[3][1][2]);
 console.groupEnd();
 
 /*
@@ -310,28 +327,30 @@ console.groupEnd();
 */
 
 var DwarfPlanets = [
-  [ "PLUTO",
-   [
-   "Pluto is the largest known dwarf planet in the Solar System, discovered in 1930. It was thought to be the 9th planet of our system for 75 years until the discovery of Eris and other similar objects that led to its demotion from a planet to a dwarf planet in 2006.",
-   "-229°C",
-   "13,050,000,000,000 billion kg (0.00218 x Earth)"
-   ],
+  [
+    "PLUTO",
+    [
+      "Pluto is the largest known dwarf planet in the Solar System, discovered in 1930. It was thought to be the 9th planet of our system for 75 years until the discovery of Eris and other similar objects that led to its demotion from a planet to a dwarf planet in 2006.",
+      "-229°C",
+      "13,050,000,000,000 billion kg (0.00218 x Earth)"
+    ]
   ],
-  ["MAKEMAKE",
-  ["Makemake is the second furthest dwarf planet from the Sun located beyond Neptune’s orbit. Discovered in 2005, it is the third-largest known dwarf planet.",
-    "-239°C",
-    "	3,000,000,000,000 billion kg (0.0005 x Earth)"
-   ],
-  ],
- ];
+  [
+    "MAKEMAKE",
+    [
+      "Makemake is the second furthest dwarf planet from the Sun located beyond Neptune’s orbit. Discovered in 2005, it is the third-largest known dwarf planet.",
+      "-239°C",
+      "	3,000,000,000,000 billion kg (0.0005 x Earth)"
+    ]
+  ]
+];
 
- console.group(DwarfPlanets[0][0]); //Pluto.
-   console.log("Description", DwarfPlanets[0][1][0]);
-   console.log("Surface temperature",DwarfPlanets[0][1][1]);
-   console.log("Mass",DwarfPlanets[0][1][2]);
+console.group(DwarfPlanets[0][0]); //Pluto.
+console.log("Description", DwarfPlanets[0][1][0]);
+console.log("Surface temperature", DwarfPlanets[0][1][1]);
+console.log("Mass", DwarfPlanets[0][1][2]);
 
- console.group(DwarfPlanets[1][0]); //Makemake.
-   console.log("Description",DwarfPlanets[1][1][0]);
-   console.log("Surface temperature",DwarfPlanets[1][1][1] );
-   console.log("Mass",DwarfPlanets[1][1][2]);
-
+console.group(DwarfPlanets[1][0]); //Makemake.
+console.log("Description", DwarfPlanets[1][1][0]);
+console.log("Surface temperature", DwarfPlanets[1][1][1]);
+console.log("Mass", DwarfPlanets[1][1][2]);
