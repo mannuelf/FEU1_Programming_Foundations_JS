@@ -297,60 +297,52 @@ var planets = [
       "87 to -5 °C",
       "641,693,000,000,000 billion kg (0.107 x Earth)"
     ],
-  ],
+  ]
 ];
 
 console.group(planets[0][0]); // Mercury.
-  console.log("Description:",planets[0][1][0] );
-  console.log("Surface temperature:",planets[0][1][1] );
-  console.log("Mass:", planets [0][1][2]);
+  console.log("Description:", );
+  console.log("Surface temperature:", );
+  console.log("Mass:", );
 console.groupEnd();
 
-console.group(planets[1][0]); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
-  console.log("Description:",planets[1][1][0] );
-  console.log("Surface temperature:",planets[1][1][1] );
-  console.log("Mass:",planets [1][1][2] );
+console.group(); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
+  console.log("Description:", );
+  console.log("Surface temperature:", );
+  console.log("Mass:", );
 console.groupEnd();
 
-console.group(planets [2][0]); // Earth.
-  console.log("Description:",planets [2][1][0] );
-  console.log("Surface temperature:",planets [2][1][1] );
-  console.log("Mass:",planets [2][1][2] );
+console.group(); // Earth.
+  console.log("Description:", );
+  console.log("Surface temperature:", );
+  console.log("Mass:", );
 console.groupEnd();
 
-console.group(planets [3][0]); // Mars.
-  console.log("Description:", planets [3][1][0]);
-  console.log("Surface temperature:",planets [3][1][1] );
-  console.log("Mass:",planets [3][1][2] );
+console.group(); // Mars.
+  console.log("Description:", );
+  console.log("Surface temperature:", );
+  console.log("Mass:", );
 console.groupEnd();
+
 
 /*
  Level 2::::::::::::::
  Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
 */
 
-var DwarfPlanets = [
- [ "PLUTO",
-  [
-  "Pluto is the largest known dwarf planet in the Solar System, discovered in 1930. It was thought to be the 9th planet of our system for 75 years until the discovery of Eris and other similar objects that led to its demotion from a planet to a dwarf planet in 2006.",
-  "-229°C",
-  "13,050,000,000,000 billion kg (0.00218 x Earth)"
-  ],
- ],
- ["MAKEMAKE",
- ["Makemake is the second furthest dwarf planet from the Sun located beyond Neptune’s orbit. Discovered in 2005, it is the third-largest known dwarf planet.",
-   "-239°C",
-   "	3,000,000,000,000 billion kg (0.0005 x Earth)"
-  ],
- ],
-];
 
-console.group(DwarfPlanets [0][0]); //Pluto.
-  console.log("Description", DwarfPlanets[0][1][0]);
-  console.log("Surface temperature",DwarfPlanets [0][1][1]);
-  console.log("Mass",DwarfPlanets[0][1][2]);
+/*
+ 7. Android Object REFACTOR:::::
 
-console.group(DwarfPlanets [1][0]); //Makemake.
-  console.log("Description",DwarfPlanets [1][1][0]);
-  console.log("Surface temperature",DwarfPlanets[1][1][1] );
-  console.log("Mass",DwarfPlanets [1][1][2]);
+ Level 1::::::::::::::
+ Refactor (change) all the variables you have in place that initializes the android into an android object.
+ - Your android needs a head, upperBody, lowerBody & [ anyThingElseYouCanDreamOf ].
+ - Feel free to create any new properties that will further describe your android [ anyThingYouCanDreamOf ].
+ - next update your application to use this newly refactored code
+
+ tip: the console.log that prints the variables of the android will need to be updated
+
+ Level 2::::::::::::::
+ Refactor the planets array to be an array of objects, each object must be its own planet.
+  - next update your application to use this newly refactored code
+*/
