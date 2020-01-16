@@ -104,20 +104,25 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
 */
 
 
-var head = true;
-var upperBody =true;
-var eyes = 3;
-var eyeColor = "green";
-var hairColor = "black";
-var legs = 2;
-var arms = 4;
-var hands = 2;
-var ears = 6;
-var canFly = true;
+
+
+var droid = [{
+  upperBody:
+  name: "Kristoffer-droid",
+  eyes: "green",
+  ears: 3,
+},
+{
+  loverBody:,
+  numberOfHands: 2,
+  hair: "pink",
+  numberOfLegs: 2,
+
+}];
 
 
 console.log(".-.-. Booting .-.-.");
-console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon, isInGoodMood, canRun, suitColor,);
+console.log(name, eyes, eyeColor, hairColor, legs, arms, hands, ears, canFly, head, upperBody,);
 
 
 
