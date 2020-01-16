@@ -283,25 +283,25 @@ var planets = [
 console.group(planets[0][0]); // Mercury.
   console.log("Description:",planets[0][1][0] );
   console.log("Surface temperature:",planets[0][1][1] );
-  console.log("Mass:", planets [0][1][2]);
+  console.log("Mass:", planets[0][1][2]);
 console.groupEnd();
 
 console.group(planets[1][0]); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
   console.log("Description:",planets[1][1][0] );
   console.log("Surface temperature:",planets[1][1][1] );
-  console.log("Mass:",planets [1][1][2] );
+  console.log("Mass:",planets[1][1][2] );
 console.groupEnd();
 
-console.group(planets [2][0]); // Earth.
-  console.log("Description:",planets [2][1][0] );
-  console.log("Surface temperature:",planets [2][1][1] );
-  console.log("Mass:",planets [2][1][2] );
+console.group(planets[2][0]); // Earth.
+  console.log("Description:",planets[2][1][0] );
+  console.log("Surface temperature:",planets[2][1][1] );
+  console.log("Mass:",planets[2][1][2] );
 console.groupEnd();
 
-console.group(planets [3][0]); // Mars.
-  console.log("Description:", planets [3][1][0]);
-  console.log("Surface temperature:",planets [3][1][1] );
-  console.log("Mass:",planets [3][1][2] );
+console.group(planets[3][0]); // Mars.
+  console.log("Description:", planets[3][1][0]);
+  console.log("Surface temperature:",planets[3][1][1] );
+  console.log("Mass:",planets[3][1][2] );
 console.groupEnd();
 
 /*
@@ -325,13 +325,13 @@ var DwarfPlanets = [
   ],
  ];
 
- console.group(DwarfPlanets [0][0]); //Pluto.
+ console.group(DwarfPlanets[0][0]); //Pluto.
    console.log("Description", DwarfPlanets[0][1][0]);
-   console.log("Surface temperature",DwarfPlanets [0][1][1]);
+   console.log("Surface temperature",DwarfPlanets[0][1][1]);
    console.log("Mass",DwarfPlanets[0][1][2]);
 
- console.group(DwarfPlanets [1][0]); //Makemake.
-   console.log("Description",DwarfPlanets [1][1][0]);
+ console.group(DwarfPlanets[1][0]); //Makemake.
+   console.log("Description",DwarfPlanets[1][1][0]);
    console.log("Surface temperature",DwarfPlanets[1][1][1] );
-   console.log("Mass",DwarfPlanets [1][1][2]);
+   console.log("Mass",DwarfPlanets[1][1][2]);
 
