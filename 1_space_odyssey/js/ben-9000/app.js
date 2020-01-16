@@ -141,13 +141,13 @@ var lunarRadar = {
 };
 
 
-lunarRadar.isEnabled = TRUE;
+lunarRadar.isEnabled = true;
 lunarRadar.long = true;
 lunarRadar.lat = true;
-lunarRadar.approachSpeed = 600;
+lunarRadar.approachSpeed = 50;
 
 console.log("lunaLanderSpeed",lunarRadar.approachSpeed);
-
+/*
 if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
    console.log(
     "\u{1F91F} looking good " +
@@ -185,7 +185,7 @@ if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
       " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance."
   );
 }
-
+*/
 // Level 1 convert this psuedocode to functioning code.
 
 /*
