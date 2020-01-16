@@ -212,23 +212,18 @@ console.log("\u{1F311} LUNAR LANDING:::::");
 
 // start coding here
 
+
 var lunarRadar = {
   isEnabled: undefined,
   long: undefined,
   lat: undefined,
   approachSpeed: undefined // "ft per minute"
 };
+lunarRadar.isEnabled = true;
+lunarRadar.long = 200;
+lunarRadar.lat = 100;
+lunarRadar.approachSpeed = 200;
 
-var lunarRadar = {
-  isEnabled: true,
-  long: 200,
-  lat: 100,
-  approachSpeed: 200,
-}
-var isEnabled = true;
-var long = 200;
-var lat = 100;
-var approachSpeed = 200;
 
 if (isEnabled && lat && long) {
   console.log("\u{1F91F} looking good " + name + " we are making our descent, now entering approach speed");
