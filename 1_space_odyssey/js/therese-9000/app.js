@@ -421,14 +421,6 @@ var neptune = {
 
 planets.unshift(venus, neptune);
 
-for (var i = 0; i < planets.length; i++) {
-  console.group(planets[i].planet);
-    console.log("Description:", planets[i].desc);
-    console.log("Surface temperature:", planets[i].surfaceTemp);
-    console.log("Mass:", planets[i].mass);
-  console.groupEnd();
-}
-
 /*
  7. Android Object REFACTOR:::::
 
@@ -444,3 +436,11 @@ for (var i = 0; i < planets.length; i++) {
  Refactor the planets array to be an array of objects, each object must be its own planet.
   - next update your application to use this newly refactored code
 */
+
+for (var i = 0; i < planets.length; i++) {
+  console.group(planets[i].planet);
+    console.log("Description:", planets[i].desc);
+    console.log("Surface temperature:", planets[i].surfaceTemp);
+    console.log("Mass:", planets[i].mass);
+  console.groupEnd();
+}
