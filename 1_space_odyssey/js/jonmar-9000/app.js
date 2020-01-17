@@ -4,13 +4,14 @@ const droid = {
   name: "Jonmar-9000",
   isAlive: true,
   body: {
-    eyes: 2,
-    eyeColor: "black",
-    hairColor: "black",
-    legs: 2,
-    arms: 2,
-    hands: 2,
-    ears: 2
+    head: {
+      eyes: 2,
+      eyeColor: "black",
+      hairColor: "black",
+      ears: 2
+    },
+    upperBody: { arms: 2, hands: 2 },
+    lowerBody: { legs: 2 }
   },
   accesories: {
     hasJetPack: true,
@@ -251,7 +252,7 @@ console.groupEnd();
 
 // Level 2::::::::::::::
 
-const neptune = [
+const neptune1 = [
   "NEPTUNE",
   [
     "Neptune is the fourth largest and the farthest planet of the Solar System with the most powerful wind speeds out of all the planets. It is the smallest of the gas giants and is the first planet to be discovered by mathematical predictions in 1846.",
@@ -260,7 +261,7 @@ const neptune = [
   ]
 ];
 
-const uranus = [
+const uranus1 = [
   "URANUS",
   [
     "Uranus is the seventh planet discovered in the Solar System that also led to the discovery of the last planet, Neptune they are both referred to as ice giants. Officially recognized in 1781 after many observations in the past, it is the third largest planet of the Solar System.",
@@ -269,6 +270,98 @@ const uranus = [
   ]
 ];
 
-planets.unshift(neptune, uranus);
+planets.unshift(neptune1, uranus1);
 
 console.table(planets);
+
+// 7. Android Object REFACTOR:::::
+
+// Level 1::::::::::::::
+
+const android = {
+  name: "Jonmar-9000",
+  isAlive: true,
+  body: {
+    head: {
+      eyes: 2,
+      eyeColor: "black",
+      hairColor: "black",
+      ears: 2
+    },
+    upperBody: { arms: 2, hands: 2 },
+    lowerBody: { legs: 2 }
+  },
+  accesories: {
+    hasJetPack: true,
+    hasWeapon: true,
+    suitColor: "pink"
+  },
+  ability: {
+    canWalk: true,
+    canRun: true,
+    canFly: true,
+    isInGoodMood: true
+  }
+};
+
+//Level 2::::::::::::::
+
+const planetObject = [
+  {
+    name: "MERCURY",
+    description:
+      "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+    surfaceTemp: "-173 to 427°C",
+    mass: "330,104,000,000,000 billion kg (0.055 x Earth)"
+  },
+  {
+    name: "JUPITER",
+    description:
+      "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+    surfaceTemp: "-108°C",
+    mass: "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+  },
+  {
+    name: "EARTH",
+    description:
+      "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+    surfaceTemp:
+      "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+    mass: "6.6 sextillion tons"
+  },
+  {
+    name: "MARS",
+    description:
+      "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+    surfaceTemp: "87 to -5 °C",
+    mass: "641,693,000,000,000 billion kg (0.107 x Earth)"
+  }
+];
+
+function NewPlanet(name, description, surfaceTemp, mass) {
+  this.name = name;
+  this.description = description;
+  this.surfaceTemp = surfaceTemp;
+  this.mass = mass;
+}
+
+const neptune = new NewPlanet(
+  "NEPTUNE",
+  "Neptune is the fourth largest and the farthest planet of the Solar System with the most powerful wind speeds out of all the planets. It is the smallest of the gas giants and is the first planet to be discovered by mathematical predictions in 1846.",
+  "−201 °C",
+  "102,410,000,000,000,000 billion kg (17.15x Earth)"
+);
+
+const uranus = new NewPlanet(
+  "URANUS",
+  "Uranus is the seventh planet discovered in the Solar System that also led to the discovery of the last planet, Neptune they are both referred to as ice giants. Officially recognized in 1781 after many observations in the past, it is the third largest planet of the Solar System.",
+  "−197 °C",
+  "86,810,300,000,000,000 billion kg (14.536 x Earth)"
+);
+
+const newPlanetArray = [neptune, uranus];
+
+planetObject.unshift(...newPlanetArray);
+
+console.table(planetObject);
+console.log(planetObject);

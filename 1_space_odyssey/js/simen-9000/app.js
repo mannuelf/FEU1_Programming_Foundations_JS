@@ -85,26 +85,56 @@
         b. ensure to choose the correct values and datatypes
         c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
     */
-    var isAlive = true;
-    var name = "simen-9000";
-    var hasJetPack = true;
-    var suitColor = "white";
-    var eyes = 2;
-    var eyeColor = "blue";
-    var hairColor = "brown";
-    var legs = 2;
-    var arms = 2;
-    var hands = 2;
-    var ears = 2;
-    var canWalk = true;
-    var canRun = true;
-    var canFly  = false;
-    var hasWeapon = true;
-    var isInGoodMood = true;
+   /*
+ 7. Android Object REFACTOR:::::
 
+ Level 1::::::::::::::
+ Refactor (change) all the variables you have in place that initializes the android into an android object.
+ - Your android needs a head, upperBody, lowerBody & [ anyThingElseYouCanDreamOf ].
+ - Feel free to create any new properties that will further describe your android [ anyThingYouCanDreamOf ].
+ - next update your application to use this newly refactored code
 
+ tip: the console.log that prints the variables of the android will need to be updated
+
+ Level 2::::::::::::::
+ Refactor the planets array to be an array of objects, each object must be its own planet.
+  - next update your application to use this newly refactored code
+*/
+    var simensAndoid = {
+      head: {
+        isAlive: true,
+        eyes: 2,
+        ears: 2,
+        eyeColor: "blue",
+        hairColor: "brown",
+      },
+      upperBody: {
+        hasJetPack: true,
+        suitColor: "white",
+        arms: 2,
+        hands: 2,
+      },
+      lowerBody: {
+        legs: 2,
+        canWalk: true,
+        canRun: true,
+        canFly: false,
+      },
+      superDroid:{
+        hasWeapon: true,
+        isInGoodMood: true,
+      },
+    }
     console.log(".-.-. Booting .-.-.");
-    console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon);
+
+    console.log("head",
+      simensAndoid.head.isAlive, simensAndoid.head.eyes, simensAndoid.head.ears, simensAndoid.head.eyeColor, simensAndoid.head.hairColor);
+    console.log("upperBody",
+    simensAndoid.upperBody.hasJetPack, simensAndoid.upperBody.suitColor, simensAndoid.upperBody.arms, simensAndoid.upperBody.hands);
+    console.log("lowerBody",
+    simensAndoid.lowerBody.legs, simensAndoid.lowerBody.canWalk, simensAndoid.lowerBody.canRun, simensAndoid.lowerBody.canFly);
+    console.log("superDroid",
+    simensAndoid.superDroid.hasWeapon, simensAndoid.superDroid.isInGoodMood);
 
     /*
     2. BROKEN SATELLITE::::::
@@ -120,7 +150,7 @@
     console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
 
     */
-   if (hasJetPack === true) {
+   if (simensAndoid.upperBody.hasJetPack === true) {
     console.log("JetPack is enabled!!! off I go outside to fix the satellite");
 }
 else {
@@ -251,7 +281,6 @@ if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long){
 
 
   if (lunarRadar.approachSpeed <= 200 && lunarRadar.approachSpeed <= 299){
-  if (lunarRadar.approachSpeed <= 200 && lunarRadar.approachSpeed >= 299){
   console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get heck outta here!");
   } else if(lunarRadar.approachSpeed <= 300){
   console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
@@ -384,5 +413,6 @@ var newPlanet1 = [
     "108,209,475 km (0.73 AU),"
   ]
 ];
+
 planets.unshift(newPlanet);
 planets.unshift(newPlanet1);
