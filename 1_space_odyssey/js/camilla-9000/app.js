@@ -395,33 +395,27 @@ for(var i = 0; i < android.length; i++) {
   console.log(android[i]);
 }
 
-var head = [ {
-  head: true,
-  eyes: 2,
-  nose: true,
-  mouth: 1,
-  hair: true,
-  ears: 2
-}];
-for(var i = 0; i < head.length; i++) {
-  console.log(head[i]);
-}
+var androidTwo = {
+  head: {
+    head: true,
+    eyes: 2,
+    nose: true,
+    mouth: 1,
+    hair: true,
+    ears: 2
+  },
+  upperBody: {
+    arms: 2,
+    colortShirt: "grey"
+  },
+  lowerBody: {
+    legs: 2,
+    colorPants: "blue",
+    shoes: 2,
+    colorShose: "black"
+  }
 
-var upperBody = [ {
-  arms: 2,
-  colortShirt: "grey",
 }
-]
-for(var i = 0; i < upperBody.length; i++) {
-  console.log(upperBody[i]);
-}
-var lowerBody = [ {
-  legs: 2,
-  colorPants: "blue",
-  shoes: 2,
-  colorShose: "black"
-}
-];
-for(var i = 0; i < lowerBody.length; i++) {
-  console.log(lowerBody[i]);
+for(var i = 0; i < androidTwo.length; i++) {
+  console.log(androidTwo[i]);
 }
