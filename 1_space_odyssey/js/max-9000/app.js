@@ -1,40 +1,40 @@
-var isAlive;
-var name = "Max-9000";
-var hasJetPack = true;
-var suitColor = "blue";
-var eyes = 5;
-var eyeColor = "red";
-var hairColor = "black";
-var legs = 4;
-var arms = 2;
-var hands = 2;
-var ears = 2;
-var canWalk = true;
-var canRun = true;
-var canFly = true;
-var hasWeapon = true;
-var isInGoodMood = false;
-isAlive = true;
-eyes = 1067;
+var android = [{
+  isAlive: true,
+  name: "Max-9000",
+  hasJetPack: true,
+  suitColor: "yellow with balck strips",
+  eyes: 5,
+  eyeColor: "red",
+  hairColor: "black",
+  legs: 20,
+  arms: 10,
+  hands: 4,
+  ears: 4,
+  canWalk: true,
+  canRun: true,
+  canFly: true,
+  hasWeapon: true,
+  isInGoodMood: false,
+  isAlive: true,
+  eyes: 1067,
+  aimBot: true,
+  radar: true,
+  lazerTeeth: true,
+  faceSmile: true
+}];
 
 console.log(".-.-. Booting .-.-.");
-console.log(
-  name,
-  isAlive,
-  hasJetPack,
-  eyes,
-  eyeColor,
-  hairColor,
-  legs,
-  arms,
-  hands,
-  ears,
-  canWalk,
-  canFly,
-  hasWeapon
-);
 
-if (hasJetPack) {
+if (android.lazerTeeth) {
+  console.log("SHOOT EVERYTING WITH A SMILE!");
+} else {
+  console.log(
+    "Stay normal"
+  );
+}
+
+
+if (android.hasJetPack) {
   console.log("JetPack is enabled!!! off I go outside to fix the satellite");
 } else {
   console.log(
@@ -320,3 +320,63 @@ planets.unshift(newPlanets);
 planets.unshift(planets2);
 
 console.log(planets);
+
+/*
+7. Android Object REFACTOR:::::
+
+Level 1::::::::::::::
+Refactor (change) all the variables you have in place that initializes the android into an android object.
+- Your android needs a head, upperBody, lowerBody & [ anyThingElseYouCanDreamOf ].
+- Feel free to create any new properties that will further describe your android [ anyThingYouCanDreamOf ].
+- next update your application to use this newly refactored code
+
+tip: the console.log that prints the variables of the android will need to be updated
+*/
+
+
+
+
+/*
+Level 2::::::::::::::
+Refactor the planets array to be an array of objects, each object must be its own planet.
+ - next update your application to use this newly refactored code
+*/
+
+
+var newPlanets2 = [
+  Mercury = [{
+    Description: "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+    SurfaceTemperature: "-173 to 427°C",
+    Mass: "330,104,000,000,000 billion kg (0.055 x Earth)"
+  }]
+
+  Jupiter = [{
+    Description: "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+    SurfaceTemperature: "-108°C",
+    Mass: "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+  }];
+
+  Earth = [{
+    Description: "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+    SurfaceTemperature: "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+    Mass: "6.6 sextillion tons"
+  }];
+
+  Mars = [{
+    Description: "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+    SurfaceTemperature: "87 to -5 °C",
+    Mass: "641,693,000,000,000 billion kg (0.107 x Earth)",
+  }];
+
+  Uranus = [{
+    Description: "Ranus is the seventh planet discovered in the Solar System that also led to the discovery of the last planet, Neptune they are both referred to as ice giants. Officially recognized in 1781 after many observations in the past, it is the third largest planet of the Solar System.",
+    SurfaceTemperature: "-197 °C",
+    Mass: "86,810,300,000,000,000 billion kg (14.536 x Earth)"
+  }];
+
+  Haumea = [{
+    Description: "Haumea is the fastest rotating dwarf planet with the most interesting/controversial shape. It is located beyond the orbit of Neptune. It was discovered in 2004 and is the fourth largest dwarf planet.",
+    SurfaceTemperature: "-241°C",
+    Mass: "	4,006,000,000,000 billion kg (0.00066 x Earth)"
+  }]
+];
