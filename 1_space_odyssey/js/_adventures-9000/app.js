@@ -354,5 +354,4 @@ console.groupEnd();
   Refactor your application to be initialized by a function that will.
 
   Level 2:::::::::
-  Look through your code and find more opportunities to use and call functions
-*/
+  Look through your code and find more opportunities to use and call functions and parameters aka arguments.
