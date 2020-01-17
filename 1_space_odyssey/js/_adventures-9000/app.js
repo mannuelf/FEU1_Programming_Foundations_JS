@@ -346,3 +346,13 @@ console.groupEnd();
  Refactor the planets array to be an array of objects, each object must be its own planet.
   - next update your application to use this newly refactored code
 */
+
+
+/*
+  8. REFACTOR Create functions:::::::
+  Level 1:::::::::
+  Refactor your application to be initialized by a function that will.
+
+  Level 2:::::::::
+  Look through your code and find more opportunities to use and call functions
+*/
