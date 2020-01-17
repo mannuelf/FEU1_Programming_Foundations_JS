@@ -104,10 +104,15 @@ var planet = [
 ];
 
 for (var i = 0; i < planet.length; i++) {
-  console.log(planet[i]);
+console.group(planet[i].name); //Jupiter
+console.log(planet[i].description);
+console.log(planet[i].mass);
 }
 
-console.group(planet[0].name); //Mercury
+
+
+
+/*console.group(planet[0].name); //Mercury
 console.log(planet[0].description);
 console.log(planet[0].mass);
 
@@ -122,6 +127,7 @@ console.log(planet[2].mass);
 console.group(planet[3].name); //Mars
 console.log(planet[3].description);
 console.log(planet[3].mass);
+*/ 
 
 /* 
  2. BROKEN SATELLITE::::::
