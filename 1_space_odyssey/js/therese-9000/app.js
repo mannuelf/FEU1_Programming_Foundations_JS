@@ -1,3 +1,5 @@
+function initialize(){
+
 /*
 ____/\\\\\\\\\_________/\\\\\\\_______/\\\\\\\\\_________/\\\\\\\__________        
  __/\\\///////\\\_____/\\\/////\\\___/\\\///////\\\_____/\\\/////\\\________       
@@ -84,22 +86,6 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
-// var isAlive = true;
-// var name = "Therese-9000";
-// var hasJetPack = true;
-// var suitColor = "black";
-// var eyes = 2;
-// var eyeColor = "green";
-// var hairColor = "brown";
-// var legs = 2;
-// var arms = 2;
-// var hands = 2;
-// var ears = 2;
-// var canWalk = true;
-// var canRun = true;
-// var canFly = true;
-// var hasWeapon = true;
-// var isInGoodMood = true;
 
 var android = [
   {
@@ -121,25 +107,7 @@ var android = [
     isInGoodMood: true
   }
 ];
-
 console.log(".-.-. Booting .-.-.");
-
-// console.log(
-//   name,
-//   isAlive,
-//   hasJetPack,
-//   eyes,
-//   eyeColor,
-//   hairColor,
-//   legs,
-//   arms,
-//   hands,
-//   ears,
-//   canWalk,
-//   canFly,
-//   hasWeapon
-// );
-
 for (var i = 0; i < android.length; i++) {
   console.log(android[i]);
 }
@@ -444,3 +412,13 @@ for (var i = 0; i < planets.length; i++) {
     console.log("Mass:", planets[i].mass);
   console.groupEnd();
 }
+/*
+  8. REFACTOR Create functions:::::::
+  Level 1:::::::::
+  Refactor your application to be initialized by a function.
+
+  Level 2:::::::::
+  Look through your code and find more opportunities to use and call functions and parameters aka arguments.
+*/
+
+};
