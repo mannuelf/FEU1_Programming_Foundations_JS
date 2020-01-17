@@ -84,38 +84,62 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
-var isAlive = true;
+/*
+Level 1::::::::::::::
+Refactor (change) all the variables you have in place that initializes the android into an android object.
+- Your android needs a head, upperBody, lowerBody & [ anyThingElseYouCanDreamOf ].
+- Feel free to create any new properties that will further describe your android [ anyThingYouCanDreamOf ].
+*/
 var name = "GoochieGoochie";
-var hasJetPack = true;
-var suitColor = "white and red";
-var eyes = 2;
-var eyeColor = "blue";
-var hairColor = "pink";
-var legs = 2;
-var arms = 2;
-var hands = 2;
-var ears = 2;
-var canWalk = true;
-var canRun = true;
-var canFly = false;
-var hasWeapon = false;
-var isInGoodMood = false;
+
+var robot = [
+  {
+  robotUpperBody: {
+    alloy: "tritainium",
+    bodyRotation: "360",
+    robotArms: "manuverable",
+    hasJetPack: true,
+    },
+  robotLowerbody: {
+    alloy: "tritainium",
+    robotLegs: "manuverable",
+    },
+  robotWeapondary: {
+    mainWeapon: "Dual gatling Laser",
+    secondaryWeapon: "dual Rocketlaunchers",
+    gattlingAmmo: 3535353,
+    rocketAmmo: 4353,
+    },
+  head: {
+    robotHeadLabal: "battleDroid",
+    robotEyes: true,
+    robotView: "night, infrared",
+    robotLives: 34,
+    mouth: true,
+    },
+  }
+]
 
 console.log("\u{1F916} .-.-. Booting .-.-.");
 console.log(
-    name,
-    isAlive,
-    hasJetPack,
-    eyes,
-    eyeColor,
-    hairColor,
-    legs,
-    arms,
-    hands,
-    ears,
-    canWalk,
-    canFly,
-    hasWeapon
+
+  name,
+  "label: " + robot[0].head.robotHeadLabal,
+  ", eyes: " + robot[0].head.robotEyes,
+  ", view: " + robot[0].head.robotView,
+  ", mouth: " + robot[0].head.mouth,
+  ", lives: " + robot[0].head.robotLives,
+  ", upperbody alloy: " + robot[0].robotUpperBody.alloy,
+  ", arms: " + robot[0].robotUpperBody.robotArms,
+  ", rotation: " + robot[0].robotUpperBody.bodyRotation,
+  ", jetpack: " + robot[0].robotUpperBody.hasJetPack,
+  ", lowerbody alloy: " + robot[0].robotLowerbody.alloy,
+  ", leg: " + robot[0].robotLowerbody.robotLegs,
+  ", mainweapon: " + robot[0].robotWeapondary.mainWeapon,
+  ", secondweapon: " + robot[0].robotWeapondary.secondaryWeapon,
+  ", mainammo: " + robot[0].robotWeapondary.gattlingAmmo,
+  ", secondammo: " + robot[0].robotWeapondary.rocketAmmo,
+
 );
 
 /*
@@ -131,8 +155,8 @@ console.log(
 /*
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
 */
-
-if (hasJetPack === true) {
+var jetPackChecker=robot[0].robotUpperBody.hasJetPack
+if (jetPackChecker === true) {
     console.log("JetPack is enabled!!! off I go outside to fix the satellite");
 } else {
     console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
@@ -312,89 +336,81 @@ console.log(
 console.log("\u{1F319} PLANETARY INFO-DASH:::::");
 
 var planets = [
-  [ "MERCURY",
-    [
-      "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
-      "-173 to 427°C",
-      "330,104,000,000,000 billion kg (0.055 x Earth)"
-    ],
-  ],
-  [ "JUPITER",
-    [
-      "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
-      "-108°C",
-      "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
-    ],
-  ],
-  [ "EARTH",
-    [
-      "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
-      "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
-      "6.6 sextillion tons"
-    ],
-  ],
-  [ "MARS",
-    [
-      "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
-      "87 to -5 °C",
-      "641,693,000,000,000 billion kg (0.107 x Earth)"
-    ],
-  ],
+    {
+      planetname: "MERCURY",
+      description: "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+      surfaceTempurature: "-173 to 427°C",
+      weight: "330,104,000,000,000 billion kg (0.055 x Earth)"
+    },
+    {
+      planetname: "JUPITER",
+      description: "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+      surfaceTempurature: "-108°C",
+      weight: "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+    },
+    {
+      planetname: "EARTH",
+      description: "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+      surfaceTempurature: "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+      weight: "6.6 sextillion tons"
+    },
+    {
+      planetname: "MARS",
+      description: "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+      surfaceTempurature: "87 to -5 °C",
+      weight: "641,693,000,000,000 billion kg (0.107 x Earth)"
+    },
 ];
-planets.unshift( 
-  [ "HAUMEA",
-    [
-      "Haumea is the fastest rotating dwarf planet with the most interesting/controversial shape. It is located beyond the orbit of Neptune. It was discovered in 2004 and is the fourth largest dwarf planet.",
-      "-241°C",
-      "6,452,000,000 km (43.13 AU)"
-    ],
-  ],
+planets.unshift( {
+      planetname: "HAUMEA",
+      description: "Haumea is the fastest rotating dwarf planet with the most interesting/controversial shape. It is located beyond the orbit of Neptune. It was discovered in 2004 and is the fourth largest dwarf planet.",
+      surfaceTempurature: "-241°C",
+      distance: "6,452,000,000 km (43.13 AU)"
+    },
 );
 
-planets.unshift(
-  [ "SATURN",
-    [
-      "Saturn is the sixth planet from the sun, with the largest planetary rings in the Solar System. It is the second-largest planet after Jupiter, and recently, with many other moons being discovered, it surpassed the number of Jupiter’s moons and is now considered the planet with the most numerous satellites.",
-      "-175°C",
-      "5.683 × 10^26 kg"
-    ],
-  ],
+planets.unshift({
+      planetname: "SATURN",
+      description: "Saturn is the sixth planet from the sun, with the largest planetary rings in the Solar System. It is the second-largest planet after Jupiter, and recently, with many other moons being discovered, it surpassed the number of Jupiter’s moons and is now considered the planet with the most numerous satellites.",
+      surfaceTempurature: "-175°C",
+      weight: "5.683 × 10^26 kg"
+    },
 );
 
-console.group(planets[0][0]); // Saturn.
-  console.log("Discription:", planets[0][1][0]);
-  console.log("Surface temperature:", planets[0][1][1]);
-  console.log("Distance:", planets[0][1][2]);
+console.group(planets[0].planetname); // Saturn.
+  console.log("Discription:", planets[0].description);
+  console.log("Surface temperature:", planets[0].surfaceTempurature);
+  console.log("Distance:", planets[0].weight);
 console.groupEnd();
 
-console.group(planets[1][0]); // Haumea.
-  console.log("Description:", planets[1][1][0]);
-  console.log("Surface temperature:", planets[1][1][1]);
-  console.log("Distance:", planets[1][1][2]);
+console.group(planets[1].planetname); // Haumea.
+  console.log("Description:", planets[1].description);
+  console.log("Surface temperature:", planets[1].surfaceTempurature);
+  console.log("Distance:", planets[1].distance);
 console.groupEnd();
 
-console.group(planets[2][0]); // Mercury.
-  console.log("Description:", planets[2][1][0]);
-  console.log("Surface temperature:", planets[2][1][1]);
-  console.log("Distance:", planets[2][1][2]);
+console.group(planets[2].planetname); // Mercury.
+  console.log("Description:", planets[2].description);
+  console.log("Surface temperature:", planets[2].surfaceTempurature);
+  console.log("Distance:", planets[2].weight);
 console.groupEnd();
 
-console.group(planets[3][0]); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
-  console.log("Description:", planets[3][1][0]);
-  console.log("Surface temperature:", planets[3][1][1]);
-  console.log("Distance:", planets[3][1][2]);
+console.group(planets[2].planetname); // Jupiter.
+  console.log("Description:", planets[2].description);
+  console.log("Surface temperature:", planets[2].surfaceTempurature);
+  console.log("Distance:", planets[2].weight);
 console.groupEnd();
 
-console.group(planets[4][0]); // Earth.
-  console.log("Description:", planets[4][1][0]);
-  console.log("Surface temperature:", planets[4][1][1]);
-  console.log("Distance:", planets[4][1][2]);
+console.group(planets[4].planetname); // Earth.
+  console.log("Description:", planets[4].description);
+  console.log("Surface temperature:", planets[4].surfaceTempurature);
+  console.log("Distance:", planets[4].weight);
 console.groupEnd();
 
-console.group(planets[5][0]); // Mars.
-  console.log("Description:", planets[5][1][0]);
-  console.log("Surface temperature:", planets[5][1][1]);
-  console.log("Distance:", planets[5][1][2]);
+console.group(planets[5].planetname); // Mars.  
+  console.log("Description:", planets[5].description);
+  console.log("Surface temperature:", planets[5].surfaceTempurature);
+  console.log("Distance:", planets[5].weight);
 console.groupEnd();
 
 
@@ -403,3 +419,35 @@ console.groupEnd();
  Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
 */
 
+/*
+ 7. Android Object REFACTOR:::::
+
+ Level 1::::::::::::::
+ Refactor (change) all the variables you have in place that initializes the android into an android object.
+ - Your android needs a head, upperBody, lowerBody & [ anyThingElseYouCanDreamOf ].
+ - Feel free to create any new properties that will further describe your android [ anyThingYouCanDreamOf ].
+ - next update your application to use this newly refactored code
+
+ tip: the console.log that prints the variables of the android will need to be updated
+*/
+
+
+
+
+
+/*
+ Level 2::::::::::::::
+ Refactor the planets array to be an array of objects, each object must be its own planet.
+  - next update your application to use this newly refactored code
+*/
+
+
+/*
+  8. REFACTOR Create functions:::::::
+  Level 1:::::::::
+  Refactor your application to be initialized by a function that will.
+
+  Level 2:::::::::
+  Look through your code and find more opportunities to use and call functions and parameters aka arguments.
+  */
+ 
