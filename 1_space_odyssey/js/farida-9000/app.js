@@ -1,30 +1,84 @@
-var isAlive = true;
-var name = "farida-9000";
-var hasJetPack = true;
-var suitColor = "pink";
-var eyes = 2;
-var eyeColor = "green";
-var hairColor = "red";
-var legs = 2;
-var arms = 2;
-var hands = 2;
-var ears = 2;
-var canWalk = true;
-var canRun = true;
-var canFly = true;
-var hasWeapon = true;
-var isInGoodMood = false;
+var faridasAndroid = {
+  head: {
+    eyes: 2,
+    hairColor: "red",
+    eyeColor: "green",
+    ears: 2,
+    isAlive: true,
+    name: "farida-9000",
+    isInGoodMood: false
+  },
+  upperBody: {
+    hasJetPack: true,
+    arms: 2,
+    hands: 2,
+    hasWeapon: true,
+    canFly: true,
+    suitColor: "pink"
+  },
+  lowerBody: {
+    canWalk: true,
+    canRun: true,
+    legs: 2
+  },
+  superPowers: {
+    mindReading: true,
+    canFly: true
+  }
+};
 
 console.log(".-.-. Booting .-.-.");
-console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon);
+
+console.log("...Head...",
+  faridasAndroid.head.name,
+  faridasAndroid.head.isAlive,
+  faridasAndroid.head.eyes,
+  faridasAndroid.head.eyeColor,
+  faridasAndroid.head.hairColor,
+  faridasAndroid.head.isInGoodMood
+);
+
+console.log("...Upperbody...",
+  faridasAndroid.upperBody.arms,
+  faridasAndroid.upperBody.hands,
+  faridasAndroid.upperBody.hasJetPack,
+  faridasAndroid.upperBody.hasWeapon,
+  faridasAndroid.upperBody.canFly,
+  faridasAndroid.upperBody.suitColor
+);
+
+console.log(".-.-.Lowerbody.-.-.",
+  faridasAndroid.lowerBody.legs,
+  faridasAndroid.lowerBody.canRun,
+  faridasAndroid.lowerBody.canWalk,
+  faridasAndroid.superPowers.mindReading,
+  faridasAndroid.superPowers.canFly
+);
+
+console.log(".-.-.Super Powers.-.-.",
+  faridasAndroid.superPowers.mindReading,
+  faridasAndroid.superPowers.canFly
+);
 
 
-if (hasJetPack === true) {
+
+if (faridasAndroid.upperBody.hasJetPack === true) {
   console.log("JetPack is enabled!!! off I go outside to fix the satellite");
 } else {
   console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
-}
+};
+
 /*
+ 7. Android Object REFACTOR:::::
+
+ Level 1::::::::::::::
+ Refactor (change) all the variables you have in place that initializes the android into an android object.
+ - Your android needs a head, upperBody, lowerBody & [ anyThingElseYouCanDreamOf ].
+ - Feel free to create any new properties that will further describe your android [ anyThingYouCanDreamOf ].
+ - next update your application to use this newly refactored code
+
+ tip: the console.log that prints the variables of the android will need to be updated
+
  3. METEOR SHOWER::::::
     On your way to Jupiter you encounter a massive meteor shower that could damage the ship, you need to redirect the ship to a new safe location.
     a) Using a for loop iterate through the responses array and choose the appropriate response to get out of danger.
@@ -201,100 +255,68 @@ if (lunarRadar.isEnabled === true && lunarRadar.lat !== undefined && lunarRadar.
 }
 
 
-
-/*
- 6. PLANETARY INFO-DASH:::::
-
- Level 1::::::::::::::
- Given this array of planets using what you know about how to access data in an arrays index log out the:
-  - Description,
-  - Surface temperature and
-  - Mass
-
-  in the console logs bellow.
-
-  tip: pass your variables into the console.log after comma ,
-*/
 console.log("\u{1F319} PLANETARY INFO-DASH:::::");
 
 var planets = [
-  ["MERCURY",
-    [
-      "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
-      "-173 to 427°C",
-      "330,104,000,000,000 billion kg (0.055 x Earth)"
-    ],
-  ],
-  ["JUPITER",
-    [
-      "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
-      "-108°C",
-      "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
-    ],
-  ],
-  ["EARTH",
-    [
-      "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
-      "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
-      "6.6 sextillion tons"
-    ],
-  ],
-  ["MARS",
-    [
-      "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
-      "87 to -5 °C",
-      "641,693,000,000,000 billion kg (0.107 x Earth)"
-    ],
-  ],
+
+  {
+    name: "Mercury",
+    Description: "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+    surfaceTemperature: "-173 to 427°C",
+    Mass: "330,104,000,000,000 billion kg (0.055 x Earth)"
+  },
+
+
+  {
+    name: "Jupiter",
+    Description: "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+    surfaceTemperature: "-108°C",
+    Mass: "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+  },
+
+
+  {
+    name: "Earth",
+    Description: "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+    surfaceTemperature: "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+    Mass: "6.6 sextillion tons"
+  },
+
+  {
+    name: "March",
+    Description: "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+    surfaceTemperature: "87 to -5 °C",
+    Mass: "641,693,000,000,000 billion kg (0.107 x Earth)"
+  }
 ];
 
-console.group(planets[0][0]); // Mercury.
-console.log("Description:", planets[0][1][0]);
-console.log("Surface temperature:", planets[0][1][1]);
-console.log("Mass:", planets[0][1][2]);
-console.groupEnd();
 
-console.group(planets[1][0]); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
-console.log("Description:", planets[1][1][0]);
-console.log("Surface temperature:", planets[1][1][1]);
-console.log("Mass:", planets[1][1][2]);
-console.groupEnd();
+var venus = {
 
-console.group(planets[2][0]); // Earth.
-console.log("Description:", planets[2][1][0]);
-console.log("Surface temperature:", planets[1][1][1]);
-console.log("Mass:", planets[1][1][2]);
-console.groupEnd();
+    name: "VENUS",
+    Description: "Spinning in the opposite direction to most planets, Venus is the hottest planet, and one of the brightest objects in the sky.",
+    surfaceTemperature: "462° C",
+    Mass: "4,867,320,000,000,000 billion kg (0.815 x Earth)"
 
-console.group(planets[3][0]); // Mars.
-console.log("Description:", planets[3][1][0]);
-console.log("Surface temperature:", planets[3][1][1]);
-console.log("Mass:", planets[3][1][2]);
-console.groupEnd();
+};
 
-/*
- Level 2::::::::::::::
- Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
-*/
+var neptune = {
 
-var newPlanet1 = [
-  "VENUS",
-  [
-    "Spinning in the opposite direction to most planets, Venus is the hottest planet, and one of the brightest objects in the sky.",
-    "462° C",
-    "4,867,320,000,000,000 billion kg (0.815 x Earth)"
-  ],
-]
+    name: "NEPTUNE",
+    Description: "Neptune is now the most distant planet and is a cold and dark world nearly 3 billion miles from the Sun.",
+    surfaceTemperature: "-201 °C",
+    Mass: "102,410,000,000,000,000 billion kg (17.15x Earth)"
 
-var newPlanet2 = [
-  "NEPTUNE",
-  [
-    "Neptune is now the most distant planet and is a cold and dark world nearly 3 billion miles from the Sun.",
-    "-201 °C",
-    "102,410,000,000,000,000 billion kg (17.15x Earth)"
-  ],
-]
+};
 
-planets.unshift(newPlanet1);
-planets.unshift(newPlanet2);
-console.table(planets);
+planets.unshift(venus);
+planets.unshift(neptune);
+
+for (var i = 0; i < planets.length; i++) {
+  console.group(planets[i].name); // Neptune.
+  console.log("Description:", planets[i].Description);
+  console.log("Surface temperature:", planets[i].surfaceTemperature);
+  console.log("Mass:", planets[i].Mass);
+  console.groupEnd();
+}
+
