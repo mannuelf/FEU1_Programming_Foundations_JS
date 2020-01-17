@@ -1,36 +1,73 @@
-var isAlive = true;
-var name = "Bartek-9000";
-var hasJetPack = true;
-var suitColor = "gold";
-var eyes = 4;
-var eyeColor = "skyblue";
-var hairColor = null;
-var legs = 3;
-var arms = 2;
-var hands = 4;
-var ears = 1;
-var canWalk = true;
-var canRun = true;
-var canFly = true;
-var hasWeapon = true;
-var isInGoodMood = false;
+const Android = {
+  head: {
+    name: "BARTEK-9000",
+    eyes: 4,
+    eyeColor: "blue",
+    hairColor: "white",
+    ears: "3",
+    isInGoodMood: false
+  },
+  upperBody: {
+    arms: 4,
+    hands: 4
+  },
+  lowerBody: {
+    legs: 2
+  },
+  anyThingElseYouCanDreamOf: {
+    abilities: {
+      canWalk: true,
+      canRun: true,
+      canFly: true
+    },
+
+    inventory: {
+      hasJetPack: true,
+      hasWeapon: true,
+      suitColor: "black"
+    },
+
+    state: {
+      isAlive: true,
+      isInGoodMood: false
+    }
+  }
+};
 
 console.log(".-.-. Booting .-.-.");
+console.log(`Android ${Android.head.name} booting with`);
+console.log(`${Android.head.eyes} eyes of colour ${Android.head.eyeColor}`);
 console.log(
-  name,
-  isAlive,
-  hasJetPack,
-  eyes,
-  eyeColor,
-  hairColor,
-  legs,
-  arms,
-  hands,
-  ears,
-  canWalk,
-  canFly,
-  hasWeapon
+  `Long ${Android.head.hairColor} hair is covering its ${Android.head.ears} ears`
 );
+console.log(
+  `It has ${Android.upperBody.arms} arms and a total of ${Android.upperBody.hands} hands`
+);
+console.log(`It has ${Android.lowerBody.legs} legs and can use them to :`);
+Android.anyThingElseYouCanDreamOf.abilities.canWalk
+  ? console.log("Walk and ...")
+  : console.log("Well... it can cripple, and");
+Android.anyThingElseYouCanDreamOf.abilities.canRun
+  ? console.log("run")
+  : console.log("thats basically it");
+
+Android.anyThingElseYouCanDreamOf.abilities.canFly
+  ? Android.anyThingElseYouCanDreamOf.inventory.hasJetPack
+    ? console.log("It can fly using its jetPack")
+    : console.log("It can fly without a jetPack... somehow")
+  : console.log("It cant fly");
+
+Android.anyThingElseYouCanDreamOf.inventory.hasWeapon
+  ? console.log("It holds a weapon so.. ")
+  : console.log("Ahh, good, it has no weapon");
+Android.anyThingElseYouCanDreamOf.state.isInGoodMood
+  ? console.log("Dont make it angry")
+  : console.log("Be aware, its not in a good mood right now");
+Android.anyThingElseYouCanDreamOf.state.isAlive
+  ? console.log("and it's still alive")
+  : console.log(
+      "its screen just showed a blue screen of death and its fuses blew"
+    );
 
 /*
  2. BROKEN SATELLITE::::::
@@ -48,7 +85,7 @@ console.log("\u{1F6F0} BROKEN SATELLITE::::::");
 
  */
 
-hasJetPack
+Android.anyThingElseYouCanDreamOf.inventory.hasJetPack
   ? console.log("JetPack is enabled!!! off I go outside to fix the satellite")
   : console.log(
       "JetPack NOT enabled, please enable jetPack before doing a space walk"
@@ -299,29 +336,29 @@ var planets = [
   ]
 ];
 
-console.group(planets[0][0]); // Mercury.
-console.log("Description:", planets[0][1][0]);
-console.log("Surface temperature:", planets[0][1][1]);
-console.log("Mass:", planets[0][1][2]);
-console.groupEnd();
+// console.group(planets[0][0]); // Mercury.
+// console.log("Description:", planets[0][1][0]);
+// console.log("Surface temperature:", planets[0][1][1]);
+// console.log("Mass:", planets[0][1][2]);
+// console.groupEnd();
 
-console.group(planets[1][0]); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
-console.log("Description:", planets[1][1][0]);
-console.log("Surface temperature:", planets[1][1][1]);
-console.log("Mass:", planets[1][1][2]);
-console.groupEnd();
+// console.group(planets[1][0]); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
+// console.log("Description:", planets[1][1][0]);
+// console.log("Surface temperature:", planets[1][1][1]);
+// console.log("Mass:", planets[1][1][2]);
+// console.groupEnd();
 
-console.group(planets[2][0]); // Earth.
-console.log("Description:", planets[2][1][0]);
-console.log("Surface temperature:", planets[2][1][1]);
-console.log("Mass:", planets[2][1][2]);
-console.groupEnd();
+// console.group(planets[2][0]); // Earth.
+// console.log("Description:", planets[2][1][0]);
+// console.log("Surface temperature:", planets[2][1][1]);
+// console.log("Mass:", planets[2][1][2]);
+// console.groupEnd();
 
-console.group(planets[3][0]); // Mars.
-console.log("Description:", planets[3][1][0]);
-console.log("Surface temperature:", planets[3][1][1]);
-console.log("Mass:", planets[3][1][2]);
-console.groupEnd();
+// console.group(planets[3][0]); // Mars.
+// console.log("Description:", planets[3][1][0]);
+// console.log("Surface temperature:", planets[3][1][1]);
+// console.log("Mass:", planets[3][1][2]);
+// console.groupEnd();
 
 /*
  Level 2::::::::::::::
@@ -357,14 +394,59 @@ planets[0][planets[planets.length - 1].length - 1].push(
   "86,810,300,000,000,000 billion kg (14.536 x Earth)"
 );
 
-console.group(planets[0][0]); // Earth.
-console.log("Description:", planets[0][1][0]);
-console.log("Surface temperature:", planets[0][1][1]);
-console.log("Mass:", planets[0][1][2]);
-console.groupEnd();
+// console.group(planets[0][0]); // Earth.
+// console.log("Description:", planets[0][1][0]);
+// console.log("Surface temperature:", planets[0][1][1]);
+// console.log("Mass:", planets[0][1][2]);
+// console.groupEnd();
 
-console.group(planets[1][0]); // Mars.
-console.log("Description:", planets[1][1][0]);
-console.log("Surface temperature:", planets[1][1][1]);
-console.log("Mass:", planets[1][1][2]);
-console.groupEnd();
+// console.group(planets[1][0]); // Mars.
+// console.log("Description:", planets[1][1][0]);
+// console.log("Surface temperature:", planets[1][1][1]);
+// console.log("Mass:", planets[1][1][2]);
+// console.groupEnd();
+
+/*
+ 7. Android Object REFACTOR:::::
+
+ Level 1::::::::::::::
+ Refactor (change) all the variables you have in place that initializes the android into an android object.
+ - Your android needs a head, upperBody, lowerBody & [ anyThingElseYouCanDreamOf ].
+ - Feel free to create any new properties that will further describe your android [ anyThingYouCanDreamOf ].
+ - next update your application to use this newly refactored code
+
+ tip: the console.log that prints the variables of the android will need to be updated
+
+ Level 2::::::::::::::
+ Refactor the planets array to be an array of objects, each object must be its own planet.
+  - next update your application to use this newly refactored code
+*/
+
+// MAKE A NEW ARRAY OF OBJECTS FOR ALL THE PLANETS
+
+// INITIATE A NEW ARRAY
+const newPlanets = planets.map(element => {
+  return {
+    name: element[0],
+    description: element[1][0],
+    temperature: element[1][1],
+    mass: element[1][2]
+  };
+});
+
+planets = newPlanets;
+delete newPlanets;
+
+// PRINT OUT ALL THE OBJECTS
+for (var element of planets) {
+  for (var property in element) {
+    if (property === "name") {
+      console.group(element[property]);
+    } else {
+      console.log(property + " : " + element[property]);
+      if (property === "mass") {
+        console.groupEnd();
+      }
+    }
+  }
+}
