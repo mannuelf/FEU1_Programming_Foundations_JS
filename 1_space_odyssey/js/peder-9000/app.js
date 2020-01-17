@@ -1,3 +1,6 @@
+function initDroid (){
+
+
 /*
 ____/\\\\\\\\\_________/\\\\\\\_______/\\\\\\\\\_________/\\\\\\\__________
  __/\\\///////\\\_____/\\\/////\\\___/\\\///////\\\_____/\\\/////\\\________
@@ -84,6 +87,7 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
+
 
 var droid = {
   isAlive: true,
@@ -424,14 +428,7 @@ console.log(
  Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
 */
 
-var sun = [
-  "SUN",
-  [
-    "The Sun is the heart of our solar system and its gravity is what keeps every planet and particle in orbit. This yellow dwarf star is just one of billions like it across the Milky Way galaxy.",
-    "5800 K (surface) 15,600,000 K (core)",
-    "1.989e30 kg"
-  ]
-];
+
 
 /*
  7. Android Object REFACTOR:::::
@@ -448,3 +445,18 @@ var sun = [
  Refactor the planets array to be an array of objects, each object must be its own planet.
   - next update your application to use this newly refactored code
 */
+
+
+
+/*
+  8. REFACTOR Create functions:::::::
+  Level 1:::::::::
+  Refactor your application to be initialized by a function that will.
+
+  Level 2:::::::::
+  Look through your code and find more opportunities to use and call functions and parameters aka arguments.
+*/
+
+}
+
+initDroid
