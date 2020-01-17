@@ -31,7 +31,6 @@ var hasWeapon = false;
 var isInGoodMood = false;
 */
 
-
 var android = {
   head: {
     name: "ben-9000",
@@ -77,36 +76,52 @@ console.log(android.upperBody.hands);
 //Refactor the planets array to be an array of objects, each object must be its own planet.
 //next update your application to use this newly refactored code
 
-var planets = {              
-  Mercury: [ "MERCURY",
-  [
-    "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
-    "-173 to 427°C",
-    "330,104,000,000,000 billion kg (0.055 x Earth)"
-  ],
-], 
-  Jupiter:  [ "JUPITER",
-  [
-    "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
-    "-108°C",
-    "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
-  ],
-],
-earth: [ "EARTH",
-[
-  "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
-  "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
-  "6.6 sextillion tons"
-],
-],
-mars: [ "MARS",
-[
-  "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
-  "87 to -5 °C",
-  "641,693,000,000,000 billion kg (0.107 x Earth)"
-],
-]
-}; 
+var planet = [
+  {
+    name: "Mercury",
+    description:
+      "the smallest and fastest planet, Mercury is the closest planet to the sun and whips around it every 88 Earth Days",
+    mass: "330,104,000,000,000 billion kg (0.055 x Earth)"
+  },
+  {
+    name: "JUPITER",
+    description:
+      "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+    mass: "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+  },
+  {
+    name: "EARTH",
+    description:
+      "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+    mass: "6.6 sextillion tons"
+  },
+  {
+    name: "mars",
+    description:
+      "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+    mass: "641,693,000,000,000 billion kg (0.107 x Earth)"
+  }
+];
+
+for (var i = 0; i < planet.length; i++) {
+  console.log(planet[i]);
+}
+
+console.group(planet[0].name); //Mercury
+console.log(planet[0].description);
+console.log(planet[0].mass);
+
+console.group(planet[1].name); //Jupiter
+console.log(planet[1].description);
+console.log(planet[1].mass);
+
+console.group(planet[2].name); //Earth
+console.log(planet[2].description);
+console.log(planet[2].mass);
+
+console.group(planet[3].name); //Mars
+console.log(planet[3].description);
+console.log(planet[3].mass);
 
 /* 
  2. BROKEN SATELLITE::::::
@@ -196,5 +211,3 @@ If its an enemyCraft && photonLaser && photonLaserEnabled
     ELSE
       console.log("\u{1F9E8} DEAD \u{1F9E8} ");
 */
-
-
