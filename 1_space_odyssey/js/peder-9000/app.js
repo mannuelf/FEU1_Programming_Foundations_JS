@@ -459,4 +459,4 @@ console.log(
 
 }
 
-initDroid
+initDroid();
