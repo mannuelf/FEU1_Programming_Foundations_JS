@@ -91,10 +91,56 @@ Refactor (change) all the variables you have in place that initializes the andro
 - Feel free to create any new properties that will further describe your android [ anyThingYouCanDreamOf ].
 */
 var name = "GoochieGoochie";
-var hasJetPack = true;
+
+var robot = [
+  {
+  robotUpperBody: {
+    alloy: "tritainium",
+    bodyRotation: "360",
+    robotArms: "manuverable",
+    hasJetPack: true,
+    },
+  robotLowerbody: {
+    alloy: "tritainium",
+    robotLegs: "manuverable",
+    },
+  robotWeapondary: {
+    mainWeapon: "Dual gatling Laser",
+    secondaryWeapon: "dual Rocketlaunchers",
+    gattlingAmmo: 3535353,
+    rocketAmmo: 4353,
+    },
+  head: {
+    robotHeadLabal: "battleDroid",
+    robotEyes: true,
+    robotView: "night, infrared",
+    robotLives: 34,
+    mouth: true,
+    },
+  }
+]
 
 console.log("\u{1F916} .-.-. Booting .-.-.");
-console.log(name, hasJetPack);
+console.log(
+
+  name,
+  "label: " + robot[0].head.robotHeadLabal,
+  ", eyes: " + robot[0].head.robotEyes,
+  ", view: " + robot[0].head.robotView,
+  ", mouth: " + robot[0].head.mouth,
+  ", lives: " + robot[0].head.robotLives,
+  ", upperbody alloy: " + robot[0].robotUpperBody.alloy,
+  ", arms: " + robot[0].robotUpperBody.robotArms,
+  ", rotation: " + robot[0].robotUpperBody.bodyRotation,
+  ", jetpack: " + robot[0].robotUpperBody.hasJetPack,
+  ", lowerbody alloy: " + robot[0].robotLowerbody.alloy,
+  ", leg: " + robot[0].robotLowerbody.robotLegs,
+  ", mainweapon: " + robot[0].robotWeapondary.mainWeapon,
+  ", secondweapon: " + robot[0].robotWeapondary.secondaryWeapon,
+  ", mainammo: " + robot[0].robotWeapondary.gattlingAmmo,
+  ", secondammo: " + robot[0].robotWeapondary.rocketAmmo,
+
+);
 
 /*
  2. BROKEN SATELLITE::::::
@@ -102,19 +148,20 @@ console.log(name, hasJetPack);
     a) write an if condition checking if the jet pack is enabled, if true the droid can go outside if false the droid
        cannot go outside, console log the correct log based on that condition.
 */
-console.log("\u{1F6F0} BROKEN SATELLITE::::::");
+console.log(
+    "\u{1F6F0} BROKEN SATELLITE::::::"
+);
 
 /*
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
 */
-
-if (hasJetPack === true) {
-  console.log("JetPack is enabled!!! off I go outside to fix the satellite");
+var jetPackChecker=robot[0].robotUpperBody.hasJetPack
+if (jetPackChecker === true) {
+    console.log("JetPack is enabled!!! off I go outside to fix the satellite");
 } else {
-  console.log(
-    "JetPack NOT enabled, please enable jetPack before doing a space walk"
-  );
+    console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
 }
+
 
 /*
  3. METEOR SHOWER::::::
@@ -122,23 +169,28 @@ if (hasJetPack === true) {
     a) Using a for loop iterate through the responses array and choose the appropriate response to get out of danger.
       create an if condition in your loop to print only 1 response using a comparison operator.
 */
-console.log("\u{1F327} METEOR SHOWER::::::");
+console.log(
+    "\u{1F327} METEOR SHOWER::::::"
+);
 
 var responses = [
-  "Call basecamp and ask for assistance, but they are far away",
-  "Do nothing, just push through",
-  "initiate core thrusters, punch 180degrees into dash-nav and warp away from danger",
-  "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
+    "Call basecamp and ask for assistance, but they are far away",
+    "Do nothing, just push through",
+    "initiate core thrusters, punch 180degrees into dash-nav and warp away from danger",
+    "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
 ];
+
 
 // write your code here, use the console log beneath
 
 for (var i = 0; i <= responses.length; i++) {
-  if (responses[i] === responses[2]) {
-    console.log(responses[i]);
-    console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
-  }
+    if (responses[i] === responses[2]) {
+        console.log(responses[i])
+        console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
+    }
 }
+
+
 
 /*
  4. ALIENS SPACE CRAFT ENCROACHING::::::
@@ -148,7 +200,9 @@ for (var i = 0; i <= responses.length; i++) {
        the if statements pass so that photonLaser fires pew pew pew.
     b)
 */
-console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
+console.log(
+    "\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::"
+);
 
 // a.
 var enemyCraft = true;
@@ -157,14 +211,15 @@ var photonlaser = true;
 var photonLaserEnabled = true;
 
 if (enemyCraft && photonlaser && photonLaserEnabled) {
-  if (bullets >= 100) {
-    for (var i = 0; i <= 100; i++) {
-      console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
+    if (bullets >= 100) {
+        for (var i = 0; i <= 100; i++) {
+            console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
+        } 
+    } else {
+        console.log("\u{1F9E8} DEAD \u{1F9E8} ");
     }
-  } else {
-    console.log("\u{1F9E8} DEAD \u{1F9E8} ");
-  }
 }
+
 
 /*
   if its an enemyCraft && photonLaser && photonLaserEnabled
@@ -174,6 +229,8 @@ if (enemyCraft && photonlaser && photonLaserEnabled) {
         else
           console.log("\u{1F9E8} DEAD \u{1F9E8} ");
 */
+
+
 
 /*
  5. LUNAR LANDING:::::
@@ -190,20 +247,22 @@ if (enemyCraft && photonlaser && photonLaserEnabled) {
 
     tip: varName.keyName (this is how to extract a value from an object)
 */
-console.log("\u{1F311} LUNAR LANDING:::::");
-
-// start coding here
-
-var lunarRadar = {
-  isEnabled: true,
-  long: 100,
-  lat: 100,
-  approachSpeed: 200 // "ft per minute"
-};
-
-// Level 1 convert this psuedocode to functioning code.
-
-/*
+console.log(
+    "\u{1F311} LUNAR LANDING:::::"
+  );
+  
+  // start coding here
+  
+  var lunarRadar = {
+    isEnabled: true,
+    long: 100,
+    lat: 100,
+    approachSpeed: 200, // "ft per minute"
+  };
+  
+  // Level 1 convert this psuedocode to functioning code.
+  
+  /*
   if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
       console.log("\u{1F91F} looking good " + name + " we are making our descent, now entering approach speed");
 
@@ -226,59 +285,40 @@ var lunarRadar = {
           console.log("\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " + name + " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
     }
   */
+  
+  // Level 2 convert it to a switch statement.
 
-// Level 2 convert it to a switch statement.
+   if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
+    console.log("\u{1F91F} looking good " + name + " we are making our descent, now entering approach speed");
+   
+      switch (lunarRadar.approachSpeed){
+      case 200:
+        console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get the heck outta here!");
+      break;
+      case 300:
+        console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+      break;
+      case 400:
+        console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+      break;
+      case 500:
+        console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+      break; 
+      case 600:
+        console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+      break;
+      case 100:
+        console.log("\u{1F47D} hmmm need a bit more heat " + name + " lets increase pitch and we should have a smooth landing");
+      break;
+      default:
+        console.log("Please enter an approach speed"); 
+    }
 
-if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
-  console.log(
-    "\u{1F91F} looking good " +
-      name +
-      " we are making our descent, now entering approach speed"
-  );
+   } else { 
+          console.log("\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " + name + " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
+    }
+  
 
-  switch (lunarRadar.approachSpeed) {
-    case 200:
-      console.log(
-        "\u{269B} well done " +
-          name +
-          " we have touched down safely. Lets get some samples and get the heck outta here!"
-      );
-      break;
-    case 300:
-      console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
-      break;
-    case 400:
-      console.log(
-        "\u{1F627} coming in way too hot " + name + " decrease pitch!"
-      );
-      break;
-    case 500:
-      console.log(
-        "\u{1F627} coming in way too hot " + name + " decrease pitch!"
-      );
-      break;
-    case 600:
-      console.log(
-        "\u{1F627} coming in way too hot " + name + " decrease pitch!"
-      );
-      break;
-    case 100:
-      console.log(
-        "\u{1F47D} hmmm need a bit more heat " +
-          name +
-          " lets increase pitch and we should have a smooth landing"
-      );
-      break;
-    default:
-      console.log("Please enter an approach speed");
-  }
-} else {
-  console.log(
-    "\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " +
-      name +
-      " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance."
-  );
-}
 
 /*
  6. PLANETARY INFO-DASH:::::
@@ -296,92 +336,83 @@ if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
 console.log("\u{1F319} PLANETARY INFO-DASH:::::");
 
 var planets = [
-  [
-    "MERCURY",
-    [
-      "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
-      "-173 to 427°C",
-      "330,104,000,000,000 billion kg (0.055 x Earth)"
-    ]
-  ],
-  [
-    "JUPITER",
-    [
-      "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
-      "-108°C",
-      "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
-    ]
-  ],
-  [
-    "EARTH",
-    [
-      "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
-      "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
-      "6.6 sextillion tons"
-    ]
-  ],
-  [
-    "MARS",
-    [
-      "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
-      "87 to -5 °C",
-      "641,693,000,000,000 billion kg (0.107 x Earth)"
-    ]
-  ]
+    {
+      planetname: "MERCURY",
+      description: "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+      surfaceTempurature: "-173 to 427°C",
+      weight: "330,104,000,000,000 billion kg (0.055 x Earth)"
+    },
+    {
+      planetname: "JUPITER",
+      description: "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+      surfaceTempurature: "-108°C",
+      weight: "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+    },
+    {
+      planetname: "EARTH",
+      description: "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+      surfaceTempurature: "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+      weight: "6.6 sextillion tons"
+    },
+    {
+      planetname: "MARS",
+      description: "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+      surfaceTempurature: "87 to -5 °C",
+      weight: "641,693,000,000,000 billion kg (0.107 x Earth)"
+    },
 ];
-planets.unshift([
-  "HAUMEA",
-  [
-    "Haumea is the fastest rotating dwarf planet with the most interesting/controversial shape. It is located beyond the orbit of Neptune. It was discovered in 2004 and is the fourth largest dwarf planet.",
-    "-241°C",
-    "6,452,000,000 km (43.13 AU)"
-  ]
-]);
+planets.unshift( {
+      planetname: "HAUMEA",
+      description: "Haumea is the fastest rotating dwarf planet with the most interesting/controversial shape. It is located beyond the orbit of Neptune. It was discovered in 2004 and is the fourth largest dwarf planet.",
+      surfaceTempurature: "-241°C",
+      distance: "6,452,000,000 km (43.13 AU)"
+    },
+);
 
-planets.unshift([
-  "SATURN",
-  [
-    "Saturn is the sixth planet from the sun, with the largest planetary rings in the Solar System. It is the second-largest planet after Jupiter, and recently, with many other moons being discovered, it surpassed the number of Jupiter’s moons and is now considered the planet with the most numerous satellites.",
-    "-175°C",
-    "5.683 × 10^26 kg"
-  ]
-]);
+planets.unshift({
+      planetname: "SATURN",
+      description: "Saturn is the sixth planet from the sun, with the largest planetary rings in the Solar System. It is the second-largest planet after Jupiter, and recently, with many other moons being discovered, it surpassed the number of Jupiter’s moons and is now considered the planet with the most numerous satellites.",
+      surfaceTempurature: "-175°C",
+      weight: "5.683 × 10^26 kg"
+    },
+);
 
-console.group(planets[0][0]); // Saturn.
-console.log("Discription:", planets[0][1][0]);
-console.log("Surface temperature:", planets[0][1][1]);
-console.log("Distance:", planets[0][1][2]);
+console.group(planets[0].planetname); // Saturn.
+  console.log("Discription:", planets[0].description);
+  console.log("Surface temperature:", planets[0].surfaceTempurature);
+  console.log("Distance:", planets[0].weight);
 console.groupEnd();
 
-console.group(planets[1][0]); // Haumea.
-console.log("Description:", planets[1][1][0]);
-console.log("Surface temperature:", planets[1][1][1]);
-console.log("Distance:", planets[1][1][2]);
+console.group(planets[1].planetname); // Haumea.
+  console.log("Description:", planets[1].description);
+  console.log("Surface temperature:", planets[1].surfaceTempurature);
+  console.log("Distance:", planets[1].distance);
 console.groupEnd();
 
-console.group(planets[2][0]); // Mercury.
-console.log("Description:", planets[2][1][0]);
-console.log("Surface temperature:", planets[2][1][1]);
-console.log("Distance:", planets[2][1][2]);
+console.group(planets[2].planetname); // Mercury.
+  console.log("Description:", planets[2].description);
+  console.log("Surface temperature:", planets[2].surfaceTempurature);
+  console.log("Distance:", planets[2].weight);
 console.groupEnd();
 
-console.group(planets[3][0]); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
-console.log("Description:", planets[3][1][0]);
-console.log("Surface temperature:", planets[3][1][1]);
-console.log("Distance:", planets[3][1][2]);
+console.group(planets[2].planetname); // Jupiter.
+  console.log("Description:", planets[2].description);
+  console.log("Surface temperature:", planets[2].surfaceTempurature);
+  console.log("Distance:", planets[2].weight);
 console.groupEnd();
 
-console.group(planets[4][0]); // Earth.
-console.log("Description:", planets[4][1][0]);
-console.log("Surface temperature:", planets[4][1][1]);
-console.log("Distance:", planets[4][1][2]);
+console.group(planets[4].planetname); // Earth.
+  console.log("Description:", planets[4].description);
+  console.log("Surface temperature:", planets[4].surfaceTempurature);
+  console.log("Distance:", planets[4].weight);
 console.groupEnd();
 
-console.group(planets[5][0]); // Mars.
-console.log("Description:", planets[5][1][0]);
-console.log("Surface temperature:", planets[5][1][1]);
-console.log("Distance:", planets[5][1][2]);
+console.group(planets[5].planetname); // Mars.  
+  console.log("Description:", planets[5].description);
+  console.log("Surface temperature:", planets[5].surfaceTempurature);
+  console.log("Distance:", planets[5].weight);
 console.groupEnd();
+
 
 /*
  Level 2::::::::::::::
@@ -400,31 +431,9 @@ console.groupEnd();
  tip: the console.log that prints the variables of the android will need to be updated
 */
 
-var robot = [
-  ("robotUpperBody": {
-    material: "tritainium",
-    bodyRotation: "360",
-    robotArms: "manuverable"
-  }),
-  ("robotLowerbody": {
-    material: "tritainium",
-    robotLegs: "manuverable"
-  }),
-  ("robotWeapondary": {
-    mainWeapon: "Dual gatling Laser",
-    secondaryWeapon: "dual Rocketlaunchers",
-    gatlingAmmo: 3535353,
-    rocketAmmo: 4353
-  }),
-  ("head": {
-    robotEyes: true,
-    robotHeadLabal: "battleDroid",
-    robotView: "night, infrared",
-    robotLives: 34
-  })
-];
 
-console.log(robot);
+
+
 
 /*
  Level 2::::::::::::::
