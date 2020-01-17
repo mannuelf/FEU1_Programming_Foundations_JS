@@ -17,7 +17,6 @@ var isInGoodMood = false;
 isAlive = true;
 eyes = 1067;
 
-
 console.log(".-.-. Booting .-.-.");
 console.log(
   name,
@@ -116,9 +115,7 @@ if (enemyCraft && photonLaser && photonLaserEnabled) {
 
     tip: varName.keyName (this is how to extract a value from an object)
 */
-console.log(
-  "\u{1F311} LUNAR LANDING:::::"
-);
+console.log("\u{1F311} LUNAR LANDING:::::");
 
 // start coding here
 
@@ -131,27 +128,43 @@ var lunarRadar = {
   isEnabled: enabled,
   long: long,
   lat: lat,
-  speed: speed, // "ft per minute"
-}
+  speed: speed // "ft per minute"
+};
 
-console.log("MOON MAN:", lunarRadar)
+console.log("MOON MAN:", lunarRadar);
 
-var name = "Mr.Tinm"
+var name = "Mr.Tinm";
 
-console.log("It is moon man:", lunarRadar.speed !== undefined)
+console.log("It is moon man:", lunarRadar.speed !== undefined);
 if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
-  console.log("\u{1F91F} looking good " + name + " we are making our descent, now entering approach speed");
+  console.log(
+    "\u{1F91F} looking good " +
+    name +
+    " we are making our descent, now entering approach speed"
+  );
   if (lunarRadar.speed >= 200 && lunarRadar.speed < 299) {
-    console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get heck outta here!");
+    console.log(
+      "\u{269B} well done " +
+      name +
+      " we have touched down safely. Lets get some samples and get heck outta here!"
+    );
   } else if (lunarRadar.speed >= 300) {
     console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
   } else if (lunarRadar.speed < 100) {
-    console.log("\u{1F47D} hmmm need a bit more heat " + name + " lets increase pitch and we should have a smooth landing");
+    console.log(
+      "\u{1F47D} hmmm need a bit more heat " +
+      name +
+      " lets increase pitch and we should have a smooth landing"
+    );
   } else {
-    console.log('Please enter an approach speed');
+    console.log("Please enter an approach speed");
   }
 } else {
-  console.log("\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " + name + " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
+  console.log(
+    "\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " +
+    name +
+    " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance."
+  );
 }
 
 /*
@@ -206,3 +219,104 @@ switch (true) {
     console.log("Please enter an approach speed");
     break;
 }
+
+/*
+ 6. PLANETARY INFO-DASH:::::
+
+ Level 1::::::::::::::
+ Given this array of planets using what you know about how to access data in an arrays index log out the:
+  - Description,
+  - Surface temperature and
+  - Mass
+
+  in the console logs bellow.
+
+  tip: pass your variables into the console.log after comma ,
+*/
+console.log("\u{1F319} PLANETARY INFO-DASH:::::");
+
+var planets = [
+  [
+    "MERCURY",
+    [
+      "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+      "-173 to 427°C",
+      "330,104,000,000,000 billion kg (0.055 x Earth)"
+    ]
+  ],
+  [
+    "JUPITER",
+    [
+      "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+      "-108°C",
+      "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+    ]
+  ],
+  [
+    "EARTH",
+    [
+      "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+      "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+      "6.6 sextillion tons"
+    ]
+  ],
+  [
+    "MARS",
+    [
+      "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+      "87 to -5 °C",
+      "641,693,000,000,000 billion kg (0.107 x Earth)"
+    ]
+  ]
+];
+
+console.group(planets[0][0]); // Mercury.
+console.log("Description:", planets[0][1][0]);
+console.log("Surface temperature:", planets[0][1][1]);
+console.log("Mass:", planets[0][1][2]);
+console.groupEnd();
+
+console.group(planets[1][0]); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
+console.log("Description:", planets[1][1][0]);
+console.log("Surface temperature:", planets[1][1][1]);
+console.log("Mass:", planets[1][1][2]);
+console.groupEnd();
+
+console.group(planets[2][0]); // Earth.
+console.log("Description:", planets[2][1][0]);
+console.log("Surface temperature:", planets[2][1][1]);
+console.log("Mass:", planets[2][1][2]);
+console.groupEnd();
+
+console.group(planets[3][0]); // Mars.
+console.log("Description:", planets[3][1][0]);
+console.log("Surface temperature:", planets[3][1][1]);
+console.log("Mass:", planets[3][1][2]);
+console.groupEnd();
+
+/*
+ Level 2::::::::::::::
+ Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
+*/
+
+var newPlanets = [
+  "Uranus",
+  [
+    "ranus is the seventh planet discovered in the Solar System that also led to the discovery of the last planet, Neptune they are both referred to as ice giants. Officially recognized in 1781 after many observations in the past, it is the third largest planet of the Solar System.",
+    "-197 °C",
+    "86,810,300,000,000,000 billion kg (14.536 x Earth)"
+  ]
+];
+var planets2 = [
+  "Haumea",
+  [
+    "Haumea is the fastest rotating dwarf planet with the most interesting/controversial shape. It is located beyond the orbit of Neptune. It was discovered in 2004 and is the fourth largest dwarf planet.",
+    "-241°C",
+    "	4,006,000,000,000 billion kg (0.00066 x Earth)"
+  ]
+];
+
+planets.unshift(newPlanets);
+planets.unshift(planets2);
+
+console.log(planets);
