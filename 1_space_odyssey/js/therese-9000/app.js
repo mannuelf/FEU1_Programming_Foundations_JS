@@ -211,19 +211,21 @@ if (
 
     tip: varName.keyName (this is how to extract a value from an object)
 */
-console.log(
-  "\u{1F311} LUNAR LANDING:::::"
-);
+console.log("\u{1F311} LUNAR LANDING:::::");
 
 // start coding here
 
 var lunarRadar = {
-  isEnabled: true,
-  long: 30.7723,
-  lat: 20.1911,
-  approachSpeed: 200, // "ft per minute"
-}
+  isEnabled: undefined,
+  long: undefined,
+  lat: undefined,
+  approachSpeed: undefined, // "ft per minute"
+};
 
+lunarRadar.isEnabled = true;
+lunarRadar.long = 30.7723;
+lunarRadar.lat = 20.1911;
+lunarRadar.approachSpeed = 700;
 
 // Level 1 convert this psuedocode to functioning code.
 
@@ -248,7 +250,7 @@ ELSE
   console.log("\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " + name + " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
 
 
-if(lunarRadar.isEnabled && lunarRadar.lat !== undefined && lunarRadar.long !== undefined){
+if(lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long){
   console.log("\u{1F91F} looking good " + name + " we are making our descent, now entering approach speed");
   if(lunarRadar.approachSpeed >= 200 && lunarRadar.approachSpeed < 299){
     console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get heck outta here!");
@@ -271,33 +273,169 @@ if(lunarRadar.isEnabled && lunarRadar.lat !== undefined && lunarRadar.long !== u
 
 */
 
-
 // Level 2 convert it to a switch statement.
 
-if (lunarRadar.isEnabled && lunarRadar.lat !== undefined && lunarRadar.long !== undefined) {
-  console.log("\u{1F91F} looking good " + name + " we are making our descent, now entering approach speed");
-  switch(lunarRadar.approachSpeed) {
+if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
+  console.log(
+    "\u{1F91F} looking good " +
+      name +
+      " we are making our descent, now entering approach speed"
+  );
+  switch (lunarRadar.approachSpeed) {
     case 200:
-      console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get heck outta here!");
+      console.log(
+        "\u{269B} well done " +
+          name +
+          " we have touched down safely. Lets get some samples and get heck outta here!"
+      );
       break;
     case 300:
       console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
       break;
     case 400:
-      console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+      console.log(
+        "\u{1F627} coming in way too hot " + name + " decrease pitch!"
+      );
       break;
     case 500:
-      console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+      console.log(
+        "\u{1F627} coming in way too hot " + name + " decrease pitch!"
+      );
       break;
     case 600:
-      console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+      console.log(
+        "\u{1F627} coming in way too hot " + name + " decrease pitch!"
+      );
       break;
     case 100:
-      console.log("\u{1F47D} hmmm need a bit more heat " + name + " lets increase pitch and we should have a smooth landing");
+      console.log(
+        "\u{1F47D} hmmm need a bit more heat " +
+          name +
+          " lets increase pitch and we should have a smooth landing"
+      );
       break;
     default:
-      console.log('Please enter an approach speed');
-  } 
+      console.log("Please enter an approach speed");
+  }
 } else {
-    console.log("\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " + name + " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
+  console.log(
+    "\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " +
+      name +
+      " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance."
+  );
 }
+
+/*
+ 6. PLANETARY INFO-DASH:::::
+
+ Level 1::::::::::::::
+ Given this array of planets using what you know about how to access data in an arrays index log out the:
+  - Description,
+  - Surface temperature and
+  - Mass
+
+  in the console logs bellow.
+
+  tip: pass your variables into the console.log after comma ,
+*/
+console.log("\u{1F319} PLANETARY INFO-DASH:::::");
+
+
+var planets = [
+  [ "MERCURY",
+    [
+      "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+      "-173 to 427°C",
+      "330,104,000,000,000 billion kg (0.055 x Earth)"
+    ],
+  ],
+  [ "JUPITER",
+    [
+      "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+      "-108°C",
+      "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+    ],
+  ],
+  [ "EARTH",
+    [
+      "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+      "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+      "6.6 sextillion tons"
+    ],
+  ],
+  [ "MARS",
+    [
+      "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+      "87 to -5 °C",
+      "641,693,000,000,000 billion kg (0.107 x Earth)"
+    ],
+  ],
+];
+var mercuryDesc = planets[0];
+var jupiterDesc = planets[1];
+var earthDesc = planets[2];
+var marsDesc = planets[3];
+
+
+console.group(planets[0][0]); // Mercury.
+  console.log("Description:", mercuryDesc[1][0]);
+  console.log("Surface temperature:", mercuryDesc[1][1]);
+  console.log("Mass:", mercuryDesc[1][2]);
+console.groupEnd();
+
+console.group(planets[1][0]); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
+  console.log("Description:", jupiterDesc[1][0]);
+  console.log("Surface temperature:", jupiterDesc[1][1]);
+  console.log("Mass:", jupiterDesc[1][2]);
+console.groupEnd();
+
+console.group(planets[2][0]); // Earth.
+  console.log("Description:", earthDesc[1][0]);
+  console.log("Surface temperature:", earthDesc[1][1]);
+  console.log("Mass:", earthDesc[1][2]);
+console.groupEnd();
+
+console.group(planets[3][0]); // Mars.
+  console.log("Description:", marsDesc[1][0]);
+  console.log("Surface temperature:", marsDesc[1][1]);
+  console.log("Mass:", marsDesc[1][2]);
+console.groupEnd();
+
+/*
+ Level 2::::::::::::::
+ Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
+*/
+
+var venus = [
+  "VENUS",
+  [
+    "Venus is the second planet from the Sun and the sixth largest. Together with Mercury, they are the only planets without a satellite, even though Mercury is closer to the sun, Venus is the hottest planet.",
+    "462 °C", 
+    "4,867,320,000,000,000 billion kg (0.815 x Earth)"
+  ]
+]
+
+var neptune = [
+  "NEPTUNE",
+  [
+    "Neptune is the fourth largest and the farthest planet of the Solar System with the most powerful wind speeds out of all the planets. It is the smallest of the gas giants and is the first planet to be discovered by mathematical predictions in 1846. ",
+    "-201 °C",
+    "102,410,000,000,000,000 billion kg (17.15x Earth)"
+  ]
+]
+
+planets.unshift(venus, neptune);
+
+var venusDesc = planets[4];
+var neptuneDesc = planets[5];
+
+console.group(planets[4][0]);
+  console.log("Description:", venusDesc[1][0]);
+  console.log("Surface temperature:", venusDesc[1][1]);
+  console.log("Mass:", venusDesc[1][2]);
+console.groupEnd();
+console.group(planets[5][0]);
+  console.log("Description:", neptuneDesc[1][0]);
+  console.log("Surface temperature:", neptuneDesc[1][1]);
+  console.log("Mass:", neptuneDesc[1][2]);
+console.groupEnd();
