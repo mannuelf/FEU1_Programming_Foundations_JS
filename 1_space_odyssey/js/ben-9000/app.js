@@ -101,13 +101,37 @@ var planet = [
       "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
     mass: "641,693,000,000,000 billion kg (0.107 x Earth)"
   }
+
+
 ];
+
+var newPlanet=[
+   {
+    name:"VENUS",
+    description:"Spinning in the opposite direction to most planets, Venus is the hottest planet, and one of the brightest objects in the sky.",
+    mass:  "4,867,320,000,000,000 billion kg (0.815 x Earth)"
+   },
+   {
+     name:"Benlanet",
+     description: "Spinning in the opposite direction to most planets, Venus is the hottest planet, and one of the brightest objects in the sky.",
+      mass:  "4,867,320,000,000,000 billion kg (0.815 x Earth)"
+  },
+]
+
+
+
+planet.unshift(newPlanet[0], newPlanet[1]);
+
+
 
 for (var i = 0; i < planet.length; i++) {
 console.group(planet[i].name); //Jupiter
 console.log(planet[i].description);
 console.log(planet[i].mass);
 }
+
+
+
 
 
 
