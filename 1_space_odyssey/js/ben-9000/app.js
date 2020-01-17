@@ -230,7 +230,7 @@ if (enemyCraft && photonLaser && photonLaserEnabled) {
     console.log("\u{1F9E8} DEAD \u{1F9E8}");
   }
 } else {
-  console.log("do your homework");
+  console.log("Oh no");
 }
 
 /*
@@ -241,3 +241,129 @@ If its an enemyCraft && photonLaser && photonLaserEnabled
     ELSE
       console.log("\u{1F9E8} DEAD \u{1F9E8} ");
 */
+
+/*
+ 6. PLANETARY INFO-DASH:::::
+
+ Level 1::::::::::::::
+ Given this array of planets using what you know about how to access data in an arrays index log out the:
+  - Description,
+  - Surface temperature and
+  - Mass
+
+  in the console logs bellow.
+
+  tip: pass your variables into the console.log after comma ,
+*/
+console.log("\u{1F319} PLANETARY INFO-DASH:::::");
+
+var planets = [
+  [
+    "MERCURY",
+    [
+      "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+      "-173 to 427°C",
+      "330,104,000,000,000 billion kg (0.055 x Earth)"
+    ]
+  ],
+  [
+    "JUPITER",
+    [
+      "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+      "-108°C",
+      "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+    ]
+  ],
+  [
+    "EARTH",
+    [
+      "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+      "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+      "6.6 sextillion tons"
+    ]
+  ],
+  [
+    "MARS",
+    [
+      "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+      "87 to -5 °C",
+      "641,693,000,000,000 billion kg (0.107 x Earth)"
+    ]
+  ]
+];
+
+
+var newPlanet = [
+  "Neptunes",
+  [
+    "is the fourth largest and the farthest planet of the Solar System with the most powerful wind speeds out of all the planets. It is the smallest of the gas giants and is the first planet to be discovered by mathematical predictions in 1846.",
+    "-201 °C",
+    "60,190.03 Earth days (164.79 Earth years)"
+  ]
+];
+
+var newPlanet1 = [
+  
+    "Venus",
+    [
+      "spinning in the opposite direction to most planets, Venus is the hottest planet, and one of the brightest object in the sky.",
+      "462° C",
+      "108,209,475 km (0.73 AU),"
+    ]
+];
+
+planets.unshift(newPlanet);
+planets.unshift(newPlanet1);
+
+
+console.log("\u{1F319} PLANETARY INFO-DASH:::::");
+
+console.group(planets[4][0]); // earth.done
+  console.log("Description:", planets[4][1][0]);
+  console.log("Surface temperature:", "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower");
+  console.log("Distance:", "6.6 sextillion tons");
+console.groupEnd();
+
+console.group(planets[3][0]); // jupter.done
+  console.log("Description:", planets[3][1][0]);
+  console.log("Surface temperature:", "-108°C");
+  console.log("Distance:", "1,898,130,000,000,000,000 billion kg (317.83 x Earth)");
+console.groupEnd();
+
+console.group(planets[5][0]);  // mars.done 
+  console.log("Description:", planets[5][1][0]);
+  console.log("Surface temperature:", "-87 to -5°C");
+  console.log("Distance:","641,693,000,000,000 billion kg (0.107 x Earth)");
+console.groupEnd();
+
+console.group(planets[2][0]);  // Mercury.done
+  console.log("Description:", planets[2][1][0]);
+  console.log("Surface temperature:","-173 to 427°C");
+  console.log("Distance:","330,104,000,000,000 billion kg (0.055 x Earth)");
+console.groupEnd();
+
+
+console.group(planets[0][0]); // Venus. done
+  console.log("Description:", planets[0][1][0]);
+  console.log("Surface temperature:",  "462° C");
+  console.log("108,209,475 km (0.73 AU),");
+console.groupEnd();
+
+console.group(planets[1][0]); // Neptunes.done
+  console.log("Description:", planets[1][1][0]);
+  console.log("Surface temperature:", "87 to -5 °C");
+  console.log("mass:", "60,190.03 Earth days (164.79 Earth years)");
+console.groupEnd();
+
+
+
+
+
+/*
+ Level 2::::::::::::::
+ Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
+*/
+
+
+console.log(planets);
+
