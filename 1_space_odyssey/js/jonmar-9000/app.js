@@ -1,6 +1,5 @@
 function initAndroid() {
   // 1st Exercise
-
   const droid = {
     name: "Jonmar-9000",
     isAlive: true,
