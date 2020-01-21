@@ -1,3 +1,4 @@
+function initAndroid () {
 /*
 ____/\\\\\\\\\_________/\\\\\\\_______/\\\\\\\\\_________/\\\\\\\__________
  __/\\\///////\\\_____/\\\/////\\\___/\\\///////\\\_____/\\\/////\\\________
@@ -296,6 +297,8 @@ if (lunarRadar.isEnabled && lunarRadar.lat !== undefined && lunarRadar.long !== 
 }
 
 
+
+
 // Level 1 convert this psuedocode to functioning code.
 
 /*
@@ -444,3 +447,20 @@ console.log("Mass", DwarfPlanets[1][1][2]);
  Refactor the planets array to be an array of objects, each object must be its own planet.
   - next update your application to use this newly refactored code
 */
+
+
+
+/*
+  8. REFACTOR Create functions:::::::
+  Level 1:::::::::
+  Refactor your application to be initialized by a function.
+
+  Level 2:::::::::
+  Look through your code and find more opportunities to use and call functions and parameters aka arguments.
+*/
+
+};
+
+
+
+
