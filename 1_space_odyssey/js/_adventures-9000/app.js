@@ -84,6 +84,7 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
+
 var isAlive;
 var name;
 var suitColor;
@@ -353,5 +354,7 @@ console.groupEnd();
   Refactor your application to be initialized by a function.
 
   Level 2:::::::::
+  Look through your code and find more opportunities to use and call functions and parameters aka arguments.*/
+
   Look through your code and find more opportunities to use and call functions and parameters aka arguments.
   */
