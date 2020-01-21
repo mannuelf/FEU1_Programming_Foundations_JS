@@ -352,7 +352,10 @@ console.groupEnd();
 /*
   8. REFACTOR Create functions:::::::
   Level 1:::::::::
-  Refactor your application to be initialized by a function that will.
+  Refactor your application to be initialized by a function.
 
   Level 2:::::::::
   Look through your code and find more opportunities to use and call functions and parameters aka arguments.*/
+
+  Look through your code and find more opportunities to use and call functions and parameters aka arguments.
+  */
