@@ -1,3 +1,4 @@
+function initAndroid () {
 /*
 ____/\\\\\\\\\_________/\\\\\\\_______/\\\\\\\\\_________/\\\\\\\__________
  __/\\\///////\\\_____/\\\/////\\\___/\\\///////\\\_____/\\\/////\\\________
@@ -84,42 +85,81 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
-var isAlive = true;
-var name = "natasha-9000";
-var hasJetPack = true;
-var suitColor = "white";
-var eyes = 4;
-var eyeColor = "green";
-var hairColor = "black";
-var legs = 3;
-var arms = 4;
-var hands = 4;
-var ears = 2;
-var canWalk = false;
-var canRun = false;
-var canFly = true;
-var hasWeapon = true;
-var isInGoodMood = true;
+
+/*
+-var isAlive = true;
+-var name = "natasha-9000";
+-var hasJetPack = true;
+-var suitColor = "white";
+-var eyes = 4;
+-var eyeColor = "green";
+-var hairColor = "black";
+-var legs = 3;
+-var arms = 4;
+-var hands = 4;
+-var ears = 2;
+-var canWalk = false;
+-var canRun = false;
+-var canFly = true;
+-var hasWeapon = true;
+-var isInGoodMood = true;
+*/
+
+var android = {
+  personalInfo: {
+    isAlive: "true",
+    name: "natasha-9000",
+    isInGoodMood: "true",
+   },
+  upperBody: {
+    arms: "4",
+    hands:"4",
+    eyes: "4",
+    ears: "2",
+    hairColor:"black",
+    eyeColor:"green",
+    suitColor: "white",
+    },
+  lowerBody: {
+    legs:"3",
+    feets:"3",
+   },
+  skills: {
+    canWalk: "false",
+    canRun: "false",
+    canFly:"true",
+    },
+  gadget: {
+    hasWeapon :"true",
+    hasJetPack:"true",
+    pocketknife:"false",
+    },
+  }
 
 console.log(".-.-. Booting .-.-.");
 console.log(
   name,
-  isAlive,
-  hasJetPack,
-  eyes,
-  eyeColor,
-  hairColor,
-  legs,
-  arms,
-  hands,
-  ears,
-  canWalk,
-  canFly,
-  hasWeapon,
-  isInGoodMood,
-  canRun,
-  suitColor
+  android.personalInfo.isAlive,
+  android.gadget.hasJetPack,
+  android.upperBody.eyes,
+  android.upperBody.eyeColor,
+  android.upperBody.hairColor,
+  android.lowerBody.legs,
+  android.upperBody.arms,
+  android.upperBody.hands,
+  android.upperBody.ears,
+  android.skills.canWalk,
+  android.skills.canFly,
+  android.gadget.hasWeapon,
+  android.personalInfo.isInGoodMood,
+  android.skills.canRun,
+  android.personalInfo.suitColor
 );
+
+
+
+
+
 
 /*
  2. BROKEN SATELLITE::::::
@@ -215,19 +255,56 @@ console.log("\u{1F311} LUNAR LANDING:::::");
 
 // start coding here
 
+
 var lunarRadar = {
   isEnabled: undefined,
   long: undefined,
   lat: undefined,
-  approachSpeed: undefined // "ft per minute"
+  approachSpeed: undefined, // "ft per minute"
 };
+
+lunarRadar.isEnabled = true;
+lunarRadar.long = 233;
+lunarRadar.lat = 245;
+lunarRadar.approachSpeed = 250;  // "ft per minute"
+
+if (lunarRadar.isEnabled && lunarRadar.lat !== undefined && lunarRadar.long !== undefined) {
+  console.log("\u{1F91F} looking good " + name + " we are making our descent, now entering approach speed");
+
+  if (lunarRadar.approachSpeed >= 200 && lunarRadar.approachSpeed < 299) {
+    console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get heck outta here!");
+  }
+  else if(lunarRadar.approachSpeed >= 300) {
+    console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+  }
+  else if(lunarRadar.approachSpeed >= 400) {
+    console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+  }
+  else if(lunarRadar.approachSpeed >= 500) {
+    console.log('Please enter an approach speed');
+  }
+  else if (lunarRadar.approachSpeed >= 600) {
+    console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+  }
+  else if (lunarRadar.approachSpeed <= 100) {
+    console.log("\u{1F47D} hmmm need a bit more heat " + name + " lets increase pitch and we should have a smooth landing");
+  } else {
+    console.log('Please enter an approach speed');
+  }
+
+} else {
+  console.log("\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " + name + " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
+}
+
+
+
 
 // Level 1 convert this psuedocode to functioning code.
 
 /*
 IF lunar radar is enabled && lat is defined and long is defined
     console.log("\u{1F91F} looking good " + name + " we are making our descent, now entering approach speed");
-    IF approach speed is greater than or equal to 200ft per minute and approach speed is less than 299ft per minute
+  IF approach speed is greater than or equal to 200ft per minute and approach speed is less than 299ft per minute
       console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get heck outta here!");
     ELSE IF approach speed is greater than or equal to 300ft per minute
       console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
@@ -237,7 +314,7 @@ IF lunar radar is enabled && lat is defined and long is defined
       console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
     ELSE IF approach speed is greater than or equal to 600ft per minute
       console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
-    ELSE IF approach speed is less than or equal to 100ft per minute
+      ELSE IF approach speed is less than or equal to 100ft per minute
       console.log("\u{1F47D} hmmm need a bit more heat " + name + " lets increase pitch and we should have a smooth landing");
     ELSE
       console.log('Please enter an approach speed');
@@ -354,3 +431,36 @@ console.group(DwarfPlanets[1][0]); //Makemake.
 console.log("Description", DwarfPlanets[1][1][0]);
 console.log("Surface temperature", DwarfPlanets[1][1][1]);
 console.log("Mass", DwarfPlanets[1][1][2]);
+
+/*
+ 7. Android Object REFACTOR:::::
+
+ Level 1::::::::::::::
+ Refactor (change) all the variables you have in place that initializes the android into an android object.
+ - Your android needs a head, upperBody, lowerBody & [ anyThingElseYouCanDreamOf ].
+ - Feel free to create any new properties that will further describe your android [ anyThingYouCanDreamOf ].
+ - next update your application to use this newly refactored code
+
+ tip: the console.log that prints the variables of the android will need to be updated
+
+ Level 2::::::::::::::
+ Refactor the planets array to be an array of objects, each object must be its own planet.
+  - next update your application to use this newly refactored code
+*/
+
+
+
+/*
+  8. REFACTOR Create functions:::::::
+  Level 1:::::::::
+  Refactor your application to be initialized by a function.
+
+  Level 2:::::::::
+  Look through your code and find more opportunities to use and call functions and parameters aka arguments.
+*/
+
+};
+
+
+
+
