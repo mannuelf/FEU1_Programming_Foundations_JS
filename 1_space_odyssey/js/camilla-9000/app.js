@@ -1,4 +1,6 @@
-/*
+function initAndroid() {
+
+  /*
 ____/\\\\\\\\\_________/\\\\\\\_______/\\\\\\\\\_________/\\\\\\\__________
  __/\\\///////\\\_____/\\\/////\\\___/\\\///////\\\_____/\\\/////\\\________
   _\///______\//\\\___/\\\____\//\\\_\///______\//\\\___/\\\____\//\\\_______
@@ -419,3 +421,15 @@ var androidTwo = {
 for(var i = 0; i < androidTwo.length; i++) {
   console.log(androidTwo[i]);
 }
+
+/*
+  8. REFACTOR Create functions:::::::
+  Level 1:::::::::
+  Refactor your application to be initialized by a function.
+
+  Level 2:::::::::
+  Look through your code and find more opportunities to use and call functions and parameters aka arguments.
+*/
+
+}
+
