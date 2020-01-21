@@ -6,29 +6,35 @@
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
 
-var isAlive = true;
-var name = "Hoff-9000";
-var hasJetPack = true;
-var suitColor = "neongreen";
-var eyes = true;
-var eyeColor = "blue";
-var hairColor = "blonde";
-var legs = 2;
-var arms = 2;
-var hands = 2;
-var ears = 2;
-var canWalk = true;
-var canRun = false;
-var canFly = true;
-var hasWeapon = true;
-var isInGoodMood = true;
-
-var voiceover = "David Hasslehoff";
-var bodytype = "car";
-var evilAI = "EvilArcade";
-var evilAIBodyType = "Packman machine";
-
-
+//refactor robot variables
+var hoff9000 = {
+    name: "Hoff-9000",
+    voiceOver: "David Hasslehoff",
+    catchPhrase: "Don't hassle the Hoff 9000",
+    personality: "Badass",
+    isAlive: true,
+    body: "human-like",
+    head: true,
+    upperBody: true,
+    lowerBody: true,
+    canMove: true,
+    canRun: false,
+    hasJetPack: false,
+    canFly: false,
+    isTransformed: false,
+    hasWeapon: false
+  }
+  console.log(hoff9000);
+  /*,
+  {
+    isTransformed: true,
+    transformedBody: "artificial car",
+    canMove: true,
+    canRun: true,
+    hasJetPack: true,
+    canFly: true,
+    catchPhrase: "Don't hassle the Hoff 9000",
+  };*/
 
 
 /*
@@ -308,4 +314,14 @@ console.groupEnd();
 /*
  Level 2::::::::::::::
  Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
+*/
+
+/*
+ 7. Android Object REFACTOR:::::
+
+ Level 1::::::::::::::
+ Refactor (change) all the variables you have in place that initializes the android into an android object.
+ - Your android needs a head, upperBody, lowerBody & [ anyThingElseYouCanDreamOf ].
+ - Feel free to create any new properties that will further describe your android [ anyThingYouCanDreamOf ].
+ - next update your application to use this newly refactored code
 */

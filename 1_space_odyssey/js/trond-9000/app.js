@@ -1,5 +1,8 @@
 //1
 
+// Old code
+
+/*
 var isAlive = true;
 var name = "Trond-9000";
 var hasJetPack = true;
@@ -33,14 +36,58 @@ console.log(
   canFly,
   hasWeapon
 );
+*/
+
+// Refactored code
+
+var android = {
+  isAlive: true,
+  name: "Trond-9000",
+  hasJetPack: true,
+  suitColor: "white",
+  eyes: true,
+  eyeColor: "blue",
+  hairColor: "dark blonde",
+  legs: 2,
+  arms: 2,
+  hands: 2,
+  ears: 2,
+  canWalk: true,
+  canRun: true,
+  anFly: true,
+  hasWeapon: true,
+  isInGoodMood: true,
+  head: true,
+  upperBody: true,
+  lowerBody: true
+  };
+
+console.log("\u{1F916} .-.-. Booting refactored droid.-.-.");
+console.log(android);
 
 //2
 
+// Old code
+/*
 console.log(
   "\u{1F6F0} BROKEN SATELLITE::::::"
 );
 
 if (hasJetPack === true) {
+    console.log("JetPack is enabled!!! off I go outside to fix the satellite");
+}
+else {
+    console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
+}
+*/
+
+// Refactored code
+
+console.log(
+  "\u{1F6F0} BROKEN SATELLITE::::::"
+);
+
+if (android.hasJetPack) {
     console.log("JetPack is enabled!!! off I go outside to fix the satellite");
 }
 else {
@@ -135,20 +182,6 @@ else {
 
 console.log("\u{1F319} PLANETARY INFO-DASH:::::");
 
-/*
- 6. PLANETARY INFO-DASH:::::
-
- Level 1::::::::::::::
- Given this array of planets using what you know about how to access data in an arrays index log out the:
-  - Description,
-  - Surface temperature and
-  - Mass
-
-  in the console logs bellow.
-
-  tip: pass your variables into the console.log after comma ,
-*/
-
 var planets = [
   [ "MERCURY",
     [
@@ -231,3 +264,26 @@ planets.unshift(neptune, venus);
 
 console.log(planets);
 
+//7
+//Level 1
+
+// See //1 refactored code
+
+//7
+//Level 2
+
+/*
+ 7. Android Object REFACTOR:::::
+
+ Level 1::::::::::::::
+ Refactor (change) all the variables you have in place that initializes the android into an android object.
+ - Your android needs a head, upperBody, lowerBody & [ anyThingElseYouCanDreamOf ].
+ - Feel free to create any new properties that will further describe your android [ anyThingYouCanDreamOf ].
+ - next update your application to use this newly refactored code
+
+ tip: the console.log that prints the variables of the android will need to be updated
+
+ Level 2::::::::::::::
+ Refactor the planets array to be an array of objects, each object must be its own planet.
+  - next update your application to use this newly refactored code
+*/
