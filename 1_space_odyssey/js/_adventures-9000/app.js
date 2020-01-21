@@ -118,7 +118,6 @@ console.log(
   hasWeapon
 );
 
-
 if (hasJetPack) {
   console.log("JetPack is enabled!!! off I go outside to fix the satellite");
 } else {
@@ -175,10 +174,6 @@ for (var i = 0; i <= responses.length; i++) {
 */
 console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
 
-var orderHasShipped = true;
-
-//honestly have no clue of what i did her
-
 // a.
 var enemyCraft = false;
 var photonLaser = true;
@@ -194,7 +189,7 @@ if (enemyCraft && photonLaser && photonLaserEnabled) {
     console.log("\u{1F9E8} DEAD \u{1F9E8}");
   }
 } else {
-  console.log("do your homework")
+  console.log("do your homework");
 }
 
 /*
@@ -205,7 +200,6 @@ if (enemyCraft && photonLaser && photonLaserEnabled) {
         ELSE
           console.log("\u{1F9E8} DEAD \u{1F9E8} ");
 */
-
 
 /*
  5. LUNAR LANDING:::::
@@ -222,9 +216,7 @@ if (enemyCraft && photonLaser && photonLaserEnabled) {
 
     tip: varName.keyName (this is how to extract a value from an object)
 */
-console.log(
-  "\u{1F311} LUNAR LANDING:::::"
-);
+console.log("\u{1F311} LUNAR LANDING:::::");
 
 // start coding here
 
@@ -232,8 +224,8 @@ var lunarRadar = {
   isEnabled: undefined,
   long: undefined,
   lat: undefined,
-  approachSpeed: undefined, // "ft per minute"
-}
+  approachSpeed: undefined // "ft per minute"
+};
 
 // Level 1 convert this psuedocode to functioning code.
 
@@ -259,3 +251,107 @@ ELSE
 */
 
 // Level 2 convert it to a switch statement.
+
+/*
+ 6. PLANETARY INFO-DASH:::::
+
+ Level 1::::::::::::::
+ Given this array of planets using what you know about how to access data in an arrays index log out the:
+  - Description,
+  - Surface temperature and
+  - Mass
+
+  in the console logs bellow.
+
+  tip: pass your variables into the console.log after comma ,
+*/
+console.log("\u{1F319} PLANETARY INFO-DASH:::::");
+
+var planets = [
+  [
+    "MERCURY",
+    [
+      "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+      "-173 to 427°C",
+      "330,104,000,000,000 billion kg (0.055 x Earth)"
+    ]
+  ],
+  [
+    "JUPITER",
+    [
+      "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+      "-108°C",
+      "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+    ]
+  ],
+  [
+    "EARTH",
+    [
+      "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+      "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+      "6.6 sextillion tons"
+    ]
+  ],
+  [
+    "MARS",
+    [
+      "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+      "87 to -5 °C",
+      "641,693,000,000,000 billion kg (0.107 x Earth)"
+    ]
+  ]
+];
+
+console.group(planets[0][0]); // Mercury.
+console.log("Description:");
+console.log("Surface temperature:");
+console.log("Mass:");
+console.groupEnd();
+
+console.group(); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
+console.log("Description:");
+console.log("Surface temperature:");
+console.log("Mass:");
+console.groupEnd();
+
+console.group(); // Earth.
+console.log("Description:");
+console.log("Surface temperature:");
+console.log("Mass:");
+console.groupEnd();
+
+console.group(); // Mars.
+console.log("Description:");
+console.log("Surface temperature:");
+console.log("Mass:");
+console.groupEnd();
+
+/*
+ Level 2::::::::::::::
+ Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
+*/
+
+/*
+ 7. Android Object REFACTOR:::::
+
+ Level 1::::::::::::::
+ Refactor (change) all the variables you have in place that initializes the android into an android object.
+ - Your android needs a head, upperBody, lowerBody & [ anyThingElseYouCanDreamOf ].
+ - Feel free to create any new properties that will further describe your android [ anyThingYouCanDreamOf ].
+ - next update your application to use this newly refactored code
+
+ tip: the console.log that prints the variables of the android will need to be updated
+
+ Level 2::::::::::::::
+ Refactor the planets array to be an array of objects, each object must be its own planet.
+  - next update your application to use this newly refactored code
+*/
+
+/*
+  8. REFACTOR Create functions:::::::
+  Level 1:::::::::
+  Refactor your application to be initialized by a function.
+
+  Level 2:::::::::
+  Look through your code and find more opportunities to use and call functions and parameters aka arguments.
+  */

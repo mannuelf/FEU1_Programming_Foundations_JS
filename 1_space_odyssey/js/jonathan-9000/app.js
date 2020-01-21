@@ -1,5 +1,4 @@
-function bootUpManny() {
-  /*
+/*
 ____/\\\\\\\\\_________/\\\\\\\_______/\\\\\\\\\_________/\\\\\\\__________
  __/\\\///////\\\_____/\\\/////\\\___/\\\///////\\\_____/\\\/////\\\________
   _\///______\//\\\___/\\\____\//\\\_\///______\//\\\___/\\\____\//\\\_______
@@ -45,6 +44,7 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
         2020: The sole survivor of the journey to Jupiter ascends to the next level of humanity.
  */
 
+
 /*
   You are the sole survivor who will make the journey to Jupiter.
 
@@ -86,39 +86,26 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
 var isAlive = true;
-var name = "Manny-9000";
+var name = "jonathan-9000";
 var hasJetPack = true;
-var suitColor = "Chrome";
+var suitColor = "orange";
 var eyes = 2;
-var eyeColor = "brown";
+var eyeColor = "green";
 var hairColor = "black";
 var legs = 2;
-var arms = 2;
-var hands = 2;
+var arms = 4;
+var hands = 4;
 var ears = 2;
 var canWalk = true;
-var canRun = true;
+var canRun = false;
 var canFly = true;
-var hasWeapon = true;
+var hasWeapon = false;
 var isInGoodMood = true;
 
-console.log("\u{1F916} .-.-. Booting .-.-.");
-console.log(
-  name,
-  isAlive,
-  hasJetPack,
-  eyes,
-  eyeColor,
-  hairColor,
-  legs,
-  arms,
-  hands,
-  ears,
-  canWalk,
-  canFly,
-  hasWeapon,
-  isInGoodMood
-);
+console.log(".-.-. Booting .-.-.");
+console.log(name, isAlive, hasJetPack, eyes, eyeColor, hairColor, legs, arms, hands, ears, canWalk, canFly, hasWeapon);
+
+
 
 /*
  2. BROKEN SATELLITE::::::
@@ -126,120 +113,18 @@ console.log(
     a) write an if condition checking if the jet pack is enabled, if true the droid can go outside if false the droid
        cannot go outside, console log the correct log based on that condition.
 */
-console.log(
-  " \u{2747} BROKEN SATELLITE:::::: \u{2747} \u{2747} \u{2747} \u{2747}"
-);
-
-if (hasJetPack) {
-  console.log("JetPack is enabled!!! off I go outside to fix the satellite");
-} else {
-  console.log(
-    "JetPack NOT enabled, please enable jetPack before doing a space walk"
-  );
-}
 
 /*
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
 
  console.log("JetPack is enabled!!! off I go outside to fix the satellite");
  console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
+
  */
 
-/*
- 3. METEOR SHOWER::::::
-    On your way to Jupiter you encounter a massive meteor shower that could damage the ship, you need to redirect the ship to a new safe location.
-    a. Using a for loop iterate through the responses array and choose the appropriate response to get out of danger.
-      create an if condition in your loop to print only 1 response using a comparison operator.
-*/
-console.log(
-  "\u{1F327} METEOR SHOWER::::::"
-);
 
-var responses = [
-  "Call basecamp and ask for assistance, but they are far away",
-  "Do nothing, just push through",
-  "initiate core thrusters, punch 180degrees into dash-nav and warp away from danger",
-  "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
-];
-
-var numResponses = responses.length;
-for (var i = 0; i <= numResponses; i++) {
-  if (responses[i] === responses[2]) {
-    console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
-  }
-}
-
-/*
-4. ALIENS SPACE CRAFT ENCROACHING::::::
-    Alien craft approaches its an enemy for sure...you need to shoot it down!!
-    a) create the required variables below and fill in the correct values and dataTypes to make
-       the if statements pass so that photonLaser fires pew pew pew.
-*/
-console.log(
-  "\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::"
-);
-
-var enemyCraft = true;
-var photonLaser = true;
-var photonLaserEnabled = true;
-var bullets = 101;
-
-if (enemyCraft && photonLaser && photonLaserEnabled) {
-  if (bullets >= 100) {
-    for(var i = 0; i <= 100; i++ ) {
-      console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
-    }
-  } else {
-    console.log("\u{1F9E8} DEAD \u{1F9E8} ");
-  }
-}
-
-/*
- 5. LUNAR LANDING:::::
-    We got word of an extra terrestrial sighting on the moon... we have been tasked to land on the moon
-    to investigate it, we have aboard a NASA lunar module https://en.wikipedia.org/wiki/Apollo_Lunar_Module
-    This module will allow to land safely on the moon with the aid of the landing radar which takes inputs.
-
-    Ensure the correct co-ordinates and approach speed are entered into the landing radar.
-    It's all automated we just have to ensure that the correct values are input ie. not undefined.
-
-    The lunar radar accepts approach speeds in increments of hundreds only, starting at 0 and maxing out at 700.
-
-    You cannot edit the lunarRadar object directly you have to pass your values in via an interface called variables.
-
-    tip: varName.keyName (this is how to extract a value from an object)
-*/
-console.log(
-  "\u{1F311} LUNAR LANDING:::::"
-);
-
-// start coding here
-
-var lunarRadar = {
-  long: undefined,
-  lat: undefined,
-  approachSpeed: undefined, // "ft per minute"
-}
-
-// Level 1 convert this psuedocode to functioning code.
-
-/*
-IF lat is defined and long is defined
-    console.log("\u{1F91F} looking good " + name + " we are making our descent, now entering approach speed");
-    IF approach speed is greater than or equal to 200ft per minute and approach speed is less than 299ft per minute
-      console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get heck outta here!");
-    ELSE IF approach speed is greater than or equal to 300ft per minute
-      console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
-    ELSE IF approach speed is greater than or equal to 600ft per minute
-      console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
-    ELSE IF approach speed is less than or equal to 100ft per minute
-      console.log("\u{1F47D} hmmm need a bit more heat " + name + " lets increase pitch and we should have a smooth landing");
-    ELSE
-      console.log('Please enter an approach speed');
-ELSE
-  console.log("\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " + name + " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
-*/
-
-// Level 2 convert it to a switch statements.
-
-}
+ if (hasJetPack) {
+  console.log("JetPack is enabled!!! off I go outside to fix the satellite");
+} else {
+  console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
+};

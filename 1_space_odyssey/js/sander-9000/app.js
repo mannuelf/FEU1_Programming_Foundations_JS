@@ -84,6 +84,8 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
+
+/*
 var isAlive = true;
 var name = "Sander-9000";
 var hasJetPack = true;
@@ -100,23 +102,45 @@ var canRun = true;
 var canFly = false;
 var hasWeapon = true;
 var isInGoodMood = true;
+*/
+
+var android = {
+  head: {
+    ears: 2,
+    eyes: 2,
+    eyeColor: "blue",
+    hairColor: "blonde"
+  },
+  upperBody:{
+    arms: 2,
+    hands: 2,
+  },
+  lowerBody:{
+    legs: 2,
+    tail: 0,
+    feet: 2
+  },
+  skills:{
+    canWalk: true,
+    canRun: true,
+    canFly: false
+  },
+
+  equipment:{
+    hasJetPack: true,
+    hasWeapon: true,
+    suitColor: "white"
+  },
+
+  whom:{
+    name: "Sander-9000",
+    isAlive: true,
+    isInGoodMood: true,
+  }
+};
 
 console.log(".-.-. Booting .-.-.");
-console.log(
-  name,
-  isAlive,
-  hasJetPack,
-  eyes,
-  eyeColor,
-  hairColor,
-  legs,
-  arms,
-  hands,
-  ears,
-  canWalk,
-  canFly,
-  hasWeapon
-);
+console.log(android);
 
 /*
  2. BROKEN SATELLITE::::::
@@ -133,7 +157,7 @@ console.log(
 
  */
 
-if (hasJetPack) {
+if (android.equipment) {
   console.log("JetPack is enabled!!! off I go outside to fix the satellite");
 } else {
   console.log(
@@ -203,3 +227,326 @@ if (enemyCraft && photonLaser && photonLaserEnabled);
         ELSE
           console.log("\u{1F9E8} DEAD \u{1F9E8} ");
 */
+
+/*
+ 5. LUNAR LANDING:::::
+    We got word of an extra terrestrial sighting on the moon... we have been tasked to land on the moon
+    to investigate it, we have aboard a NASA lunar module https://en.wikipedia.org/wiki/Apollo_Lunar_Module
+    This module will allow to land safely on the moon with the aid of the landing radar which takes inputs.
+
+    Ensure the correct co-ordinates and approach speed are entered into the landing radar.
+    It's all automated we just have to ensure that the correct values are input ie. not undefined.
+
+    The lunar radar accepts approach speeds in increments of hundreds only, starting at 0 and maxing out at 700.
+
+    You cannot edit the lunarRadar object directly you have to pass your values in via an interface called variables.
+
+    tip: varName.keyName (this is how to extract a value from an object)
+*/
+console.log("\u{1F311} LUNAR LANDING:::::");
+
+// start coding here
+
+var enabled = true;
+var latlong = 200;
+var speed = 200;
+
+var lunarRadar = {
+  isEnabled: enabled,
+  long: latlong,
+  lat: latlong,
+  approachSpeed: speed // "ft per minute"
+};
+
+if (
+  lunarRadar.isEnabled &&
+  lunarRadar.lat !== undefined &&
+  lunarRadar.long !== undefined
+) {
+  console.log(
+    "\u{1F91F} looking good " +
+      name +
+      " we are making our descent, now entering approach speed"
+  );
+  if (lunarRadar.approachSpeed >= 200 && lunarRadar.approachSpeed < 299) {
+    console.log(
+      "\u{269B} well done " +
+        name +
+        " we have touched down safely. Lets get some samples and get heck outta here!"
+    );
+  } else if (lunarRadar.approachSpeed >= 300) {
+    console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+  } else if (lunarRadar.approachSpeed <= 100) {
+    console.log(
+      "\u{1F47D} hmmm need a bit more heat " +
+        name +
+        " lets increase pitch and we should have a smooth landing"
+    );
+  } else if (lunarRadar.approachSpeed === undefined) {
+    console.log("Please enter an approach speed");
+  }
+} else {
+  console.log(
+    "\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " +
+      name +
+      " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance."
+  );
+}
+
+// Level 1 convert this psuedocode to functioning code.
+
+/*
+IF lunar radar is enabled && lat is defined and long is defined
+    console.log("\u{1F91F} looking good " + name + " we are making our descent, now entering approach speed");
+    IF approach speed is greater than or equal to 200ft per minute and approach speed is less than 299ft per minute
+      console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get heck outta here!");
+    ELSE IF approach speed is greater than or equal to 300ft per minute
+      console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+    ELSE IF approach speed is greater than or equal to 400ft per minute
+      console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+    ELSE IF approach speed is greater than or equal to 500ft per minute
+      console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+    ELSE IF approach speed is greater than or equal to 600ft per minute
+      console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+    ELSE IF approach speed is less than or equal to 100ft per minute
+      console.log("\u{1F47D} hmmm need a bit more heat " + name + " lets increase pitch and we should have a smooth landing");
+    ELSE
+      console.log('Please enter an approach speed');
+ELSE
+  console.log("\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " + name + " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
+*/
+
+// Level 2 convert it to a switch statement.
+
+switch (true) {
+  case lunarRadar.approachSpeed >= 200 && lunarRadar.approachSpeed < 299:
+    console.log(
+      "\u{269B} well done " +
+        name +
+        " we have touched down safely. Lets get some samples and get heck outta here!"
+    );
+    break;
+  case lunarRadar.approachSpeed >= 300:
+    console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+    break;
+  case lunarRadar.approachSpeed <= 100:
+    console.log(
+      "\u{1F47D} hmmm need a bit more heat " +
+        name +
+        " lets increase pitch and we should have a smooth landing"
+    );
+    break;
+  case lunarRadar.approachSpeed === undefined:
+    console.log("Please enter an approach speed");
+    break;
+}
+
+/*
+ 6. PLANETARY INFO-DASH:::::
+
+ Level 1::::::::::::::
+ Given this array of planets using what you know about how to access data in an arrays index log out the:
+  - Description,
+  - Surface temperature and
+  - Mass
+
+  in the console logs bellow.
+
+  tip: pass your variables into the console.log after comma ,
+*/
+console.log("\u{1F319} PLANETARY INFO-DASH:::::");
+
+var planets = [
+  [
+    "MERCURY",
+    [
+      "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+      "-173 to 427°C",
+      "330,104,000,000,000 billion kg (0.055 x Earth)"
+    ]
+  ],
+  [
+    "JUPITER",
+    [
+      "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+      "-108°C",
+      "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+    ]
+  ],
+  [
+    "EARTH",
+    [
+      "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+      "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+      "6.6 sextillion tons"
+    ]
+  ],
+  [
+    "MARS",
+    [
+      "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+      "87 to -5 °C",
+      "641,693,000,000,000 billion kg (0.107 x Earth)"
+    ]
+  ]
+];
+
+console.group(planets[0][0]); // Mercury.
+console.log("Description:", planets[0][1][0]);
+console.log("Surface temperature:", planets[0][1][1]);
+console.log("Mass:", planets[0][1][2]);
+console.groupEnd();
+
+console.group(planets[1][0]); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
+console.log("Description:", planets[1][1][0]);
+console.log("Surface temperature:", planets[1][1][1]);
+console.log("Mass:", planets[1][1][2]);
+console.groupEnd();
+
+console.group(planets[2][0]); // Earth.
+console.log("Description:", planets[2][1][0]);
+console.log("Surface temperature:", planets[2][1][1]);
+console.log("Mass:", planets[2][1][2]);
+console.groupEnd();
+
+console.group(planets[3][0]); // Mars.
+console.log("Description:", planets[3][1][0]);
+console.log("Surface temperature:", planets[3][1][1]);
+console.log("Mass:", planets[3][1][2]);
+console.groupEnd();
+
+/*
+ Level 2::::::::::::::
+ Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
+*/
+
+var venus = [
+  "VENUS",
+  [
+    "Venus is the second planet from the Sun and the sixth largest. Together with Mercury, they are the only planets without a satellite, even though Mercury is closer to the sun, Venus is the hottest planet.",
+    "The highest is an average of 465 degrees Celsius, 900 degrees Fahrenheit, hot enough to melt lead; And the lowest is about 655 K (380 °C; 715 °F)",
+    "Venus has a mass of 4.87 × 1024 kg"
+  ]
+];
+
+var saturn = [
+  "SATURN",
+  [
+    "Saturn is the sixth planet from the sun, with the largest planetary rings in the Solar System. It is the second-largest planet after Jupiter, and recently, with many other moons being discovered, it surpassed the number of Jupiter’s moons and is now considered the planet with the most numerous satellites.",
+    "The temperature of Saturn’s upper atmosphere is on average about -175C (-285F)",
+    "5,683E26 kg"
+  ]
+];
+
+planets.unshift(venus, saturn);
+
+console.group(planets[0][0]); // Venus.
+console.log("Description:", planets[0][1][0]);
+console.log("Surface temperature:", planets[0][1][1]);
+console.log("Mass:", planets[0][1][2]);
+console.groupEnd();
+
+console.group(planets[1][0]); // Saturn.
+console.log("Description:", planets[1][1][0]);
+console.log("Surface temperature:", planets[1][1][1]);
+console.log("Mass:", planets[1][1][2]);
+console.groupEnd();
+
+console.group(planets[2][0]); // Mercury.
+console.log("Description:", planets[2][1][0]);
+console.log("Surface temperature:", planets[2][1][1]);
+console.log("Mass:", planets[2][1][2]);
+console.groupEnd();
+
+console.group(planets[3][0]); // Jupiter.
+console.log("Description:", planets[3][1][0]);
+console.log("Surface temperature:", planets[3][1][1]);
+console.log("Mass:", planets[3][1][2]);
+console.groupEnd();
+
+console.group(planets[4][0]); // Earth.
+console.log("Description:", planets[4][1][0]);
+console.log("Surface temperature:", planets[4][1][1]);
+console.log("Mass:", planets[4][1][2]);
+console.groupEnd();
+
+console.group(planets[5][0]); // Mars.
+console.log("Description:", planets[5][1][0]);
+console.log("Surface temperature:", planets[5][1][1]);
+console.log("Mass:", planets[5][1][2]);
+console.groupEnd();
+
+/*
+ 7. Android Object REFACTOR:::::
+
+ Level 1::::::::::::::
+ Refactor (change) all the variables you have in place that initializes the android into an android object.
+ - Your android needs a head, upperBody, lowerBody & [ anyThingElseYouCanDreamOf ].
+ - Feel free to create any new properties that will further describe your android [ anyThingYouCanDreamOf ].
+ - next update your application to use this newly refactored code
+
+ tip: the console.log that prints the variables of the android will need to be updated
+
+ Level 2::::::::::::::
+ Refactor the planets array to be an array of objects, each object must be its own planet.
+  - next update your application to use this newly refactored code
+*/
+
+console.log("---NEW PLANET OBJECTS---");
+
+var planets = [
+  {
+    name: "VENUS",
+    description:
+      "Venus is the second planet from the Sun and the sixth largest. Together with Mercury, they are the only planets without a satellite, even though Mercury is closer to the sun, Venus is the hottest planet.",
+    surfaceTemperature:
+      "The highest is an average of 465 degrees Celsius, 900 degrees Fahrenheit, hot enough to melt lead; And the lowest is about 655 K (380 °C; 715 °F)",
+    mass: "Venus has a mass of 4.87 × 1024 kg"
+  },
+
+  {
+    name: "SATURN",
+    description:
+      "Saturn is the sixth planet from the sun, with the largest planetary rings in the Solar System. It is the second-largest planet after Jupiter, and recently, with many other moons being discovered, it surpassed the number of Jupiter’s moons and is now considered the planet with the most numerous satellites.",
+    surfaceTemperature:
+      "The temperature of Saturn’s upper atmosphere is on average about -175C (-285F)",
+    mass: "5,683E26 kg"
+  },
+
+  {
+    name: "MERCURY",
+    description:
+      "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+    surfaceTemperature: "-173 to 427°C",
+    mass: "330,104,000,000,000 billion kg (0.055 x Earth)"
+  },
+
+  {
+    name: "JUPITER",
+    description:
+      "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+    surfaceTemperature: "-108°C",
+    mass: "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+  },
+
+  {
+    name: "EARTH",
+    description:
+      "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+    surfaceTemperature:
+      "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+    mass: "6.6 sextillion tons"
+  },
+
+  {
+    name: "MARS",
+    description:
+      "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+    surfaceTemperature: "87 to -5 °C",
+    mass: "641,693,000,000,000 billion kg (0.107 x Earth)"
+  }
+];
+
+for (var i = 0; i < planets.length; i++) {
+  console.log(planets[i]);
+}
