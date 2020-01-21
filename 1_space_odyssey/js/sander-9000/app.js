@@ -104,6 +104,8 @@ var hasWeapon = true;
 var isInGoodMood = true;
 */
 
+function initializeDroid() {
+
 var android = {
   head: {
     ears: 2,
@@ -142,6 +144,7 @@ var android = {
 console.log(".-.-. Booting .-.-.");
 console.log(android);
 
+
 /*
  2. BROKEN SATELLITE::::::
     You need to send the droid out on a space walk to fix the satellite, with out it you can't communicate with earth.
@@ -164,6 +167,7 @@ if (android.equipment) {
     "JetPack NOT enabled, please enable jetPack before doing a space walk"
   );
 }
+
 
 /*
  3. METEOR SHOWER::::::
@@ -550,3 +554,17 @@ var planets = [
 for (var i = 0; i < planets.length; i++) {
   console.log(planets[i]);
 }
+
+
+/*
+  8. REFACTOR Create functions:::::::
+  Level 1:::::::::
+  Refactor your application to be initialized by a function.
+
+  Level 2:::::::::
+  Look through your code and find more opportunities to use and call functions and parameters aka arguments.
+*/
+
+};
+
+initializeDroid();
