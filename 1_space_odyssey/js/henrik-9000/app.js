@@ -1,3 +1,5 @@
+function bootHenrik() {
+
 /* ______   __  __   ______  ______
         _..._
       .'     '.      _
@@ -23,6 +25,7 @@
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
+
 var isAlive = true;
 var name = "Henrik-9000";
 var hasJetPack = true;
@@ -236,6 +239,9 @@ if (lunarRadar.isEnabled && lunarRadar.long && lunarRadar.lat) {
 
   tip: pass your variables into the console.log after comma ,
 */
+
+
+
 console.log("\u{1F319} PLANETARY INFO-DASH:::::");
 
 var planets = [
@@ -331,3 +337,22 @@ console.group(planets[0][0]); // Uranus.
   console.log("Surface temperature:", planets[0][1][1] );
   console.log("Mass:", planets[0][1][2] );
 console.groupEnd();
+
+
+/*
+  8. REFACTOR Create functions:::::::
+  Level 1:::::::::
+  Refactor your application to be initialized by a function that will.
+*/
+
+
+
+
+
+
+/*
+  Level 2:::::::::
+  Look through your code and find more opportunities to use and call functions and parameters aka arguments.
+*/
+
+}
