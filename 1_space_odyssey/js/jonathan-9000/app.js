@@ -145,8 +145,11 @@ var responses = [
   "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
 ];
 
-
-
-
 // write your code here, use the console log beneath
 // console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
+
+for (var count = 0; count < responses.length; count++) {
+  if (responses[count] === responses[2]) {
+    console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
+  }
+}
