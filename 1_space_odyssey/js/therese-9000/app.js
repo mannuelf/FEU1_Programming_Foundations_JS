@@ -1,4 +1,7 @@
-/*
+console.log("Please initialize Therese-9000");
+
+function initialize() {
+  /*
 ____/\\\\\\\\\_________/\\\\\\\_______/\\\\\\\\\_________/\\\\\\\__________        
  __/\\\///////\\\_____/\\\/////\\\___/\\\///////\\\_____/\\\/////\\\________       
   _\///______\//\\\___/\\\____\//\\\_\///______\//\\\___/\\\____\//\\\_______      
@@ -44,7 +47,7 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
         2020: The sole survivor of the journey to Jupiter ascends to the next level of humanity.
  */
 
-/*
+  /*
   You are the sole survivor who will make the journey to Jupiter.
 
   But before you can leave you must build an autonomous humanoid robot to help you on your mission.
@@ -59,7 +62,7 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
   Using JavaScript build the software that will allow us to describe and programme the humanoid to do our bidding.
   */
 
-/* ______   __  __   ______  ______   
+  /* ______   __  __   ______  ______   
         _..._
       .'     '.      _
      /    .-""-\   _/ \
@@ -84,78 +87,72 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
-var isAlive = true;
-var name = "Therese-9000";
-var hasJetPack = true;
-var suitColor = "black";
-var eyes = 2;
-var eyeColor = "green";
-var hairColor = "brown";
-var legs = 2;
-var arms = 2;
-var hands = 2;
-var ears = 2;
-var canWalk = true;
-var canRun = true;
-var canFly = true;
-var hasWeapon = true;
-var isInGoodMood = true;
 
-console.log(".-.-. Booting .-.-.");
-console.log(
-  name,
-  isAlive,
-  hasJetPack,
-  eyes,
-  eyeColor,
-  hairColor,
-  legs,
-  arms,
-  hands,
-  ears,
-  canWalk,
-  canFly,
-  hasWeapon
-);
+  var android = [
+    {
+      isAlive: true,
+      name: "Therese-9000",
+      hasJetPack: false,
+      suitColor: "black",
+      eyes: 2,
+      eyeColor: "green",
+      hairColor: "brown",
+      legs: 2,
+      arms: 2,
+      hands: 2,
+      ears: 2,
+      canWalk: true,
+      canRun: true,
+      canFly: true,
+      hasWeapon: true,
+      isInGoodMood: true
+    }
+  ];
 
-/* 
+  console.log(".-.-. Booting .-.-.");
+  for (var i = 0; i < android.length; i++) {
+    console.log(android[i]);
+  }
+
+  /* 
  2. BROKEN SATELLITE::::::
     You need to send the droid out on a space walk to fix the satellite, with out it you can't communicate with earth.
     a) write an if condition checking if the jet pack is enabled, if true the droid can go outside if false the droid 
        cannot go outside, console log the correct log based on that condition. 
 */
-if (hasJetPack === true) {
-  console.log("JetPack is enabled!!! off I go outside to fix the satellite");
-} else {
-  console.log(
-    "JetPack NOT enabled, please enable jetPack before doing a space walk"
-  );
-}
 
-/*
+  if (android[0].hasJetPack === true) {
+    console.log("JetPack is enabled!!! off I go outside to fix the satellite");
+  } else {
+    console.log(
+      "JetPack NOT enabled, please enable jetPack before doing a space walk"
+    );
+  }
+
+  /*
  3. METEOR SHOWER::::::
     On your way to Jupiter you encounter a massive meteor shower that could damage the ship, you need to redirect the ship to a new safe location.
     a) Using a for loop iterate through the responses array and choose the appropriate response to get out of danger.
       create an if condition in your loop to print only 1 response using a comparison operator.
 */
-console.log("\u{1F327} METEOR SHOWER::::::");
+  console.log("\u{1F327} METEOR SHOWER::::::");
 
-var responses = [
-  "Call basecamp and ask for assistance, but they are far away",
-  "Do nothing, just push through",
-  "initiate core thrusters, punch 180degrees into dash-nav and warp away from danger",
-  "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
-];
+  var responses = [
+    "Call basecamp and ask for assistance, but they are far away",
+    "Do nothing, just push through",
+    "initiate core thrusters, punch 180degrees into dash-nav and warp away from danger",
+    "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
+  ];
 
-// write your code here, use the console log beneath
+  // write your code here, use the console log beneath
 
-for (var i = 0; i <= responses.length; i++) {
-  if (i === 3) {
-    console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
+  for (var i = 0; i <= responses.length; i++) {
+    if (i === 3) {
+      console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
+    }
   }
-}
 
-/*
+  /*
  4. ALIENS SPACE CRAFT ENCROACHING::::::
     Alien craft approaches its an enemy for sure...you need to shoot it down!!
     a) convert the pseudoscope to real code
@@ -163,15 +160,15 @@ for (var i = 0; i <= responses.length; i++) {
        the if statements pass so that photonLaser fires pew pew pew.
     b)
 */
-console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
+  console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
 
-// a.
-var enemyCraft = true;
-var photonLaser = true;
-var photonLaserEnabled = true;
-var bullets = 123;
+  // a.
+  var enemyCraft = true;
+  var photonLaser = true;
+  var photonLaserEnabled = true;
+  var bullets = 123;
 
-/*
+  /*
   If its an enemyCraft && photonLaser && photonLaserEnabled
       IF bullets is greater than or equal to 100
           shoot 100 photon-lazers by printing this log 100 times:
@@ -180,23 +177,23 @@ var bullets = 123;
           console.log("\u{1F9E8} DEAD \u{1F9E8} ");
 */
 
-if (
-  enemyCraft === true &&
-  photonLaser === true &&
-  photonLaserEnabled === true
-) {
-  if (bullets >= 100) {
-    for (var i = 0; i < 100; i++) {
-      console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
+  if (
+    enemyCraft === true &&
+    photonLaser === true &&
+    photonLaserEnabled === true
+  ) {
+    if (bullets >= 100) {
+      for (var i = 0; i < 100; i++) {
+        console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
+      }
+    } else {
+      console.log("\u{1F9E8} DEAD \u{1F9E8} ");
     }
   } else {
-    console.log("\u{1F9E8} DEAD \u{1F9E8} ");
+    console.log("Move along, kind sir");
   }
-} else {
-  console.log("Move along, kind sir");
-}
 
-/*
+  /*
  5. LUNAR LANDING:::::
     We got word of an extra terrestrial sighting on the moon... we have been tasked to land on the moon
     to investigate it, we have aboard a NASA lunar module https://en.wikipedia.org/wiki/Apollo_Lunar_Module
@@ -211,25 +208,25 @@ if (
 
     tip: varName.keyName (this is how to extract a value from an object)
 */
-console.log("\u{1F311} LUNAR LANDING:::::");
+  console.log("\u{1F311} LUNAR LANDING:::::");
 
-// start coding here
+  // start coding here
 
-var lunarRadar = {
-  isEnabled: undefined,
-  long: undefined,
-  lat: undefined,
-  approachSpeed: undefined, // "ft per minute"
-};
+  var lunarRadar = {
+    isEnabled: undefined,
+    long: undefined,
+    lat: undefined,
+    approachSpeed: undefined // "ft per minute"
+  };
 
-lunarRadar.isEnabled = true;
-lunarRadar.long = 30.7723;
-lunarRadar.lat = 20.1911;
-lunarRadar.approachSpeed = 700;
+  lunarRadar.isEnabled = true;
+  lunarRadar.long = 30.7723;
+  lunarRadar.lat = 20.1911;
+  lunarRadar.approachSpeed = 700;
 
-// Level 1 convert this psuedocode to functioning code.
+  // Level 1 convert this psuedocode to functioning code.
 
-/*
+  /*
 IF lunar radar is enabled && lat is defined and long is defined
     console.log("\u{1F91F} looking good " + name + " we are making our descent, now entering approach speed");
     IF approach speed is greater than or equal to 200ft per minute and approach speed is less than 299ft per minute
@@ -273,59 +270,59 @@ if(lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long){
 
 */
 
-// Level 2 convert it to a switch statement.
+  // Level 2 convert it to a switch statement.
 
-if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
-  console.log(
-    "\u{1F91F} looking good " +
-      name +
-      " we are making our descent, now entering approach speed"
-  );
-  switch (lunarRadar.approachSpeed) {
-    case 200:
-      console.log(
-        "\u{269B} well done " +
-          name +
-          " we have touched down safely. Lets get some samples and get heck outta here!"
-      );
-      break;
-    case 300:
-      console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
-      break;
-    case 400:
-      console.log(
-        "\u{1F627} coming in way too hot " + name + " decrease pitch!"
-      );
-      break;
-    case 500:
-      console.log(
-        "\u{1F627} coming in way too hot " + name + " decrease pitch!"
-      );
-      break;
-    case 600:
-      console.log(
-        "\u{1F627} coming in way too hot " + name + " decrease pitch!"
-      );
-      break;
-    case 100:
-      console.log(
-        "\u{1F47D} hmmm need a bit more heat " +
-          name +
-          " lets increase pitch and we should have a smooth landing"
-      );
-      break;
-    default:
-      console.log("Please enter an approach speed");
+  if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
+    console.log(
+      "\u{1F91F} looking good " +
+        name +
+        " we are making our descent, now entering approach speed"
+    );
+    switch (lunarRadar.approachSpeed) {
+      case 200:
+        console.log(
+          "\u{269B} well done " +
+            name +
+            " we have touched down safely. Lets get some samples and get heck outta here!"
+        );
+        break;
+      case 300:
+        console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+        break;
+      case 400:
+        console.log(
+          "\u{1F627} coming in way too hot " + name + " decrease pitch!"
+        );
+        break;
+      case 500:
+        console.log(
+          "\u{1F627} coming in way too hot " + name + " decrease pitch!"
+        );
+        break;
+      case 600:
+        console.log(
+          "\u{1F627} coming in way too hot " + name + " decrease pitch!"
+        );
+        break;
+      case 100:
+        console.log(
+          "\u{1F47D} hmmm need a bit more heat " +
+            name +
+            " lets increase pitch and we should have a smooth landing"
+        );
+        break;
+      default:
+        console.log("Please enter an approach speed");
+    }
+  } else {
+    console.log(
+      "\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " +
+        name +
+        " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance."
+    );
   }
-} else {
-  console.log(
-    "\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " +
-      name +
-      " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance."
-  );
-}
 
-/*
+  /*
  6. PLANETARY INFO-DASH:::::
 
  Level 1::::::::::::::
@@ -338,104 +335,92 @@ if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
 
   tip: pass your variables into the console.log after comma ,
 */
-console.log("\u{1F319} PLANETARY INFO-DASH:::::");
+  console.log("\u{1F319} PLANETARY INFO-DASH:::::");
 
+  var planets = [
+    {
+      planet: "MERCURY",
+      desc:
+        "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+      surfaceTemp: "-173 to 427°C",
+      mass: "330,104,000,000,000 billion kg (0.055 x Earth)"
+    },
+    {
+      planet: "JUPITER",
+      desc:
+        "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+      surfaceTemp: "-108°C",
+      mass: "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+    },
+    {
+      planet: "EARTH",
+      desc:
+        "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+      surfaceTemp:
+        "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+      mass: "6.6 sextillion tons"
+    },
+    {
+      planet: "MARS",
+      desc:
+        "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+      surfaceTemp: "87 to -5 °C",
+      mass: "641,693,000,000,000 billion kg (0.107 x Earth)"
+    }
+  ];
 
-var planets = [
-  [ "MERCURY",
-    [
-      "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
-      "-173 to 427°C",
-      "330,104,000,000,000 billion kg (0.055 x Earth)"
-    ],
-  ],
-  [ "JUPITER",
-    [
-      "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
-      "-108°C",
-      "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
-    ],
-  ],
-  [ "EARTH",
-    [
-      "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
-      "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
-      "6.6 sextillion tons"
-    ],
-  ],
-  [ "MARS",
-    [
-      "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
-      "87 to -5 °C",
-      "641,693,000,000,000 billion kg (0.107 x Earth)"
-    ],
-  ],
-];
-var mercuryDesc = planets[0];
-var jupiterDesc = planets[1];
-var earthDesc = planets[2];
-var marsDesc = planets[3];
-
-
-console.group(planets[0][0]); // Mercury.
-  console.log("Description:", mercuryDesc[1][0]);
-  console.log("Surface temperature:", mercuryDesc[1][1]);
-  console.log("Mass:", mercuryDesc[1][2]);
-console.groupEnd();
-
-console.group(planets[1][0]); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
-  console.log("Description:", jupiterDesc[1][0]);
-  console.log("Surface temperature:", jupiterDesc[1][1]);
-  console.log("Mass:", jupiterDesc[1][2]);
-console.groupEnd();
-
-console.group(planets[2][0]); // Earth.
-  console.log("Description:", earthDesc[1][0]);
-  console.log("Surface temperature:", earthDesc[1][1]);
-  console.log("Mass:", earthDesc[1][2]);
-console.groupEnd();
-
-console.group(planets[3][0]); // Mars.
-  console.log("Description:", marsDesc[1][0]);
-  console.log("Surface temperature:", marsDesc[1][1]);
-  console.log("Mass:", marsDesc[1][2]);
-console.groupEnd();
-
-/*
+  /*
  Level 2::::::::::::::
  Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
 */
 
-var venus = [
-  "VENUS",
-  [
-    "Venus is the second planet from the Sun and the sixth largest. Together with Mercury, they are the only planets without a satellite, even though Mercury is closer to the sun, Venus is the hottest planet.",
-    "462 °C", 
-    "4,867,320,000,000,000 billion kg (0.815 x Earth)"
-  ]
-]
+  var venus = {
+    planet: "VENUS",
+    desc:
+      "Venus is the second planet from the Sun and the sixth largest. Together with Mercury, they are the only planets without a satellite, even though Mercury is closer to the sun, Venus is the hottest planet.",
+    surfaceTemp: "462 °C",
+    mass: "4,867,320,000,000,000 billion kg (0.815 x Earth)"
+  };
 
-var neptune = [
-  "NEPTUNE",
-  [
-    "Neptune is the fourth largest and the farthest planet of the Solar System with the most powerful wind speeds out of all the planets. It is the smallest of the gas giants and is the first planet to be discovered by mathematical predictions in 1846. ",
-    "-201 °C",
-    "102,410,000,000,000,000 billion kg (17.15x Earth)"
-  ]
-]
+  var neptune = {
+    planet: "NEPTUNE",
+    desc:
+      "Neptune is the fourth largest and the farthest planet of the Solar System with the most powerful wind speeds out of all the planets. It is the smallest of the gas giants and is the first planet to be discovered by mathematical predictions in 1846. ",
+    surfaceTemp: "-201 °C",
+    mass: "102,410,000,000,000,000 billion kg (17.15x Earth)"
+  };
 
-planets.unshift(venus, neptune);
+  planets.unshift(venus, neptune);
 
-var venusDesc = planets[4];
-var neptuneDesc = planets[5];
+  /*
+ 7. Android Object REFACTOR:::::
 
-console.group(planets[4][0]);
-  console.log("Description:", venusDesc[1][0]);
-  console.log("Surface temperature:", venusDesc[1][1]);
-  console.log("Mass:", venusDesc[1][2]);
-console.groupEnd();
-console.group(planets[5][0]);
-  console.log("Description:", neptuneDesc[1][0]);
-  console.log("Surface temperature:", neptuneDesc[1][1]);
-  console.log("Mass:", neptuneDesc[1][2]);
-console.groupEnd();
+ Level 1::::::::::::::
+ Refactor (change) all the variables you have in place that initializes the android into an android object.
+ - Your android needs a head, upperBody, lowerBody & [ anyThingElseYouCanDreamOf ].
+ - Feel free to create any new properties that will further describe your android [ anyThingYouCanDreamOf ].
+ - next update your application to use this newly refactored code
+
+ tip: the console.log that prints the variables of the android will need to be updated
+
+ Level 2::::::::::::::
+ Refactor the planets array to be an array of objects, each object must be its own planet.
+  - next update your application to use this newly refactored code
+*/
+
+  for (var i = 0; i < planets.length; i++) {
+    console.group(planets[i].planet);
+    console.log("Description:", planets[i].desc);
+    console.log("Surface temperature:", planets[i].surfaceTemp);
+    console.log("Mass:", planets[i].mass);
+    console.groupEnd();
+  }
+  /*
+  8. REFACTOR Create functions:::::::
+  Level 1:::::::::
+  Refactor your application to be initialized by a function.
+
+  Level 2:::::::::
+  Look through your code and find more opportunities to use and call functions and parameters aka arguments.
+*/
+}

@@ -1,3 +1,6 @@
+function initDroid (){
+ 
+
 /*
 ____/\\\\\\\\\_________/\\\\\\\_______/\\\\\\\\\_________/\\\\\\\__________
  __/\\\///////\\\_____/\\\/////\\\___/\\\///////\\\_____/\\\/////\\\________
@@ -84,38 +87,47 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
-var isAlive = true;
-var name = "Peder-9000";
-var hasJetPack = false;
-var suitColor = "pink";
-var eyes = 2;
-var eyeColor = "blue";
-var hairColor = "brown";
-var legs = 2;
-var arms = 2;
-var hands = 2;
-var ears = 2;
-var canWalk = true;
-var canRun = true;
-var canFly = true;
-var hasWeapon = true;
-var isInGoodMood = false;
+
+
+var droid = {
+  isAlive: true,
+  name: "Peder-9000",
+  head: true,
+  upperBody: true,
+  lowerBody: true,
+  laserEyes: 2,
+  eyeColor: "black",
+  legs: 2,
+  arms: 2,
+  hands: 2,
+  ears: 2,
+  canWalk: true,
+  canRun: true,
+  canFly: true,
+  hasWeapon: true,
+  isBadAss: true,
+  hasJetPack: true
+};
 
 console.log(".-.-. Booting .-.-.");
 console.log(
-  name,
-  isAlive,
-  hasJetPack,
-  eyes,
-  eyeColor,
-  hairColor,
-  legs,
-  arms,
-  hands,
-  ears,
-  canWalk,
-  canFly,
-  hasWeapon
+  droid.isAlive,
+  droid.name,
+  droid.head,
+  droid.upperBody,
+  droid.lowerBody,
+  droid.laserEyes,
+  droid.eyeColor,
+  droid.legs,
+  droid.arms,
+  droid.hands,
+  droid.ears,
+  droid.canWalk,
+  droid.canRun,
+  droid.canFly,
+  droid.hasWeapon,
+  droid.isBadAss,
+  droid.hasJetPack
 );
 
 /*
@@ -129,7 +141,7 @@ console.log(
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
   */
 
-if (hasJetPack) {
+if (droid.hasJetPack) {
   console.log("go outside");
 } else {
   console.log(
@@ -337,84 +349,114 @@ if (lunarRadar.isEnabled === true && lunarRadar.lat && lunarRadar.long) {
 */
 console.log("\u{1F319} PLANETARY INFO-DASH:::::");
 
-var planets = [
-  [
-    "MERCURY",
-    [
-      "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
-      "-173 to 427°C",
-      "330,104,000,000,000 billion kg (0.055 x Earth)"
-    ]
-  ],
-  [
-    "JUPITER",
-    [
-      "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
-      "-108°C",
-      "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
-    ]
-  ],
-  [
-    "EARTH",
-    [
-      "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
-      "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
-      "6.6 sextillion tons"
-    ]
-  ],
-  [
-    "MARS",
-    [
-      "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
-      "87 to -5 °C",
-      "641,693,000,000,000 billion kg (0.107 x Earth)"
-    ]
-  ]
-];
+var Mercury = {
+  name: "Mercury:",
+  description:
+    "Description: The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+  surfaceTemperature: "Surface Temprature:-173 to 427°C",
+  mass: "Mass: 330,104,000,000,000 billion kg (0.055 x Earth)"
+};
 
-console.group(planets[0][0]); // Mercury.
-console.log("Description:", planets[0][1][0]);
-console.log("Surface temperature:", planets[0][1][1]);
-console.log("Mass:", planets[0][1][1]);
-console.groupEnd();
+var Jupiter = {
+  name: "Jupiter: ",
+  description:
+    "Description: Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+  surfaceTemperature: "-108°C",
+  mass: "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+};
 
-console.group(planets[1][0]); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
-console.log("Description:", planets[1][1][0]);
-console.log("Surface temperature:", planets[1][1][1]);
-console.log("Mass:", planets[1][1][2]);
-console.groupEnd();
+var Earth = {
+  name: "Earth:",
+  description:
+    "Description: Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+  surfaceTemperature:
+    "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+  mass: "6.6 sextillion tons"
+};
 
-console.group(planets[2][0]); // Earth.
-console.log("Description:", planets[2][1][0]);
-console.log("Surface temperature:", planets[2][1][1]);
-console.log("Mass:", planets[2][1][2]);
-console.groupEnd();
+var Mars = {
+  name: "Mars:",
+  description:
+    "Description: Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+  surfaceTemperature: "87 to -5 °C",
+  mass: "641,693,000,000,000 billion kg (0.107 x Earth)"
+};
 
-console.group(planets[3][0]); // Mars.
-console.log("Description:", planets[3][1][0]);
-console.log("Surface temperature:", planets[3][1][1]);
-console.log("Mass:", planets[3][1][2]);
-console.groupEnd();
+var Sun = {
+  name: "Sun:",
+  description:
+    "Description: The Sun is the heart of our solar system and its gravity is what keeps every planet and particle in orbit. This yellow dwarf star is just one of billions like it across the Milky Way galaxy.",
+  surfaceTemperature: "5800 K (surface) 15,600,000 K (core)",
+  mass: "1.989e30 kg"
+};
+
+console.log(
+  Mercury.name,
+  Mercury.description,
+  Mercury.surfaceTemperature,
+  Mercury.mass
+);
+
+console.log(
+  Jupiter.name,
+  Jupiter.description,
+  Jupiter.surfaceTemperature,
+  Jupiter.mass
+);
+
+console.log(
+  Earth.name,
+  Earth.description,
+  Earth.surfaceTemperature,
+  Earth.mass
+);
+
+console.log(
+  Mars.name,
+  Mars.description,
+  Mars.surfaceTemperature,
+  Mars.mass);
+
+console.log(
+  Sun.name,
+  Sun.description,
+  Sun.surfaceTemperature,
+  Sun.mass);
 
 /*
  Level 2::::::::::::::
  Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
 */
 
-var sun = [
-    "SUN",
-    [
-      "The Sun is the heart of our solar system and its gravity is what keeps every planet and particle in orbit. This yellow dwarf star is just one of billions like it across the Milky Way galaxy.",
-      "5800 K (surface) 15,600,000 K (core)",
-      "1.989e30 kg"
-    ]
-];
 
-planets.unshift(sun);
 
-console.group(planets[0][0]); // Sun.
-console.log("Description:",planets[0][1][0]);
-console.log("Surface temperature:",planets[0][1][1]);
-console.log("Mass:", planets[0][1][2]);
-console.groupEnd();
+/*
+ 7. Android Object REFACTOR:::::
 
+ Level 1::::::::::::::
+ Refactor (change) all the variables you have in place that initializes the android into an android object.
+ - Your android needs a head, upperBody, lowerBody & [ anyThingElseYouCanDreamOf ].
+ - Feel free to create any new properties that will further describe your android [ anyThingYouCanDreamOf ].
+ - next update your application to use this newly refactored code
+
+ tip: the console.log that prints the variables of the android will need to be updated
+
+ Level 2::::::::::::::
+ Refactor the planets array to be an array of objects, each object must be its own planet.
+  - next update your application to use this newly refactored code
+*/
+
+
+
+/*
+  8. REFACTOR Create functions:::::::
+  Level 1:::::::::
+  Refactor your application to be initialized by a function that will.
+
+  Level 2:::::::::
+  Look through your code and find more opportunities to use and call functions and parameters aka arguments.
+*/
+
+}
+
+initDroid();

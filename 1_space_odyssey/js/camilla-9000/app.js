@@ -1,4 +1,6 @@
-/*
+function initAndroid() {
+
+  /*
 ____/\\\\\\\\\_________/\\\\\\\_______/\\\\\\\\\_________/\\\\\\\__________
  __/\\\///////\\\_____/\\\/////\\\___/\\\///////\\\_____/\\\/////\\\________
   _\///______\//\\\___/\\\____\//\\\_\///______\//\\\___/\\\____\//\\\_______
@@ -219,10 +221,11 @@ var lunarRadar = {
   lat: undefined,
   approachSpeed: undefined // "ft per minute"
 };
-lunarRadar.isEnabled = true;
-lunarRadar.long = 200;
-lunarRadar.lat = 100;
-lunarRadar.approachSpeed = 200;
+
+var isEnabled = true;
+var long = 200;
+var lat = 100;
+var approachSpeed = 200;
 
 
 if (isEnabled && lat && long) {
@@ -355,4 +358,78 @@ console.groupEnd();
  Level 2::::::::::::::
  Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
 */
+
+/*
+ 7. Android Object REFACTOR:::::
+
+ Level 1::::::::::::::
+ Refactor (change) all the variables you have in place that initializes the android into an android object.
+ - Your android needs a head, upperBody, lowerBody & [ anyThingElseYouCanDreamOf ].
+ - Feel free to create any new properties that will further describe your android [ anyThingYouCanDreamOf ].
+ - next update your application to use this newly refactored code
+
+ tip: the console.log that prints the variables of the android will need to be updated
+
+ Level 2::::::::::::::
+ Refactor the planets array to be an array of objects, each object must be its own planet.
+  - next update your application to use this newly refactored code
+*/
+
+
+var android = [ {
+  name: "Camilla-9000",
+  isAlive: true,
+  hasJetPack: true,
+  suitColor: "white",
+  eyes: true,
+  eyeColor: "green",
+  hairColor: "yellow",
+  legs: 2,
+  arms: 2,
+  hands: 2,
+  canWalk: true,
+  canRun: true,
+  canFly: true,
+  hasWeapon: false,
+  isInGoodMood: false
+}];
+for(var i = 0; i < android.length; i++) {
+  console.log(android[i]);
+}
+
+var androidTwo = {
+  head: {
+    head: true,
+    eyes: 2,
+    nose: true,
+    mouth: 1,
+    hair: true,
+    ears: 2
+  },
+  upperBody: {
+    arms: 2,
+    colortShirt: "grey"
+  },
+  lowerBody: {
+    legs: 2,
+    colorPants: "blue",
+    shoes: 2,
+    colorShose: "black"
+  }
+
+}
+for(var i = 0; i < androidTwo.length; i++) {
+  console.log(androidTwo[i]);
+}
+
+/*
+  8. REFACTOR Create functions:::::::
+  Level 1:::::::::
+  Refactor your application to be initialized by a function.
+
+  Level 2:::::::::
+  Look through your code and find more opportunities to use and call functions and parameters aka arguments.
+*/
+
+}
 

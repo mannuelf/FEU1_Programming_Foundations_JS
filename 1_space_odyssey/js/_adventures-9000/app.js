@@ -84,6 +84,7 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
+
 var isAlive;
 var name;
 var suitColor;
@@ -252,8 +253,6 @@ ELSE
 
 // Level 2 convert it to a switch statement.
 
-
-
 /*
  6. PLANETARY INFO-DASH:::::
 
@@ -270,66 +269,68 @@ ELSE
 console.log("\u{1F319} PLANETARY INFO-DASH:::::");
 
 var planets = [
-  [ "MERCURY",
+  [
+    "MERCURY",
     [
       "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
       "-173 to 427°C",
       "330,104,000,000,000 billion kg (0.055 x Earth)"
-    ],
+    ]
   ],
-  [ "JUPITER",
+  [
+    "JUPITER",
     [
       "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
       "-108°C",
       "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
-    ],
+    ]
   ],
-  [ "EARTH",
+  [
+    "EARTH",
     [
       "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
       "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
       "6.6 sextillion tons"
-    ],
+    ]
   ],
-  [ "MARS",
+  [
+    "MARS",
     [
       "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
       "87 to -5 °C",
       "641,693,000,000,000 billion kg (0.107 x Earth)"
-    ],
+    ]
   ]
 ];
 
 console.group(planets[0][0]); // Mercury.
-  console.log("Description:", );
-  console.log("Surface temperature:", );
-  console.log("Mass:", );
+console.log("Description:");
+console.log("Surface temperature:");
+console.log("Mass:");
 console.groupEnd();
 
 console.group(); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
-  console.log("Description:", );
-  console.log("Surface temperature:", );
-  console.log("Mass:", );
+console.log("Description:");
+console.log("Surface temperature:");
+console.log("Mass:");
 console.groupEnd();
 
 console.group(); // Earth.
-  console.log("Description:", );
-  console.log("Surface temperature:", );
-  console.log("Mass:", );
+console.log("Description:");
+console.log("Surface temperature:");
+console.log("Mass:");
 console.groupEnd();
 
 console.group(); // Mars.
-  console.log("Description:", );
-  console.log("Surface temperature:", );
-  console.log("Mass:", );
+console.log("Description:");
+console.log("Surface temperature:");
+console.log("Mass:");
 console.groupEnd();
-
 
 /*
  Level 2::::::::::::::
  Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
 */
-
 
 /*
  7. Android Object REFACTOR:::::
@@ -346,3 +347,14 @@ console.groupEnd();
  Refactor the planets array to be an array of objects, each object must be its own planet.
   - next update your application to use this newly refactored code
 */
+
+/*
+  8. REFACTOR Create functions:::::::
+  Level 1:::::::::
+  Refactor your application to be initialized by a function.
+
+  Level 2:::::::::
+  Look through your code and find more opportunities to use and call functions and parameters aka arguments.*/
+
+  Look through your code and find more opportunities to use and call functions and parameters aka arguments.
+  */

@@ -84,6 +84,8 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
+
+/*
 var isAlive = true;
 var name = "Sander-9000";
 var hasJetPack = true;
@@ -100,23 +102,48 @@ var canRun = true;
 var canFly = false;
 var hasWeapon = true;
 var isInGoodMood = true;
+*/
+
+function initializeDroid() {
+
+var android = {
+  head: {
+    ears: 2,
+    eyes: 2,
+    eyeColor: "blue",
+    hairColor: "blonde"
+  },
+  upperBody:{
+    arms: 2,
+    hands: 2,
+  },
+  lowerBody:{
+    legs: 2,
+    tail: 0,
+    feet: 2
+  },
+  skills:{
+    canWalk: true,
+    canRun: true,
+    canFly: false
+  },
+
+  equipment:{
+    hasJetPack: true,
+    hasWeapon: true,
+    suitColor: "white"
+  },
+
+  whom:{
+    name: "Sander-9000",
+    isAlive: true,
+    isInGoodMood: true,
+  }
+};
 
 console.log(".-.-. Booting .-.-.");
-console.log(
-  name,
-  isAlive,
-  hasJetPack,
-  eyes,
-  eyeColor,
-  hairColor,
-  legs,
-  arms,
-  hands,
-  ears,
-  canWalk,
-  canFly,
-  hasWeapon
-);
+console.log(android);
+
 
 /*
  2. BROKEN SATELLITE::::::
@@ -133,13 +160,14 @@ console.log(
 
  */
 
-if (hasJetPack) {
+if (android.equipment) {
   console.log("JetPack is enabled!!! off I go outside to fix the satellite");
 } else {
   console.log(
     "JetPack NOT enabled, please enable jetPack before doing a space walk"
   );
 }
+
 
 /*
  3. METEOR SHOWER::::::
@@ -333,58 +361,62 @@ switch (true) {
 console.log("\u{1F319} PLANETARY INFO-DASH:::::");
 
 var planets = [
-  [ "MERCURY",
+  [
+    "MERCURY",
     [
       "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
       "-173 to 427°C",
       "330,104,000,000,000 billion kg (0.055 x Earth)"
-    ],
+    ]
   ],
-  [ "JUPITER",
+  [
+    "JUPITER",
     [
       "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
       "-108°C",
       "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
-    ],
+    ]
   ],
-  [ "EARTH",
+  [
+    "EARTH",
     [
       "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
       "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
       "6.6 sextillion tons"
-    ],
+    ]
   ],
-  [ "MARS",
+  [
+    "MARS",
     [
       "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
       "87 to -5 °C",
       "641,693,000,000,000 billion kg (0.107 x Earth)"
-    ],
+    ]
   ]
-]
+];
 
 console.group(planets[0][0]); // Mercury.
-  console.log("Description:", planets[0][1][0]);
-  console.log("Surface temperature:", planets[0][1][1]);
-  console.log("Mass:", planets[0][1][2]);
+console.log("Description:", planets[0][1][0]);
+console.log("Surface temperature:", planets[0][1][1]);
+console.log("Mass:", planets[0][1][2]);
 console.groupEnd();
 
 console.group(planets[1][0]); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
-  console.log("Description:", planets[1][1][0]);
-  console.log("Surface temperature:", planets[1][1][1] );
-  console.log("Mass:", planets[1][1][2]);
+console.log("Description:", planets[1][1][0]);
+console.log("Surface temperature:", planets[1][1][1]);
+console.log("Mass:", planets[1][1][2]);
 console.groupEnd();
 
 console.group(planets[2][0]); // Earth.
-  console.log("Description:", planets[2][1][0]);
-  console.log("Surface temperature:", planets[2][1][1]);
-  console.log("Mass:", planets[2][1][2]);
+console.log("Description:", planets[2][1][0]);
+console.log("Surface temperature:", planets[2][1][1]);
+console.log("Mass:", planets[2][1][2]);
 console.groupEnd();
 
 console.group(planets[3][0]); // Mars.
-  console.log("Description:", planets[3][1][0]);
-  console.log("Surface temperature:", planets[3][1][1]);
-  console.log("Mass:", planets[3][1][2]);
+console.log("Description:", planets[3][1][0]);
+console.log("Surface temperature:", planets[3][1][1]);
+console.log("Mass:", planets[3][1][2]);
 console.groupEnd();
 
 /*
@@ -413,37 +445,126 @@ var saturn = [
 planets.unshift(venus, saturn);
 
 console.group(planets[0][0]); // Venus.
-  console.log("Description:", planets[0][1][0]);
-  console.log("Surface temperature:", planets[0][1][1]);
-  console.log("Mass:", planets[0][1][2]);
+console.log("Description:", planets[0][1][0]);
+console.log("Surface temperature:", planets[0][1][1]);
+console.log("Mass:", planets[0][1][2]);
 console.groupEnd();
 
 console.group(planets[1][0]); // Saturn.
-  console.log("Description:", planets[1][1][0]);
-  console.log("Surface temperature:", planets[1][1][1] );
-  console.log("Mass:", planets[1][1][2]);
+console.log("Description:", planets[1][1][0]);
+console.log("Surface temperature:", planets[1][1][1]);
+console.log("Mass:", planets[1][1][2]);
 console.groupEnd();
 
 console.group(planets[2][0]); // Mercury.
-  console.log("Description:", planets[2][1][0]);
-  console.log("Surface temperature:", planets[2][1][1]);
-  console.log("Mass:", planets[2][1][2]);
+console.log("Description:", planets[2][1][0]);
+console.log("Surface temperature:", planets[2][1][1]);
+console.log("Mass:", planets[2][1][2]);
 console.groupEnd();
 
 console.group(planets[3][0]); // Jupiter.
-  console.log("Description:", planets[3][1][0]);
-  console.log("Surface temperature:", planets[3][1][1]);
-  console.log("Mass:", planets[3][1][2]);
+console.log("Description:", planets[3][1][0]);
+console.log("Surface temperature:", planets[3][1][1]);
+console.log("Mass:", planets[3][1][2]);
 console.groupEnd();
 
 console.group(planets[4][0]); // Earth.
-  console.log("Description:", planets[4][1][0]);
-  console.log("Surface temperature:", planets[4][1][1]);
-  console.log("Mass:", planets[4][1][2]);
+console.log("Description:", planets[4][1][0]);
+console.log("Surface temperature:", planets[4][1][1]);
+console.log("Mass:", planets[4][1][2]);
 console.groupEnd();
 
 console.group(planets[5][0]); // Mars.
-  console.log("Description:", planets[5][1][0]);
-  console.log("Surface temperature:", planets[5][1][1]);
-  console.log("Mass:", planets[5][1][2]);
+console.log("Description:", planets[5][1][0]);
+console.log("Surface temperature:", planets[5][1][1]);
+console.log("Mass:", planets[5][1][2]);
 console.groupEnd();
+
+/*
+ 7. Android Object REFACTOR:::::
+
+ Level 1::::::::::::::
+ Refactor (change) all the variables you have in place that initializes the android into an android object.
+ - Your android needs a head, upperBody, lowerBody & [ anyThingElseYouCanDreamOf ].
+ - Feel free to create any new properties that will further describe your android [ anyThingYouCanDreamOf ].
+ - next update your application to use this newly refactored code
+
+ tip: the console.log that prints the variables of the android will need to be updated
+
+ Level 2::::::::::::::
+ Refactor the planets array to be an array of objects, each object must be its own planet.
+  - next update your application to use this newly refactored code
+*/
+
+console.log("---NEW PLANET OBJECTS---");
+
+var planets = [
+  {
+    name: "VENUS",
+    description:
+      "Venus is the second planet from the Sun and the sixth largest. Together with Mercury, they are the only planets without a satellite, even though Mercury is closer to the sun, Venus is the hottest planet.",
+    surfaceTemperature:
+      "The highest is an average of 465 degrees Celsius, 900 degrees Fahrenheit, hot enough to melt lead; And the lowest is about 655 K (380 °C; 715 °F)",
+    mass: "Venus has a mass of 4.87 × 1024 kg"
+  },
+
+  {
+    name: "SATURN",
+    description:
+      "Saturn is the sixth planet from the sun, with the largest planetary rings in the Solar System. It is the second-largest planet after Jupiter, and recently, with many other moons being discovered, it surpassed the number of Jupiter’s moons and is now considered the planet with the most numerous satellites.",
+    surfaceTemperature:
+      "The temperature of Saturn’s upper atmosphere is on average about -175C (-285F)",
+    mass: "5,683E26 kg"
+  },
+
+  {
+    name: "MERCURY",
+    description:
+      "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
+    surfaceTemperature: "-173 to 427°C",
+    mass: "330,104,000,000,000 billion kg (0.055 x Earth)"
+  },
+
+  {
+    name: "JUPITER",
+    description:
+      "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
+    surfaceTemperature: "-108°C",
+    mass: "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
+  },
+
+  {
+    name: "EARTH",
+    description:
+      "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+    surfaceTemperature:
+      "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
+    mass: "6.6 sextillion tons"
+  },
+
+  {
+    name: "MARS",
+    description:
+      "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
+    surfaceTemperature: "87 to -5 °C",
+    mass: "641,693,000,000,000 billion kg (0.107 x Earth)"
+  }
+];
+
+for (var i = 0; i < planets.length; i++) {
+  console.log(planets[i]);
+}
+
+
+/*
+  8. REFACTOR Create functions:::::::
+  Level 1:::::::::
+  Refactor your application to be initialized by a function.
+
+  Level 2:::::::::
+  Look through your code and find more opportunities to use and call functions and parameters aka arguments.
+*/
+
+};
+
+initializeDroid();
