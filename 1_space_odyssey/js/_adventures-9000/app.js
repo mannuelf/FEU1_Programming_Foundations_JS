@@ -354,7 +354,14 @@ console.groupEnd();
   Refactor your application to be initialized by a function.
 
   Level 2:::::::::
-  Look through your code and find more opportunities to use and call functions and parameters aka arguments.*/
-
   Look through your code and find more opportunities to use and call functions and parameters aka arguments.
+  */
+
+
+  /*
+    9. REFACTOR Arrow functions
+    Level 1:::::::::
+    Go through your application and convert all your functions into Arrow functions.
+    If you only have one function, please make a few more it is possible to have one function per feature.
+
   */
