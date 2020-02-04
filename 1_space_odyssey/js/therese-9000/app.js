@@ -87,12 +87,17 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
 console.log("Please initialize Therese-9000");
 
 const initialize = () => {
-  let android = [
-    {
+  let android = {
       isAlive: true,
       name: "Therese-9000",
+      changeName: function(newName){
+        this.name = newName
+      },
       hasJetPack: false,
       suitColor: "black",
+      changeSuit: function(newSuit){
+        this.suitColor = newSuit
+      },
       eyes: 2,
       eyeColor: "green",
       hairColor: "brown",
@@ -105,8 +110,7 @@ const initialize = () => {
       canFly: true,
       hasWeapon: true,
       isInGoodMood: true
-    }
-  ];
+    };
 
   console.log(".-.-. Booting .-.-.");
   for (let i = 0; i < android.length; i++) {
@@ -123,9 +127,10 @@ const initialize = () => {
        cannot go outside, console log the correct log based on that condition. 
 */
 
-let jetPack = initialize()[0].hasJetPack;
 
-const fixSatellite = () => {
+
+const fixSatellite = (turnOn) => {
+  let jetPack = turnOn;  
   if (jetPack === true) {
     console.log("JetPack is enabled!!! off I go outside to fix the satellite");
   } else {
@@ -135,9 +140,6 @@ const fixSatellite = () => {
   }
 };
 
-const giveJetpackToAndroid = given => {
-  jetPack = given;
-};
 /*
  3. METEOR SHOWER::::::
     On your way to Jupiter you encounter a massive meteor shower that could damage the ship, you need to redirect the ship to a new safe location.
