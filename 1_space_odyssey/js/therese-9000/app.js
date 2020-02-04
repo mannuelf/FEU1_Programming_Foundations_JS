@@ -1,6 +1,3 @@
-console.log("Please initialize Therese-9000");
-
-function initialize() {
   /*
 ____/\\\\\\\\\_________/\\\\\\\_______/\\\\\\\\\_________/\\\\\\\__________        
  __/\\\///////\\\_____/\\\/////\\\___/\\\///////\\\_____/\\\/////\\\________       
@@ -87,8 +84,11 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
+console.log("Please initialize Therese-9000");
 
-  var android = [
+// function initialize()
+const initialize = () => {
+  let android = [
     {
       isAlive: true,
       name: "Therese-9000",
@@ -105,14 +105,17 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
       canRun: true,
       canFly: true,
       hasWeapon: true,
-      isInGoodMood: true
+      isInGoodMood: true,
     }
   ];
 
   console.log(".-.-. Booting .-.-.");
-  for (var i = 0; i < android.length; i++) {
+  for (let i = 0; i < android.length; i++) {
     console.log(android[i]);
   }
+
+  return android;
+}
 
   /* 
  2. BROKEN SATELLITE::::::
@@ -121,14 +124,38 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
        cannot go outside, console log the correct log based on that condition. 
 */
 
-  if (android[0].hasJetPack === true) {
+// function fixSatellite()
+
+let jetPack = initialize()[0].hasJetPack
+
+// const fixSatellite = (getAndroid) => {
+//   if (getAndroid()[0].hasJetPack === true) {
+//     console.log("JetPack is enabled!!! off I go outside to fix the satellite");
+//   } else {
+//     console.log(
+//       "JetPack NOT enabled, please enable jetPack before doing a space walk"
+//     );
+//   }
+// }
+
+const fixSatellite = () => {
+  if (jetPack === true) {
     console.log("JetPack is enabled!!! off I go outside to fix the satellite");
   } else {
     console.log(
       "JetPack NOT enabled, please enable jetPack before doing a space walk"
     );
   }
+}
 
+// function giveJetpackToAndroid(given)
+// const giveJetpackToAndroid = given => {
+//   return hasJetPack = given;
+// }
+
+const giveJetpackToAndroid = (given) => {
+  jetPack = given;
+}
   /*
  3. METEOR SHOWER::::::
     On your way to Jupiter you encounter a massive meteor shower that could damage the ship, you need to redirect the ship to a new safe location.
@@ -136,8 +163,8 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
       create an if condition in your loop to print only 1 response using a comparison operator.
 */
   console.log("\u{1F327} METEOR SHOWER::::::");
-
-  var responses = [
+const meteorShower = () => {
+  let responses = [
     "Call basecamp and ask for assistance, but they are far away",
     "Do nothing, just push through",
     "initiate core thrusters, punch 180degrees into dash-nav and warp away from danger",
@@ -146,11 +173,12 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
 
   // write your code here, use the console log beneath
 
-  for (var i = 0; i <= responses.length; i++) {
+  for (let i = 0; i <= responses.length; i++) {
     if (i === 3) {
       console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
     }
   }
+}
 
   /*
  4. ALIENS SPACE CRAFT ENCROACHING::::::
@@ -162,11 +190,13 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
 */
   console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
 
+// function spacecraftEnroaching()
+const spacecraftEnroaching = () => {
   // a.
-  var enemyCraft = true;
-  var photonLaser = true;
-  var photonLaserEnabled = true;
-  var bullets = 123;
+  let enemyCraft = true;
+  let photonLaser = true;
+  let photonLaserEnabled = true;
+  let bullets = 123;
 
   /*
   If its an enemyCraft && photonLaser && photonLaserEnabled
@@ -183,7 +213,7 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     photonLaserEnabled === true
   ) {
     if (bullets >= 100) {
-      for (var i = 0; i < 100; i++) {
+      for (let i = 0; i < 100; i++) {
         console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
       }
     } else {
@@ -192,6 +222,7 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
   } else {
     console.log("Move along, kind sir");
   }
+}
 
   /*
  5. LUNAR LANDING:::::
@@ -210,9 +241,9 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
 */
   console.log("\u{1F311} LUNAR LANDING:::::");
 
-  // start coding here
-
-  var lunarRadar = {
+// function lunarLanding()
+const lunarLanding = () => {
+  let lunarRadar = {
     isEnabled: undefined,
     long: undefined,
     lat: undefined,
@@ -321,10 +352,9 @@ if(lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long){
         " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance."
     );
   }
-
+}
   /*
  6. PLANETARY INFO-DASH:::::
-
  Level 1::::::::::::::
  Given this array of planets using what you know about how to access data in an arrays index log out the:
   - Description,
@@ -337,7 +367,9 @@ if(lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long){
 */
   console.log("\u{1F319} PLANETARY INFO-DASH:::::");
 
-  var planets = [
+// function planetInfo()
+const planetInfo = () => {
+  let planets = [
     {
       planet: "MERCURY",
       desc:
@@ -374,7 +406,7 @@ if(lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long){
  Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
 */
 
-  var venus = {
+  const venus = {
     planet: "VENUS",
     desc:
       "Venus is the second planet from the Sun and the sixth largest. Together with Mercury, they are the only planets without a satellite, even though Mercury is closer to the sun, Venus is the hottest planet.",
@@ -382,7 +414,7 @@ if(lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long){
     mass: "4,867,320,000,000,000 billion kg (0.815 x Earth)"
   };
 
-  var neptune = {
+  const neptune = {
     planet: "NEPTUNE",
     desc:
       "Neptune is the fourth largest and the farthest planet of the Solar System with the most powerful wind speeds out of all the planets. It is the smallest of the gas giants and is the first planet to be discovered by mathematical predictions in 1846. ",
@@ -391,7 +423,6 @@ if(lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long){
   };
 
   planets.unshift(venus, neptune);
-
   /*
  7. Android Object REFACTOR:::::
 
@@ -408,13 +439,14 @@ if(lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long){
   - next update your application to use this newly refactored code
 */
 
-  for (var i = 0; i < planets.length; i++) {
+  for (let i = 0; i < planets.length; i++) {
     console.group(planets[i].planet);
     console.log("Description:", planets[i].desc);
     console.log("Surface temperature:", planets[i].surfaceTemp);
     console.log("Mass:", planets[i].mass);
     console.groupEnd();
   }
+}
   /*
   8. REFACTOR Create functions:::::::
   Level 1:::::::::
@@ -423,4 +455,13 @@ if(lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long){
   Level 2:::::::::
   Look through your code and find more opportunities to use and call functions and parameters aka arguments.
 */
-}
+
+/*
+  9. REFACTOR Arrow functions
+  Level 1:::::::::
+  Go through your application and convert all your functions into Arrow functions.
+  If you only have one function, please make a few more it is possible to have one function per feature.
+
+  Level 2:::::::::
+  Create a few methods on your droid object that will allow you to update your object properties like isAlive, eyeColors etc.
+*/
