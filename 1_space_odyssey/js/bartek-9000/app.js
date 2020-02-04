@@ -1,6 +1,6 @@
 console.log("START GAME BY CALLING gameStart()");
 
-function gameStart() {
+const gameStart = () => {
   console.log("🤖 ANDROID BOOT::::::");
   console.log("Boot the robot with a Android.boot() function");
 
@@ -31,7 +31,7 @@ function gameStart() {
   console.log(
     "You can convert our database to an array of objects by calling convertArrayToObj()"
   );
-}
+};
 
 const Android = {
   head: {
@@ -66,6 +66,30 @@ const Android = {
       isAlive: true,
       isInGoodMood: false
     }
+  },
+
+  revive: function() {
+    this.anyThingElseYouCanDreamOf.state.isAlive = true;
+    console.log(`${this.head.name} is now ALIIIIIIVEEEE`);
+  },
+
+  kill: function() {
+    this.anyThingElseYouCanDreamOf.state.isAlive = false;
+    console.log(`${this.head.name} has been killed`);
+  },
+
+  amputate: function() {
+    this.upperBody.arms = null;
+    console.log(`${this.head.name}'s arms have been cut off`);
+  },
+
+  tickle: function() {
+    this.anyThingElseYouCanDreamOf.state.isInGoodMood = true;
+    console.log(`${this.head.name} is now happy, it won't last long though`);
+    setTimeout(() => {
+      this.anyThingElseYouCanDreamOf.state.isInGoodMood = false;
+      console.log(`${this.head.name} is grumpy now`);
+    }, 30000);
   },
   boot: function() {
     console.log(".-.-. Booting .-.-.");
@@ -112,7 +136,7 @@ const Android = {
        cannot go outside, console log the correct log based on that condition.
 */
 
-const doSpaceWalk = function() {
+const doSpaceWalk = () => {
   Android.anyThingElseYouCanDreamOf.inventory.hasJetPack
     ? console.log("JetPack is enabled!!! off I go outside to fix the satellite")
     : console.log(
@@ -133,7 +157,7 @@ var responses = [
   "initiate core thrusters, punch 180degrees into dash-nav and warp away from danger",
   "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
 ];
-const saveEveryone = function() {
+const saveEveryone = () => {
   for (var i = 0; i < responses.length; i++) {
     console.log(
       `Checking responses, looking for the safest one ${i + 1}/${
@@ -331,7 +355,7 @@ var planets = [
  Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
 */
 
-function addPlanetToArray(planet, where) {
+const addPlanetToArray = (planet, where) => {
   switch (where) {
     case "start":
       planets.unshift(planet);
@@ -340,7 +364,7 @@ function addPlanetToArray(planet, where) {
       planets.push(planet);
       break;
   }
-}
+};
 
 const Venus = [
   "VENUS",
@@ -413,4 +437,13 @@ function showPlanets() {
 
   Level 2:::::::::
   Look through your code and find more opportunities to use and call functions and parameters aka arguments.
+*/
+/*
+  9. REFACTOR Arrow functions
+  Level 1:::::::::
+  Go through your application and convert all your functions into Arrow functions.
+  If you only have one function, please make a few more it is possible to have one function per feature.
+
+  Level 2:::::::::
+  Create a few methods on your droid object that will allow you to update your object properties like isAlive, eyeColors etc.
 */
