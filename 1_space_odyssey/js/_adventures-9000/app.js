@@ -364,4 +364,6 @@ console.groupEnd();
     Go through your application and convert all your functions into Arrow functions.
     If you only have one function, please make a few more it is possible to have one function per feature.
 
+    Level 2:::::::::
+    Create a few methods on your droid object that will allow you to update your object properties like isAlive, eyeColors etc.
   */
