@@ -1,5 +1,5 @@
-function initDroid (){
- 
+ initDroid = () =>{
+
 
 /*
 ____/\\\\\\\\\_________/\\\\\\\_______/\\\\\\\\\_________/\\\\\\\__________
@@ -88,6 +88,7 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
 
+droid = () =>{
 
 var droid = {
   isAlive: true,
@@ -109,6 +110,7 @@ var droid = {
   hasJetPack: true
 };
 
+
 console.log(".-.-. Booting .-.-.");
 console.log(
   droid.isAlive,
@@ -129,6 +131,7 @@ console.log(
   droid.isBadAss,
   droid.hasJetPack
 );
+}
 
 /*
  2. BROKEN SATELLITE::::::
@@ -347,6 +350,9 @@ if (lunarRadar.isEnabled === true && lunarRadar.lat && lunarRadar.long) {
 
   tip: pass your variables into the console.log after comma ,
 */
+
+planetinfo = ()=>{
+
 console.log("\u{1F319} PLANETARY INFO-DASH:::::");
 
 var Mercury = {
@@ -422,6 +428,8 @@ console.log(
   Sun.description,
   Sun.surfaceTemperature,
   Sun.mass);
+}
+
 
 /*
  Level 2::::::::::::::
@@ -459,4 +467,23 @@ console.log(
 
 }
 
+
+
+ /*
+    9. REFACTOR Arrow functions
+    Level 1:::::::::
+    Go through your application and convert all your functions into Arrow functions.
+    If you only have one function, please make a few more it is possible to have one function per feature.
+
+
+
+
+    Level 2:::::::::
+    Create a few methods on your droid object that will allow you to update your object properties like isAlive, eyeColors etc.
+  */
+
+
+
+
 initDroid();
+
