@@ -1,62 +1,69 @@
-function bootUpManny9000() {
-  var isAlive = true;
-  var name = "Manny-9000";
-  var hasJetPack = undefined;
-  var suitColor = "Chrome";
-  var eyes = 2;
-  var eyeColor = "brown";
-  var hairColor = "black";
-  var legs = 2;
-  var arms = 2;
-  var hands = 2;
-  var ears = 2;
-  var canWalk = true;
-  var canRun = true;
-  var canFly = true;
-  var hasWeapon = true;
-  var isInGoodMood = true;
+const bootUpManny9000 = () => {
+  let manny9000 = {
+    isAlive: true,
+    name: "hello ",
+    hasJetPack: undefined,
+    suitColor: "Chrome",
+    eyes: 2,
+    eyeColor: "brown",
+    hairColor: "black",
+    legs: 2,
+    arms: 2,
+    hands: 2,
+    ears: 2,
+    canWalk: true,
+    canRun: true,
+    canFly: true,
+    hasWeapon: true,
+    isInGoodMood: true,
+    changeMyName: function(paramName) {
+      this.name = paramName
+    }
+  };
+  return manny9000;
+};
 
-  console.log("\u{1F916} .-.-. Booting .-.-.");
-  console.log(
-    name,
-    isAlive,
-    hasJetPack,
-    eyes,
-    eyeColor,
-    hairColor,
-    legs,
-    arms,
-    hands,
-    ears,
-    canWalk,
-    canFly,
-    hasWeapon,
-    isInGoodMood,
-    suitColor
-  );
-}
 
-function alienSpaceCraft() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const alienSpaceCraft = () => {
   console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
 
-  var enemyCraft = true;
-  var photonLaser = true;
-  var photonLaserEnabled = true;
-  var bullets = 100;
+  let enemyCraft = true;
+  let photonLaser = true;
+  let photonLaserEnabled = true;
+  let bullets = 100;
 
   if (enemyCraft && photonLaser && photonLaserEnabled) {
     if (bullets >= 100) {
       bullets = i;
-      for (var i = 0; i < 100; i++) {
+      for (let i = 0; i < 100; i++) {
         console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
       }
     } else {
       console.log("\u{1F9E8} DEAD \u{1F9E8} ");
     }
   }
-}
+};
 
-function lunarLanding() {
+const lunarLanding = () => {
   console.log("\u{1F311} LUNAR LANDING:::::");
 
   var lunarRadar = {
@@ -117,14 +124,15 @@ function lunarLanding() {
   } else {
     console.log("Please enter an approach speed");
   }
-}
+};
 
-function enableJetPack(pressed) {
+const enableJetPack = pressed => {
   var hasJetPack;
   return (hasJetPack = pressed);
-}
+};
 
-function spaceWalk(turnJetPackOn) { // pass in a function into this function
+const spaceWalk = turnJetPackOn => {
+  // pass in a function into this function
   console.log(
     " \u{2747} BROKEN SATELLITE:::::: \u{2747} \u{2747} \u{2747} \u{2747}"
   );
@@ -136,9 +144,9 @@ function spaceWalk(turnJetPackOn) { // pass in a function into this function
       "JetPack NOT enabled, please enable jetPack before doing a space walk"
     );
   }
-}
+};
 
-function meteorShower() {
+const meteorShower = () => {
   console.log("\u{1F327} METEOR SHOWER::::::");
 
   var responses = [
@@ -154,9 +162,9 @@ function meteorShower() {
       console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
     }
   }
-}
+};
 
-function planetaryDashBoard() {
+const planetaryDashBoard = () => {
   console.log("\u{1F319} PLANETARY INFO-DASH:::::");
 
   var planets = [
@@ -248,4 +256,4 @@ function planetaryDashBoard() {
   console.log("Surface temperature:", planets[5][1][1]);
   console.log("Mass:", planets[5][1][2]);
   console.groupEnd();
-}
+};
