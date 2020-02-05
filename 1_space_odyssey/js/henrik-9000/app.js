@@ -20,34 +20,35 @@ function bootHenrik() {
 
 
  1. CREATE DROID::::::
-    Below are all the variables needed to initialize an android into consciousness in its default state.
-    a. assign the correct values to the variables below,
+    Below are all the letiables needed to initialize an android into consciousness in its default state.
+    a. assign the correct values to the letiables below,
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
 
-var isAlive = true;
-var name = "Henrik-9000";
-var hasJetPack = true;
-var suitColor = "white";
-var eyes = true;
-var eyeColor = "blue";
-var hairColor = "blond";
-var legs = 2;
-var arms = 2;
-var hands = 2;
-var ears = 2;
-var canWalk = true;
-var canRun = true;
-var canFly = true;
-var hasWeapon = true;
-var isInGoodMood = true;
+let isAlive = true;
+let name = "Henrik-9000";
+let hasJetPack = true;
+let suitColor = "white";
+let eyes = true;
+let eyeColor = "blue";
+let hairColor = "blond";
+let legs = 2;
+let arms = 2;
+let hands = 2;
+let ears = 2;
+let canWalk = true;
+let canRun = true;
+let canFly = true;
+let hasWeapon = true;
+let isInGoodMood = true;
 
 console.log(".-.-. Booting .-.-.");
 console.log(
   name,
   isAlive,
   hasJetPack,
+  suitColor,
   eyes,
   eyeColor,
   hairColor,
@@ -55,10 +56,14 @@ console.log(
   arms,
   hands,
   ears,
+  canRun,
   canWalk,
   canFly,
-  hasWeapon
+  hasWeapon,
+  isInGoodMood,
 );
+
+
 
 /*
  2. BROKEN SATELLITE::::::
@@ -66,6 +71,7 @@ console.log(
     a) write an if condition checking if the jet pack is enabled, if true the droid can go outside if false the droid
        cannot go outside, console log the correct log based on that condition.
 */
+
 
 if (hasJetPack === true) {
   console.log("JetPack is enabled!!! off I go outside to fix the satellite");
@@ -88,9 +94,11 @@ if (hasJetPack === true) {
     a) Using a for loop iterate through the responses array and choose the appropriate response to get out of danger.
       create an if condition in your loop to print only 1 response using a comparison operator.
 */
-console.log("\u{1F327} METEOR SHOWER::::::");
 
-var responses = [
+function meteorShower() {
+  console.log("\u{1F327} METEOR SHOWER::::::");
+
+let responses = [
   "Call basecamp and ask for assistance, but they are far away",
   "Do nothing, just push through",
   "initiate core thrusters, punch 180degrees into dash-nav and warp away from danger",
@@ -100,27 +108,31 @@ var responses = [
 // write your code here, use the console log beneath
 // console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
 
-for (var count = 0; count < responses.length; count++) {
+for (let count = 0; count < responses.length; count++) {
   if (responses[count] === responses[2]) {
     console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
   }
+}
+
 }
 
 /*
  4. ALIENS SPACE CRAFT ENCROACHING::::::
     Alien craft approaches its an enemy for sure...you need to shoot it down!!
     a) convert the pseudoscope to real code
-       create the required variables below and fill in the correct values and dataTypes to make
+       create the required letiables below and fill in the correct values and dataTypes to make
        the if statements pass so that photonLaser fires pew pew pew.
     b)
 */
-console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
+
+function alienSpacecraft() {
+  console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
 
 // a.
-var enemyCraft = true;
-var photonLaser = true;
-var photonLaserEnabled = true;
-var bullets = 700;
+let enemyCraft = true;
+let photonLaser = true;
+let photonLaserEnabled = true;
+let bullets = 700;
 
 /*
   If its an enemyCraft && photonLaser && photonLaserEnabled
@@ -133,12 +145,14 @@ var bullets = 700;
 
 if (enemyCraft && photonLaser && photonLaserEnabled) {
   if (bullets >= 100) {
-    for (var i = 1; i <= 100; i++) {
+    for (let i = 1; i <= 100; i++) {
       console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
     }
   } else {
     console.log("\u{1F9E8} DEAD \u{1F9E8} ");
   }
+}
+
 }
 
 /*
@@ -152,15 +166,17 @@ if (enemyCraft && photonLaser && photonLaserEnabled) {
 
     The lunar radar accepts approach speeds in increments of hundreds only, starting at 0 and maxing out at 700.
 
-    You cannot edit the lunarRadar object directly you have to pass your values in via an interface called variables.
+    You cannot edit the lunarRadar object directly you have to pass your values in via an interface called letiables.
 
-    tip: varName.keyName (this is how to extract a value from an object)
+    tip: letName.keyName (this is how to extract a value from an object)
 */
-console.log("\u{1F311} LUNAR LANDING:::::");
+
+function lunarLanding() {
+  console.log("\u{1F311} LUNAR LANDING:::::");
 
 // start coding here
 
-var lunarRadar = {
+let lunarRadar = {
   isEnabled: true,
   long: 200,
   lat: 400,
@@ -226,6 +242,8 @@ if (lunarRadar.isEnabled && lunarRadar.long && lunarRadar.lat) {
   }
 }
 
+}
+
 /*
  6. PLANETARY INFO-DASH:::::
 
@@ -237,14 +255,14 @@ if (lunarRadar.isEnabled && lunarRadar.long && lunarRadar.lat) {
 
   in the console logs bellow.
 
-  tip: pass your variables into the console.log after comma ,
+  tip: pass your letiables into the console.log after comma ,
 */
 
 
+function planetsDashboard() {
+  console.log("\u{1F319} PLANETARY INFO-DASH:::::");
 
-console.log("\u{1F319} PLANETARY INFO-DASH:::::");
-
-var planets = [
+let planets = [
   [ "MERCURY",
     [
       "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
@@ -337,7 +355,7 @@ console.group(planets[0][0]); // Uranus.
   console.log("Surface temperature:", planets[0][1][1] );
   console.log("Mass:", planets[0][1][2] );
 console.groupEnd();
-
+}
 
 /*
   8. REFACTOR Create functions:::::::
@@ -355,4 +373,14 @@ console.groupEnd();
   Look through your code and find more opportunities to use and call functions and parameters aka arguments.
 */
 
+
+ /*
+    9. REFACTOR Arrow functions
+    Level 1:::::::::
+    Go through your application and convert all your functions into Arrow functions.
+    If you only have one function, please make a few more it is possible to have one function per feature.
+
+    Level 2:::::::::
+    Create a few methods on your droid object that will allow you to update your object properties like isAlive, eyeColors etc.
+  */
 }
