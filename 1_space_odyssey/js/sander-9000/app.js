@@ -84,29 +84,9 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     b. ensure to choose the correct values and datatypes
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
+initializeDroid = () => {
 
-/*
-var isAlive = true;
-var name = "Sander-9000";
-var hasJetPack = true;
-var suitColor = "white";
-var eyes = 2;
-var eyeColor = "blue";
-var hairColor = "blonde";
-var legs = 2;
-var arms = 2;
-var hands = 2;
-var ears = 2;
-var canWalk = true;
-var canRun = true;
-var canFly = false;
-var hasWeapon = true;
-var isInGoodMood = true;
-*/
-
-function initializeDroid() {
-
-var android = {
+const android = {
   head: {
     ears: 2,
     eyes: 2,
@@ -140,10 +120,8 @@ var android = {
     isInGoodMood: true,
   }
 };
-
 console.log(".-.-. Booting .-.-.");
 console.log(android);
-
 
 /*
  2. BROKEN SATELLITE::::::
@@ -159,6 +137,9 @@ console.log(android);
  console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
 
  */
+console.log(
+  " \u{2747} BROKEN SATELLITE:::::: \u{2747} \u{2747} \u{2747} \u{2747}"
+);
 
 if (android.equipment) {
   console.log("JetPack is enabled!!! off I go outside to fix the satellite");
@@ -168,6 +149,8 @@ if (android.equipment) {
   );
 }
 
+};
+
 
 /*
  3. METEOR SHOWER::::::
@@ -175,16 +158,18 @@ if (android.equipment) {
     a) Using a for loop iterate through the responses array and choose the appropriate response to get out of danger.
       create an if condition in your loop to print only 1 response using a comparison operator.
 */
+
+meteorShower = () => {
 console.log("\u{1F327} METEOR SHOWER::::::");
 
-var responses = [
+const responses = [
   "Call basecamp and ask for assistance, but they are far away",
   "Do nothing, just push through",
   "initiate core thrusters, punch 180degrees into dash-nav and warp away from danger",
   "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
 ];
 
-for (var i = 0; i < responses.length; i++) {
+for (let i = 0; i < responses.length; i++) {
   if (
     responses[i] ===
     "initiate core thrusters, punch 180degrees into dash-nav and warp away from danger"
@@ -192,6 +177,7 @@ for (var i = 0; i < responses.length; i++) {
     console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
   }
 }
+};
 
 // write your code here, use the console log beneath
 // console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
@@ -204,33 +190,27 @@ for (var i = 0; i < responses.length; i++) {
        the if statements pass so that photonLaser fires pew pew pew.
     b)
 */
-console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
 
-// a.
-var enemyCraft = true;
-var photonLaser = true;
-var photonLaserEnabled = true;
-var bullets = 100;
+alienSpaceCraft = () => {
+  console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
+
+const enemyCraft = true;
+const photonLaser = true;
+const photonLaserEnabled = true;
+const bullets = 100;
 
 if (enemyCraft && photonLaser && photonLaserEnabled);
 {
   if (bullets >= 100) {
-    for (var i = 0; i < 100; i++) {
+    for (let i = 0; i < 100; i++) {
       console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
     }
   } else {
     console.log("\u{1F9E8} DEAD \u{1F9E8} ");
   }
 }
+};
 
-/*
-  If its an enemyCraft && photonLaser && photonLaserEnabled
-      IF bullets is greater than or equal to 100
-          shoot 100 photon-lazers by printing this log 100 times:
-          console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!"); (use a loop)
-        ELSE
-          console.log("\u{1F9E8} DEAD \u{1F9E8} ");
-*/
 
 /*
  5. LUNAR LANDING:::::
@@ -247,15 +227,15 @@ if (enemyCraft && photonLaser && photonLaserEnabled);
 
     tip: varName.keyName (this is how to extract a value from an object)
 */
+
+lunarLanding = () => {
 console.log("\u{1F311} LUNAR LANDING:::::");
 
-// start coding here
+const enabled = true;
+const latlong = 200;
+const speed = 200;
 
-var enabled = true;
-var latlong = 200;
-var speed = 200;
-
-var lunarRadar = {
+const lunarRadar = {
   isEnabled: enabled,
   long: latlong,
   lat: latlong,
@@ -345,6 +325,9 @@ switch (true) {
     break;
 }
 
+};
+
+
 /*
  6. PLANETARY INFO-DASH:::::
 
@@ -358,9 +341,11 @@ switch (true) {
 
   tip: pass your variables into the console.log after comma ,
 */
+
+planetaryDashboard = () => {
 console.log("\u{1F319} PLANETARY INFO-DASH:::::");
 
-var planets = [
+const planets = [
   [
     "MERCURY",
     [
@@ -424,7 +409,7 @@ console.groupEnd();
  Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
 */
 
-var venus = [
+const venus = [
   "VENUS",
   [
     "Venus is the second planet from the Sun and the sixth largest. Together with Mercury, they are the only planets without a satellite, even though Mercury is closer to the sun, Venus is the hottest planet.",
@@ -433,7 +418,7 @@ var venus = [
   ]
 ];
 
-var saturn = [
+const saturn = [
   "SATURN",
   [
     "Saturn is the sixth planet from the sun, with the largest planetary rings in the Solar System. It is the second-largest planet after Jupiter, and recently, with many other moons being discovered, it surpassed the number of Jupiter’s moons and is now considered the planet with the most numerous satellites.",
@@ -498,7 +483,7 @@ console.groupEnd();
 
 console.log("---NEW PLANET OBJECTS---");
 
-var planets = [
+let planets2 = [
   {
     name: "VENUS",
     description:
@@ -551,9 +536,10 @@ var planets = [
   }
 ];
 
-for (var i = 0; i < planets.length; i++) {
+for (let i = 0; i < planets.length; i++) {
   console.log(planets[i]);
 }
+};
 
 
 /*
@@ -563,8 +549,22 @@ for (var i = 0; i < planets.length; i++) {
 
   Level 2:::::::::
   Look through your code and find more opportunities to use and call functions and parameters aka arguments.
+  ----- 👍🏼 DONE -----
 */
 
-};
+
+/*
+  9. REFACTOR Arrow functions
+  Level 1:::::::::
+  Go through your application and convert all your functions into Arrow functions.
+  If you only have one function, please make a few more it is possible to have one function per feature.
+
+  Level 2:::::::::
+  Create a few methods on your droid object that will allow you to update your object properties like isAlive, eyeColors etc.
+*/
 
 initializeDroid();
+meteorShower();
+alienSpaceCraft();
+lunarLanding();
+planetaryDashboard();
