@@ -1,4 +1,4 @@
-function bootHenrik() {
+const bootHenrik = () => {
 
 /* ______   __  __   ______  ______
         _..._
@@ -80,6 +80,8 @@ if (hasJetPack === true) {
     "JetPack NOT enabled, please enable jetPack before doing a space walk"
   );
 }
+
+};
 /*
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
 
@@ -95,7 +97,7 @@ if (hasJetPack === true) {
       create an if condition in your loop to print only 1 response using a comparison operator.
 */
 
-function meteorShower() {
+const meteorShower = () => {
   console.log("\u{1F327} METEOR SHOWER::::::");
 
 let responses = [
@@ -125,7 +127,7 @@ for (let count = 0; count < responses.length; count++) {
     b)
 */
 
-function alienSpacecraft() {
+const alienSpacecraft = () => {
   console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
 
 // a.
