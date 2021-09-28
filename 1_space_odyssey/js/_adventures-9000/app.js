@@ -1,3 +1,5 @@
+console.log(' hello world ');
+
 /*
 ____/\\\\\\\\\_________/\\\\\\\_______/\\\\\\\\\_________/\\\\\\\__________
  __/\\\///////\\\_____/\\\/////\\\___/\\\///////\\\_____/\\\/////\\\________
@@ -102,7 +104,7 @@ var hasWeapon;
 var isInGoodMood;
 var hasJetPack;
 
-console.log("\u{1F916} .-.-. Booting .-.-.");
+console.log('\u{1F916} .-.-. Booting .-.-.');
 console.log(
   name,
   isAlive,
@@ -120,10 +122,10 @@ console.log(
 );
 
 if (hasJetPack) {
-  console.log("JetPack is enabled!!! off I go outside to fix the satellite");
+  console.log('JetPack is enabled!!! off I go outside to fix the satellite');
 } else {
   console.log(
-    "\u{1F691} JetPack NOT enabled, please enable jetPack before doing a space walk"
+    '\u{1F691} JetPack NOT enabled, please enable jetPack before doing a space walk'
   );
 }
 
@@ -133,7 +135,7 @@ if (hasJetPack) {
     a) write an if condition checking if the jet pack is enabled, if true the droid can go outside if false the droid
        cannot go outside, console log the correct log based on that condition.
 */
-console.log("\u{1F6F0} BROKEN SATELLITE::::::");
+console.log('\u{1F6F0} BROKEN SATELLITE::::::');
 
 /*
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
@@ -148,13 +150,13 @@ console.log("\u{1F6F0} BROKEN SATELLITE::::::");
     a) Using a for loop iterate through the responses array and choose the appropriate response to get out of danger.
       create an if condition in your loop to print only 1 response using a comparison operator.
 */
-console.log("\u{1F327} METEOR SHOWER::::::");
+console.log('\u{1F327} METEOR SHOWER::::::');
 
 var responses = [
-  "Call basecamp and ask for assistance, but they are far away",
-  "Do nothing, just push through",
-  "initiate core thrusters, punch 180degrees into dash-nav and warp away from danger",
-  "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid"
+  'Call basecamp and ask for assistance, but they are far away',
+  'Do nothing, just push through',
+  'initiate core thrusters, punch 180degrees into dash-nav and warp away from danger',
+  'ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid',
 ];
 
 for (var i = 0; i <= responses.length; i++) {
@@ -173,7 +175,7 @@ for (var i = 0; i <= responses.length; i++) {
        create the required variables below and fill in the correct values and dataTypes to make
        the if statements pass so that photonLaser fires pew pew pew.
 */
-console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
+console.log('\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::');
 
 // a.
 var enemyCraft = false;
@@ -184,13 +186,13 @@ var bullets = 100;
 if (enemyCraft && photonLaser && photonLaserEnabled) {
   if (bullets >= 100) {
     for (var i = 0; i <= 100; i++) {
-      console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
+      console.log('\u{2708} \u{1F525} pew pew pew !! you got them!!');
     }
   } else {
-    console.log("\u{1F9E8} DEAD \u{1F9E8}");
+    console.log('\u{1F9E8} DEAD \u{1F9E8}');
   }
 } else {
-  console.log("do your homework");
+  console.log('do your homework');
 }
 
 /*
@@ -217,7 +219,7 @@ if (enemyCraft && photonLaser && photonLaserEnabled) {
 
     tip: varName.keyName (this is how to extract a value from an object)
 */
-console.log("\u{1F311} LUNAR LANDING:::::");
+console.log('\u{1F311} LUNAR LANDING:::::');
 
 // start coding here
 
@@ -225,7 +227,7 @@ var lunarRadar = {
   isEnabled: undefined,
   long: undefined,
   lat: undefined,
-  approachSpeed: undefined // "ft per minute"
+  approachSpeed: undefined, // "ft per minute"
 };
 
 // Level 1 convert this psuedocode to functioning code.
@@ -266,65 +268,65 @@ ELSE
 
   tip: pass your variables into the console.log after comma ,
 */
-console.log("\u{1F319} PLANETARY INFO-DASH:::::");
+console.log('\u{1F319} PLANETARY INFO-DASH:::::');
 
 var planets = [
   [
-    "MERCURY",
+    'MERCURY',
     [
-      "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
-      "-173 to 427°C",
-      "330,104,000,000,000 billion kg (0.055 x Earth)"
-    ]
+      'The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.',
+      '-173 to 427°C',
+      '330,104,000,000,000 billion kg (0.055 x Earth)',
+    ],
   ],
   [
-    "JUPITER",
+    'JUPITER',
     [
-      "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
-      "-108°C",
-      "1,898,130,000,000,000,000 billion kg (317.83 x Earth)"
-    ]
+      'Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.',
+      '-108°C',
+      '1,898,130,000,000,000,000 billion kg (317.83 x Earth)',
+    ],
   ],
   [
-    "EARTH",
+    'EARTH',
     [
-      "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
-      "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
-      "6.6 sextillion tons"
-    ]
+      'Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.',
+      '110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower',
+      '6.6 sextillion tons',
+    ],
   ],
   [
-    "MARS",
+    'MARS',
     [
-      "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
-      "87 to -5 °C",
-      "641,693,000,000,000 billion kg (0.107 x Earth)"
-    ]
-  ]
+      'Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.',
+      '87 to -5 °C',
+      '641,693,000,000,000 billion kg (0.107 x Earth)',
+    ],
+  ],
 ];
 
 console.group(planets[0][0]); // Mercury.
-console.log("Description:");
-console.log("Surface temperature:");
-console.log("Mass:");
+console.log('Description:');
+console.log('Surface temperature:');
+console.log('Mass:');
 console.groupEnd();
 
 console.group(); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
-console.log("Description:");
-console.log("Surface temperature:");
-console.log("Mass:");
+console.log('Description:');
+console.log('Surface temperature:');
+console.log('Mass:');
 console.groupEnd();
 
 console.group(); // Earth.
-console.log("Description:");
-console.log("Surface temperature:");
-console.log("Mass:");
+console.log('Description:');
+console.log('Surface temperature:');
+console.log('Mass:');
 console.groupEnd();
 
 console.group(); // Mars.
-console.log("Description:");
-console.log("Surface temperature:");
-console.log("Mass:");
+console.log('Description:');
+console.log('Surface temperature:');
+console.log('Mass:');
 console.groupEnd();
 
 /*
@@ -357,8 +359,7 @@ console.groupEnd();
   Look through your code and find more opportunities to use and call functions and parameters aka arguments.
   */
 
-
-  /*
+/*
     9. REFACTOR Arrow functions
     Level 1:::::::::
     Go through your application and convert all your functions into Arrow functions.
